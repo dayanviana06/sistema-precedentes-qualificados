@@ -1,0 +1,30 @@
+{
+ "versao": 1,
+ "gerado_em": "2026-07-09",
+ "fontes": [
+  "STF (Repercussão Geral)",
+  "STJ (Dados Abertos — Precedentes Qualificados)",
+  "TJMA (NUGEPNAC — fichas de IRDR/IAC)"
+ ],
+ "itens": [
+  {
+   "id": "stf-tema-1234",
+   "tribunal": "STF",
+   "especie": "RG",
+   "area": "Direito Constitucional",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Trânsito em julgado",
+   "assuntos": [
+    "Direito Constitucional"
+   ],
+   "numero": "Tema 1234",
+   "fonte": "Corte Aberta/STF — Painel de Repercussão Geral — Rel. Min. Dias Toffoli",
+   "titulo": "Direito ao esquecimento",
+   "resumo": "É incompatível com a Constituição a ideia de um direito ao esquecimento, assim entendido como o poder de obstar a divulgação de fatos verídicos",
+   "completo": "É incompatível com a Constituição a ideia de um direito ao esquecimento, assim entendido como o poder de obstar a divulgação de fatos verídicos",
+   "precedentes": "",
+   "vinculos": []
+  }
+ ]
+}
