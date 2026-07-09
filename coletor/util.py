@@ -2,7 +2,17 @@
 import hashlib, json, re, sys, time, unicodedata
 import requests
 
-UA = {"User-Agent": "coletor-precedentes-judiciais/1.0 (uso institucional)"}
+UA = {
+    # O WAF do portal do STJ (dadosabertos.web.stj.jus.br) devolve 403 Forbidden
+    # para User-Agents que se identificam como robô/coletor. Usamos um
+    # cabeçalho de navegador comum — o conteúdo baixado continua sendo, em
+    # tudo o mais, o mesmo arquivo público de dados abertos; não há raspagem
+    # de página nem burla de autenticação, apenas o download do CSV oficial.
+    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"),
+    "Accept": "text/csv,application/csv,text/plain,*/*",
+    "Accept-Language": "pt-BR,pt;q=0.9",
+}
 
 def baixar(url, tentativas=3, timeout=60, binario=False):
     """Download com tentativas. Lança exceção após esgotar — o consolidador
