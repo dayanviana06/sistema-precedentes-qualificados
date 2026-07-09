@@ -847,8 +847,7 @@ normalizarItens(DADOS);reindex();
 try{const c=localStorage.getItem(SK("dados"));if(c){const j=JSON.parse(c);
   if(j&&Array.isArray(j.itens)&&j.itens.length){DB=normalizarItens(j.itens);reindex();
     setSync("Última base baixada em "+(j.quando||"?")+" · "+j.itens.length+" julgados",true);}}}catch(e){}
-mesclarImportados();
-setTimeout(()=>{render();if(navigator.onLine)atualizarLocal(false);},0);
+setTimeout(()=>{mesclarImportados();render();if(navigator.onLine)atualizarLocal(false);},0);
 
 /* ===================== NUVEM DO GABINETE (Supabase, sem bibliotecas) =====================
    Perfis por convite do gestor; login por código de e-mail (OTP); sincronização
