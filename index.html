@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Precedentes Qualificados — STF &amp; STJ</title>
+<style>
+  :root{
+    --bg:#F6F6F4; --card:#FFFFFF; --ink:#2A2F36; --ink2:#4A5561; --ink3:#7A8590;
+    --line:#E6E7E4; --soft:#F0F1EE; --soft2:#E9EAE6; --input:#FFFFFF;
+    --stf:#4A6484; --stfbg:#EDF1F5; --stj:#4E7A6A; --stjbg:#EBF2EF;
+    --tjma:#7A6070; --tjmabg:#F2EDF1;
+    --gold:#9A7B3F; --goldbg:#F4EFE4; --crimson:#96524E; --crimsonbg:#F5EBEA;
+    --green:#4E7A5E; --greenbg:#EBF2ED;
+    --panel:#FAF9F5; --panelb:#ECE7D8; --panelink:#5A5546;
+    --shadow:0 6px 24px rgba(42,47,54,.06);
+    --header:#2A2F36; --headerline:#3A404A; --headtxt:#F2F3F1; --headsub:#A8B0BA;
+  }
+  [data-theme="dark"]{
+    --bg:#1C1F23; --card:#252A30; --ink:#E4E6E8; --ink2:#BAC1C8; --ink3:#8B939C;
+    --line:#343A41; --soft:#2C3238; --soft2:#333A41; --input:#2C3238;
+    --stf:#8FAFCE; --stfbg:#2C3742; --stj:#8FC0AC; --stjbg:#2A3833;
+    --tjma:#C2A4B6; --tjmabg:#38303A;
+    --gold:#CBAA6A; --goldbg:#38332A; --crimson:#D19490; --crimsonbg:#3B2E2D;
+    --green:#8FC0A0; --greenbg:#2A3830;
+    --panel:#2B2F2A; --panelb:#3E4438; --panelink:#C9C4AE;
+    --shadow:0 6px 24px rgba(0,0,0,.35);
+    --header:#15181B; --headerline:#2A2F36; --headtxt:#E9EAEC; --headsub:#8B939C;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;transition:background .25s,color .25s}
+  button{font-family:inherit}
+  button:focus-visible,input:focus-visible{outline:2px solid var(--stf);outline-offset:1px}
+  header{background:var(--header);border-bottom:2px solid var(--headerline)}
+  .head-in{max-width:1180px;margin:0 auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  .crest{width:42px;height:42px;border-radius:10px;background:var(--headerline);display:grid;place-items:center;color:var(--headtxt);font-size:19px}
+  h1{margin:0;font-family:Georgia,'Times New Roman',serif;font-size:22px;color:var(--headtxt);font-weight:600;letter-spacing:-.01em}
+  .sub{margin:3px 0 0;font-size:12.5px;color:var(--headsub)}
+  .uptag{font-size:12px;color:var(--headsub);display:flex;align-items:center;gap:7px;background:transparent;padding:7px 12px;border-radius:20px;border:1px solid var(--headerline)}
+  .dot{width:7px;height:7px;border-radius:50%;background:#7BB88A;display:inline-block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:18px 0 10px}
+  .search{flex:1 1 260px;display:flex;align-items:center;gap:9px;background:var(--input);border:1px solid var(--line);border-radius:10px;padding:10px 13px}
+  .search input{flex:1;border:none;outline:none;font-size:14.5px;background:transparent;color:var(--ink)}
+  .btn{display:flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:13.5px;cursor:pointer;color:var(--ink2);font-weight:600}
+  .btn.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .btn.study{border-color:var(--gold);color:var(--gold)}
+  .btn.study.on{background:var(--gold);color:#fff}
+  .btn.dl{border-color:var(--stj);color:var(--stj)}
+  .btn.ref{border-color:var(--crimson);color:var(--crimson)}
+  .btn.theme{padding:10px 12px}
+  .dlwrap{position:relative}
+  .dlmenu{position:absolute;right:0;top:46px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);z-index:20;min-width:260px;overflow:hidden}
+  .dlmenu button{display:flex;width:100%;text-align:left;gap:8px;border:none;background:var(--card);padding:11px 14px;font-size:13px;cursor:pointer;color:var(--ink2);border-bottom:1px solid var(--soft)}
+  .dlmenu button:hover{background:var(--soft)}
+  .refpanel{max-width:1180px;margin:0 auto;padding:0 22px}
+  .refbox{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--crimson);border-radius:11px;padding:16px 18px;margin-top:6px}
+  .refbox h3{margin:0 0 8px;font-family:Georgia,serif;font-size:16px}
+  .refbox pre{white-space:pre-wrap;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12.5px;line-height:1.6;color:var(--ink2);margin:0}
+  .filters{padding:6px 0 4px;display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--line)}
+  .frow{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+  .flabel{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);font-weight:700;min-width:86px;padding-top:6px}
+  .chips{display:flex;gap:7px;flex-wrap:wrap;flex:1}
+  .chip{border:1px solid var(--line);background:var(--card);color:var(--ink2);border-radius:20px;padding:5px 12px;font-size:12.5px;cursor:pointer;font-weight:600;transition:.12s}
+  .chip:hover{border-color:var(--ink3)}
+  .switch{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink2);font-weight:600;cursor:pointer;padding-top:4px}
+  .switch input{width:16px;height:16px;accent-color:var(--crimson)}
+  .selinfo{font-size:12px;color:var(--ink3);padding:4px 0 0}
+  .selinfo b{color:var(--ink)}
+  .clearall{border:none;background:none;color:var(--stf);font-weight:700;font-size:12px;cursor:pointer;margin-left:6px}
+  main{max-width:1180px;margin:0 auto;padding:18px 22px 40px}
+  .area{margin-bottom:34px}
+  .area-h{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+  .area-bar{width:4px;height:22px;border-radius:3px;opacity:.75}
+  .area-t{margin:0;font-family:Georgia,serif;font-size:20px;font-weight:600}
+  .area-c{font-size:12px;background:var(--soft2);color:var(--ink3);border-radius:12px;padding:2px 9px;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(345px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:12px;padding:16px 17px 14px;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(42,47,54,.04)}
+  .ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .badge{font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:5px}
+  .oblig{font-size:9.5px;font-weight:800;letter-spacing:.03em;padding:3px 7px;border-radius:5px;background:var(--crimsonbg);color:var(--crimson);text-transform:uppercase}
+  .oblig.no{background:var(--soft);color:var(--ink3)}
+  .num{font-size:11.5px;color:var(--ink3);font-family:ui-monospace,'SF Mono',monospace}
+  .fav{border:none;background:none;cursor:pointer;padding:2px;line-height:0;font-size:16px;color:var(--gold)}
+  .ctitle{margin:11px 0 7px;font-family:Georgia,serif;font-size:16.5px;line-height:1.38;font-weight:600}
+  .ctext{margin:0;font-size:13.8px;line-height:1.65;color:var(--ink2)}
+  .status{margin-top:9px;font-size:11.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .vig{background:var(--greenbg);color:var(--green);font-weight:700;padding:2px 8px;border-radius:5px;font-size:10.5px}
+  .vig.warn{background:var(--goldbg);color:var(--gold)}
+  .sit{color:var(--ink3)}
+  .emsuma{margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--ink);font-weight:600;border-left:3px solid var(--gold);padding-left:10px}
+  .emsuma span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);font-weight:800;margin-bottom:2px}
+  .mnem{margin-top:10px;display:inline-flex;align-items:flex-start;gap:6px;background:var(--panel);color:var(--panelink);border:1px solid var(--panelb);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;line-height:1.5}
+  .expl{margin-top:12px;background:var(--panel);border:1px solid var(--panelb);border-radius:9px;padding:11px 12px;font-size:12.9px;line-height:1.65;color:var(--panelink)}
+  .expl b{color:var(--gold);display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+  .disp{margin-top:10px;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+  .disp-h{background:var(--soft);padding:7px 11px;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--ink3)}
+  .disp-i{padding:10px 12px;border-top:1px solid var(--soft)}
+  .disp-ref{font-size:11.5px;font-weight:700;color:var(--stf);margin-bottom:4px}
+  .disp-tx{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;line-height:1.6;color:var(--ink2);white-space:pre-wrap}
+  .flow{margin-top:11px;border:1px solid var(--line);border-radius:9px;padding:12px}
+  .flow .disp-h{margin:-12px -12px 10px;border-radius:0}
+  .fcol{display:flex;flex-direction:column;align-items:center;gap:3px}
+  .fnode{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:12.3px;color:var(--ink2);text-align:center;max-width:100%}
+  .fnode.ini{background:var(--stjbg);border-color:var(--stj);color:var(--stj);font-weight:600}
+  .fnode.dec{background:var(--goldbg);border-color:var(--gold);color:var(--gold);font-weight:700}
+  .fnode.fim{background:var(--greenbg);border-color:var(--green);color:var(--green);font-weight:700}
+  .farrow{color:var(--ink3);text-align:center;font-size:14px;line-height:1;margin:2px 0}
+  .fbranch{display:flex;gap:8px;justify-content:center;margin:5px 0 2px;flex-wrap:wrap}
+  .fpill{font-size:11.3px;padding:4px 10px;border-radius:14px;font-weight:600}
+  .fpill.no{background:var(--crimsonbg);color:var(--crimson)}
+  .fpill.sim{background:var(--greenbg);color:var(--green)}
+  .meta{margin-top:12px;padding-top:11px;border-top:1px solid var(--soft);font-size:12.3px;color:var(--ink3);display:flex;flex-direction:column;gap:6px}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:3px}
+  .tag{background:var(--soft);color:var(--ink3);font-size:11px;padding:2px 8px;border-radius:5px;cursor:pointer}
+  .tag:hover{background:var(--soft2)}
+  .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+  .link{font-size:11.5px;color:var(--stf);background:var(--stfbg);border:none;border-radius:5px;padding:3px 8px;cursor:pointer;font-weight:600}
+  .expand{margin-top:11px;align-self:flex-start;display:flex;align-items:center;gap:5px;border:none;background:none;color:var(--stf);font-weight:700;font-size:12.5px;cursor:pointer;padding:0}
+  .empty{text-align:center;padding:60px 20px;background:var(--card);border-radius:12px;border:1px solid var(--line)}
+  .empty h3{font-family:Georgia,serif;font-size:19px;margin:0}
+  .empty p{color:var(--ink3);margin-top:8px}
+  .study{max-width:660px;margin:8px auto 0}
+  .decks{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
+  .sstats{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .scount{font-size:13px;font-weight:700;font-family:ui-monospace,monospace}
+  .track{flex:1;height:6px;background:var(--soft2);border-radius:4px;overflow:hidden}
+  .fill{height:100%;background:var(--stf);transition:.25s}
+  .smini{font-size:12.5px;color:var(--ink3);display:flex;align-items:center;gap:4px;font-weight:600}
+  .flash{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--stf);border-radius:14px;padding:22px 24px 24px;min-height:250px;box-shadow:var(--shadow)}
+  .fprompt{font-family:Georgia,serif;font-size:21px;line-height:1.4;margin:16px 0 20px;font-weight:600}
+  .reveal{width:100%;background:var(--ink);color:var(--bg);border:none;border-radius:10px;padding:13px;font-size:14.5px;font-weight:700;cursor:pointer}
+  .answer{font-size:15px;line-height:1.65;color:var(--ink2);background:var(--soft);border-radius:10px;padding:15px 16px;border:1px solid var(--line)}
+  .answer .why{margin-top:11px;padding-top:11px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--panelink)}
+  .fmeta{font-size:12px;color:var(--ink3);margin-top:10px;font-style:italic}
+  .factions{display:flex;gap:10px;margin-top:18px}
+  .mark{flex:1;display:flex;justify-content:center;align-items:center;gap:7px;border:none;border-radius:10px;padding:12px;font-size:13.5px;font-weight:700;cursor:pointer}
+  .mark.rev{background:var(--goldbg);color:var(--gold)}
+  .mark.know{background:var(--stjbg);color:var(--stj)}
+  .skip{display:block;margin:16px auto 0;border:none;background:none;color:var(--ink3);font-size:12.5px;cursor:pointer;font-weight:600}
+  .khint{text-align:center;font-size:11px;color:var(--ink3);margin-top:8px;opacity:.8}
+  footer{max-width:1180px;margin:0 auto;padding:22px;font-size:11.8px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line)}
+  .notifs{max-width:1180px;margin:0 auto;padding:8px 22px 0;display:flex;flex-direction:column;gap:8px}
+  .notif{display:flex;align-items:flex-start;gap:10px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:11px 14px;font-size:13px;color:var(--ink2)}
+  .notif.due{border-left-color:var(--crimson)}
+  .notif b{color:var(--ink)}
+  .notif .ver{margin-left:auto;border:none;background:var(--soft);color:var(--stf);font-weight:700;font-size:12px;border-radius:8px;padding:6px 11px;cursor:pointer;white-space:nowrap}
+  .notif .fechar{border:none;background:none;color:var(--ink3);cursor:pointer;font-size:14px;padding:2px 4px}
+  .actrow{display:flex;gap:8px;align-items:center;margin-top:11px;flex-wrap:wrap}
+  .abtn{border:1px solid var(--line);background:var(--card);color:var(--ink2);font-size:11.8px;font-weight:700;border-radius:8px;padding:5px 10px;cursor:pointer}
+  .abtn.lido{background:var(--greenbg);border-color:var(--green);color:var(--green)}
+  .duechip{font-size:11px;font-weight:700;padding:3px 9px;border-radius:12px;background:var(--soft);color:var(--ink3)}
+  .duechip.hoje{background:var(--crimsonbg);color:var(--crimson)}
+  .duechip.ok{background:var(--greenbg);color:var(--green)}
+  .painel{max-width:860px;margin:8px auto 0;display:flex;flex-direction:column;gap:18px}
+  .pbox{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .pbox h3{margin:0 0 4px;font-family:Georgia,serif;font-size:17px}
+  .pbox .psub{font-size:12px;color:var(--ink3);margin:0 0 12px}
+  .pstats{display:flex;gap:10px;flex-wrap:wrap}
+  .pstat{flex:1 1 120px;background:var(--soft);border-radius:10px;padding:12px;text-align:center}
+  .pstat .n{font-size:24px;font-weight:800;font-family:Georgia,serif}
+  .pstat .l{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+  .prow{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--soft);flex-wrap:wrap}
+  .prow:first-of-type{border-top:none}
+  .prow .pt{flex:1 1 260px;min-width:0}
+  .prow .pt b{display:block;font-size:13.5px;line-height:1.35}
+  .prow .pt span{font-size:11.5px;color:var(--ink3)}
+  .prow .pbtns{display:flex;gap:6px;flex-wrap:wrap}
+  .pvazio{font-size:13px;color:var(--ink3);padding:8px 0}
+  .cfggrid{display:flex;flex-direction:column;gap:14px}
+  .cfgrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0;border-top:1px solid var(--soft);flex-wrap:wrap}
+  .cfgrow:first-of-type{border-top:none}
+  .cfgrow .cl{flex:1 1 260px}
+  .cfgrow .cl b{display:block;font-size:13.5px}
+  .cfgrow .cl span{font-size:12px;color:var(--ink3)}
+  .cfgrow input[type=text]{flex:1 1 260px;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:13px;background:var(--input);color:var(--ink)}
+  .cfgrow input[type=range]{width:160px;accent-color:var(--stf)}
+  .tgl{position:relative;width:44px;height:24px;flex:none}
+  .tgl input{opacity:0;width:0;height:0}
+  .tgl i{position:absolute;inset:0;background:var(--soft2);border-radius:14px;transition:.15s;cursor:pointer}
+  .tgl i:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:var(--card);border-radius:50%;transition:.15s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+  .tgl input:checked+i{background:var(--green)}
+  .tgl input:checked+i:before{transform:translateX(20px)}
+  .nota{margin-top:11px;border:1px solid var(--panelb);background:var(--panel);border-radius:9px;padding:10px 12px}
+  .nota .nh{display:flex;align-items:center;gap:6px;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--gold);font-weight:800;margin-bottom:5px}
+  .nota .nt{font-size:13px;line-height:1.6;color:var(--panelink);white-space:pre-wrap}
+  .nota textarea{width:100%;min-height:88px;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:13px;font-family:inherit;background:var(--input);color:var(--ink);resize:vertical}
+  .nota .nbtns{display:flex;gap:7px;margin-top:8px}
+  .notachip{font-size:11px;color:var(--gold);font-weight:700}
+  .agmenu{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;padding:8px 10px;background:var(--soft);border-radius:9px}
+  .agmenu input[type=date]{border:1px solid var(--line);border-radius:7px;padding:5px 8px;font-size:12px;background:var(--input);color:var(--ink)}
+  .agmenu .agl{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--ink3);margin-right:2px}
+  mark{background:var(--goldbg);color:inherit;border-radius:3px;padding:0 1px}
+  [data-theme="dark"] mark{background:#4a4020}
+  .seqbar{display:flex;align-items:center;gap:10px;max-width:760px;margin:0 auto 14px}
+  .seqbar .abtn{padding:8px 14px;font-size:13px}
+  .seqwrap{max-width:760px;margin:0 auto}
+  .cadmenu{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;padding:8px 10px;background:var(--soft);border-radius:9px}
+  .cadmenu .agl{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--ink3);margin-right:2px}
+  .cadmenu input[type=text]{border:1px solid var(--line);border-radius:7px;padding:5px 9px;font-size:12px;background:var(--input);color:var(--ink);width:140px}
+  .cadchip{font-size:11.5px;font-weight:700;border-radius:14px;padding:4px 11px;border:1px solid var(--line);background:var(--card);color:var(--ink2);cursor:pointer}
+  .cadchip.on{background:var(--tjma);border-color:var(--tjma);color:#fff}
+  .extrow{display:flex;gap:7px;align-items:center;flex-wrap:wrap;padding:6px 0 2px;font-size:11.5px;color:var(--ink3)}
+  .extbtn{border:1px solid var(--line);background:var(--card);color:var(--stf);font-size:11.5px;font-weight:700;border-radius:14px;padding:4px 11px;cursor:pointer}
+  .imp-ta{width:100%;min-height:140px;border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:12.5px;font-family:inherit;background:var(--input);color:var(--ink);resize:vertical}
+  .imp-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+  .imp-row select,.imp-row input[type=text]{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;background:var(--input);color:var(--ink)}
+  .fbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:10px 0 6px}
+  .fsel{border:1px solid var(--line);background:var(--input);color:var(--ink);border-radius:10px;padding:8px 11px;font-size:12.5px;font-weight:600;max-width:260px}
+  .fmore{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--ink2);border-radius:10px;padding:8px 12px;font-size:12.5px;font-weight:700;cursor:pointer}
+  .fmore .badge-n{background:var(--crimson);color:#fff;border-radius:10px;font-size:10.5px;padding:1px 7px;font-weight:800}
+  .fpanel{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin:2px 0 8px;display:flex;flex-direction:column;gap:11px}
+  .fpanel .flabel{padding-top:0;min-width:86px}
+  .asearch{border:1px solid var(--line);background:var(--input);color:var(--ink);border-radius:9px;padding:7px 10px;font-size:12.5px;width:220px}
+  .chip .x{margin-left:5px;opacity:.75}
+  .amais{font-size:11.5px;color:var(--ink3);align-self:center}
+  .grid.foco{grid-template-columns:minmax(0,860px);justify-content:center}
+  .grid.foco .card{padding:24px 30px;border-left-width:5px}
+  .grid.foco .ctitle{font-size:20px;line-height:1.4}
+  .grid.foco .ctext{font-size:15.5px;line-height:1.8}
+  .grid.foco .emsuma{font-size:15.5px;line-height:1.7}
+  .grid.foco .expl,.grid.foco .disp-tx{font-size:14px;line-height:1.75}
+  .grid.foco .badge{font-size:11.5px}
+  .area.foco .area-h{max-width:860px;margin-left:auto;margin-right:auto}
+  .btn.upd{background:var(--green);color:#fff;border-color:var(--green);font-weight:700}
+  .btn.upd:hover{filter:brightness(1.05)}
+  .btn.upd:disabled{opacity:.7;cursor:default}
+  .vstamp{font-size:11px;color:var(--headsub);opacity:.85;margin-left:8px}
+  @media print{header,.toolbar,.filters,.selinfo,footer,.expand,.fav,.link,.refpanel{display:none!important}.card{break-inside:avoid;border:1px solid #ccc}body{background:#fff;color:#000}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="head-in">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="crest">⚖</div>
+      <div>
+        <h1>Precedentes Qualificados</h1>
+        <p class="sub">STF · STJ · TJMA — observância obrigatória (art. 927 CPC), súmulas e informativos <span class="vstamp">· versão 08/07/2026 23:53</span></p>
+      </div>
+    </div>
+    <div class="uptag"><span class="dot" id="syncDot"></span> <span id="syncStatus">Aplicativo local — atualiza pelo STJ ao abrir com internet</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="toolbar">
+    <div class="search"><span style="color:#8794a3">🔎</span>
+      <input id="q" placeholder="Buscar por tema, tese, súmula, matéria, assunto…" /></div>
+    <select class="btn theme" id="perfilSel" title="Perfil ativo neste dispositivo"></select>
+    <button class="btn theme" id="themeBtn" title="Alternar modo claro/noturno">🌙</button>
+    <button class="btn theme" id="cfgBtn" title="Configurações">⚙</button>
+    <button class="btn upd" id="refreshBtn" title="Buscar agora a base mais recente publicada">🔄 <span id="refreshLbl">Atualizar agora</span></button>
+    <button class="btn" id="loginBtn" title="Entrar para sincronizar seus dados entre máquinas">👤 <span id="loginLbl">Entrar</span></button>
+    <button class="btn ref" id="refBtn">⚖ Art. 927 CPC</button>
+    <button class="btn" id="viewBtn">📖 <span id="viewLbl">Resumido</span></button>
+    <button class="btn study" id="studyBtn">🎓 Flashcards</button>
+    <button class="btn study" id="painelBtn">📅 Estudos</button>
+    <div class="dlwrap">
+      <button class="btn dl" id="dlBtn">⬇ Baixar</button>
+      <div class="dlmenu" id="dlMenu" style="display:none">
+        <button data-dl="obsidian-bloco">🟣 Bloco atual → notas Obsidian (.zip)</button>
+        <button data-dl="obsidian-native">🟣 Salvar notas .md na pasta… (Obsidian)</button>
+        <button data-dl="obsidian">🟣 Notas para Obsidian (.zip)</button>
+        <button data-dl="md">📄 Documento de estudo (.md)</button>
+        <button data-dl="csv">📊 Planilha (.csv)</button>
+        <button data-dl="print">🖨 Imprimir / salvar em PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="refpanel" id="refPanel" style="display:none"></div>
+<div class="notifs" id="notifs"></div>
+<div class="wrap"><div class="filters" id="filters"></div><div class="selinfo" id="selinfo"></div></div>
+
+<main id="main"></main>
+
+<footer>
+  Fontes oficiais: portais do STF e do STJ (Repercussão Geral, Precedentes Qualificados, Jurisprudência em Teses e Súmulas); textos legais conforme a legislação vigente (CPC, CC, CDC).
+  Protótipo com dados verificados; nenhum precedente, número ou dispositivo legal foi presumido ou inventado. A marcação de observância obrigatória segue o art. 927 do CPC —
+  a Jurisprudência em Teses é ferramenta de compilação e consulta, não constitui, por si, precedente vinculante. O campo de dispositivos é preenchido onde a transcrição pôde ser verificada. Com o coletor configurado (DATA_URL), a base sincroniza automaticamente a cada abertura com internet; offline, vale a última base baixada.
+</footer>
+
+<script>
+/* ===================== TEXTO LEGAL VERIFICADO (art. 927 CPC) ===================== */
+const ART927 = `Art. 927. Os juízes e os tribunais observarão:
+I - as decisões do Supremo Tribunal Federal em controle concentrado de constitucionalidade;
+II - os enunciados de súmula vinculante;
+III - os acórdãos em incidente de assunção de competência ou de resolução de demandas repetitivas e em julgamento de recursos extraordinário e especial repetitivos;
+IV - os enunciados das súmulas do Supremo Tribunal Federal em matéria constitucional e do Superior Tribunal de Justiça em matéria infraconstitucional;
+V - a orientação do plenário ou do órgão especial aos quais estiverem vinculados.
+§ 1º Os juízes e os tribunais observarão o disposto no art. 10 e no art. 489, § 1º, quando decidirem com fundamento neste artigo.
+§ 2º A alteração de tese jurídica adotada em enunciado de súmula ou em julgamento de casos repetitivos poderá ser precedida de audiências públicas e da participação de pessoas, órgãos ou entidades que possam contribuir para a rediscussão da tese.
+§ 4º A modificação de enunciado de súmula, de jurisprudência pacificada ou de tese adotada em julgamento de casos repetitivos observará a necessidade de fundamentação adequada e específica, considerando os princípios da segurança jurídica, da proteção da confiança e da isonomia.
+§ 5º Os tribunais darão publicidade a seus precedentes, organizando-os por questão jurídica decidida e divulgando-os, preferencialmente, na rede mundial de computadores.`;
+
+const ESP = {
+  RG:{label:"Repercussão Geral",curto:"Rep. Geral",cor:"#4A6484",bg:"#EDF1F5"},
+  REP:{label:"Recurso Repetitivo",curto:"Repetitivo",cor:"#4E7A6A",bg:"#EBF2EF"},
+  IRDR:{label:"IRDR",curto:"IRDR",cor:"#6E6288",bg:"#EFEDF4"},
+  IAC:{label:"IAC",curto:"IAC",cor:"#6E6288",bg:"#EFEDF4"},
+  SV:{label:"Súmula Vinculante",curto:"Súm. Vinculante",cor:"#96524E",bg:"#F5EBEA"},
+  SUM:{label:"Súmula",curto:"Súmula",cor:"#5C6673",bg:"#EFF0F2"},
+  JT:{label:"Jurisprudência em Teses",curto:"Jurisp. Teses",cor:"#9A7B3F",bg:"#F4EFE4"},
+  INF:{label:"Informativo de Jurisprudência",curto:"Informativo",cor:"#5C6673",bg:"#EFF0F2"},
+  PUIL:{label:"Pedido de Uniformização (PUIL)",curto:"PUIL",cor:"#4E7A6A",bg:"#EBF2EF"},
+  SIRDR:{label:"Suspensão em IRDR (SIRDR)",curto:"SIRDR",cor:"#6E6288",bg:"#EFEDF4"},
+};
+const TRIB = { STF:{cor:"#4A6484",bg:"#EDF1F5"}, STJ:{cor:"#4E7A6A",bg:"#EBF2EF"}, TJMA:{cor:"#7A6070",bg:"#F2EDF1"} };
+const AREA_COR = { "Direito do Consumidor":"#A5713F","Direito à Saúde":"#4E7A6A","Direito Constitucional":"#4A6484" };
+
+const CC205={ref:"Código Civil, art. 205",texto:"A prescrição ocorre em dez anos, quando a lei não lhe haja fixado prazo menor."};
+const CDC43={ref:"Código de Defesa do Consumidor, art. 43, caput",texto:"O consumidor, sem prejuízo do disposto no art. 86, terá acesso às informações existentes em cadastros, fichas, registros e dados pessoais e de consumo arquivados sobre ele, bem como sobre as suas respectivas fontes."};
+const CDC6VIII={ref:"Código de Defesa do Consumidor, art. 6º, caput e inciso VIII",texto:"Art. 6º São direitos básicos do consumidor:\n[...]\nVIII - a facilitação da defesa de seus direitos, inclusive com a inversão do ônus da prova, a seu favor, no processo civil, quando, a critério do juiz, for verossímil a alegação ou quando for ele hipossuficiente, segundo as regras ordinárias de experiências;"};
+const CDC6III={ref:"Código de Defesa do Consumidor, art. 6º, caput e inciso III",texto:"Art. 6º São direitos básicos do consumidor:\n[...]\nIII - a informação adequada e clara sobre os diferentes produtos e serviços, com especificação correta de quantidade, características, composição, qualidade e preço, bem como sobre os riscos que apresentem;"};
+
+const DADOS = [
+  {id:"stf-t6",tribunal:"STF",especie:"RG",area:"Direito à Saúde",obrigatorio:true,validade:"Vigente",
+   situacao:"Mérito julgado em 26/09/2024",assuntos:["Saúde","Medicamentos","SUS","Direito Constitucional"],
+   numero:"Tema 6",fonte:"RE 566.471 — Rel. Min. Marco Aurélio",
+   titulo:"Fornecimento de medicamento registrado na ANVISA, mas não incorporado ao SUS",
+   resumo:"Como regra, a ausência do fármaco nas listas do SUS impede o fornecimento por decisão judicial, independentemente do custo. Excepcionalmente, admite-se a concessão de medicamento registrado na ANVISA e não incorporado, desde que preenchidos cumulativamente os requisitos fixados na tese.",
+   completo:"1. A ausência de inclusão de medicamento nas listas de dispensação do SUS (RENAME, RESME, REMUME, entre outras) impede, como regra geral, o fornecimento do fármaco por decisão judicial, independentemente do custo. 2. É possível, excepcionalmente, a concessão judicial de medicamento registrado na ANVISA, mas não incorporado às listas de dispensação do SUS, desde que preenchidos, cumulativamente, os seguintes requisitos, cujo ônus probatório incumbe ao autor da ação: (a) negativa de fornecimento na via administrativa, nos termos do item 4 do Tema 1.234; (b) ilegalidade do ato de não incorporação pela Conitec, ausência de pedido de incorporação ou mora na sua apreciação, observados os prazos e critérios da Lei nº 8.080/1990 e do Decreto nº 7.646/2011; (c) impossibilidade de substituição por outro medicamento constante das listas do SUS. [A íntegra da tese deve ser consultada no portal do STF.]",
+   explicacao:"Na prática, o juiz só concede medicamento fora das listas do SUS em caráter excepcional. O autor precisa demonstrar, ao mesmo tempo, a negativa na via administrativa, a ilegalidade (ou a mora/omissão) na não incorporação pela Conitec e a inexistência de substituto no SUS. Faltando qualquer desses requisitos, prevalece a regra de não fornecimento.",
+   dispositivos:[],precedentes:"RE 566.471/RN",vinculos:["stf-t1234","stf-t500","stf-sv60"]},
+
+  {id:"stf-t1234",tribunal:"STF",especie:"RG",area:"Direito à Saúde",obrigatorio:true,validade:"Vigente",
+   situacao:"Tese alterada em Sessão Extraordinária de 19/02/2026",assuntos:["Saúde","Medicamentos","SUS","Competência","Direito Constitucional"],
+   numero:"Tema 1.234",fonte:"RE 1.366.243 — Rel. Min. Gilmar Mendes",
+   titulo:"Legitimidade passiva da União e competência da Justiça Federal em medicamentos não padronizados no SUS",
+   resumo:"Define a legitimidade passiva da União e a competência da Justiça Federal nas demandas sobre medicamentos registrados na ANVISA, mas não padronizados no SUS, com critérios de competência por faixa de valor e regras de custeio e ressarcimento entre os entes.",
+   completo:"Tema 1.234 — Legitimidade passiva da União e competência da Justiça Federal nas demandas que versem sobre fornecimento de medicamentos registrados na ANVISA, mas não padronizados no SUS. A tese estabelece regras de competência conforme faixas de valor do medicamento, custeio integral pela União nos casos de sua competência e regime de ressarcimento entre os entes, aplicável às ações ajuizadas após a publicação da decisão. Redação vigente alterada em Sessão Extraordinária de 19/02/2026. [Consultar a redação integral e atualizada no portal do STF.]",
+   explicacao:"Fixa quem responde e onde tramita a ação de medicamento não padronizado: a competência varia conforme a faixa de valor do medicamento, com regras de custeio pela União e de ressarcimento entre os entes. Como a redação foi alterada em fevereiro de 2026, convém conferir sempre a versão vigente antes de aplicar.",
+   dispositivos:[],precedentes:"RE 1.366.243/SC",vinculos:["stf-t6","stf-sv60","stf-t500"]},
+
+  {id:"stf-t793",tribunal:"STF",especie:"RG",area:"Direito à Saúde",obrigatorio:true,validade:"Vigente",
+   situacao:"Julgado em 16/04/2020",assuntos:["Saúde","SUS","Responsabilidade solidária","Federalismo","Direito Constitucional"],
+   numero:"Tema 793",fonte:"RE 855.178",
+   titulo:"Responsabilidade solidária dos entes federativos nas demandas prestacionais de saúde",
+   resumo:"Os entes da federação, em razão da competência comum, são solidariamente responsáveis nas demandas prestacionais de saúde, cabendo o direcionamento do cumprimento e o ressarcimento conforme a repartição de competências.",
+   completo:"Os entes da federação, em decorrência da competência comum, são solidariamente responsáveis nas demandas prestacionais na área da saúde. [A parte final da tese, sobre o direcionamento do cumprimento e o ressarcimento conforme a repartição de competências, deve ser conferida na íntegra no portal do STF.]",
+   explicacao:"Reconhece que União, Estados e Municípios respondem juntos (solidariamente) pelas prestações de saúde, de modo que o cidadão pode acionar qualquer um deles. O ente que arcar com o custo pode depois buscar ressarcimento conforme a divisão de competências do SUS.",
+   dispositivos:[],precedentes:"RE 855.178/PE",vinculos:["stf-t6"]},
+
+  {id:"stf-t500",tribunal:"STF",especie:"RG",area:"Direito à Saúde",obrigatorio:true,validade:"Vigente",
+   situacao:"Julgado em 2019",assuntos:["Saúde","Medicamentos","ANVISA","Competência","Direito Constitucional"],
+   numero:"Tema 500",fonte:"STF — Repercussão Geral",
+   titulo:"Fornecimento de medicamento sem registro na ANVISA",
+   resumo:"O Estado, como regra, não pode ser obrigado a fornecer medicamento sem registro na ANVISA. A exceção foi admitida mediante requisitos específicos, mantida a competência da Justiça Federal, com propositura em face da União.",
+   completo:"O Estado não pode ser obrigado a fornecer medicamentos sem registro na ANVISA, admitida exceção condicionada ao cumprimento de requisitos definidos pelo STF. Conforme reafirmado no Tema 1.234, mantém-se a competência da Justiça Federal para as ações que demandem fornecimento de medicamentos sem registro na ANVISA, que deverão ser propostas em face da União. [Consultar a redação integral no portal do STF.]",
+   explicacao:"Trata do medicamento que sequer tem registro na ANVISA. A regra é não fornecer; a exceção depende de requisitos rígidos, e a ação corre na Justiça Federal, contra a União.",
+   dispositivos:[],precedentes:"Tema 500/STF",vinculos:["stf-t1234","stf-t6"]},
+
+  {id:"stf-sv60",tribunal:"STF",especie:"SV",area:"Direito à Saúde",obrigatorio:true,validade:"Vigente",
+   situacao:"Publicada em 20/09/2024",assuntos:["Saúde","Medicamentos","SUS","Súmula Vinculante"],
+   numero:"Súmula Vinculante 60",fonte:"STF",
+   titulo:"Observância dos acordos interfederativos do Tema 1.234 na judicialização de fármacos",
+   resumo:"O pedido e a análise administrativos de fármacos, a judicialização e seus desdobramentos devem observar os acordos interfederativos homologados pelo STF no Tema 1.234 da repercussão geral.",
+   completo:"O pedido e a análise administrativos de fármacos na rede pública de saúde, a judicialização do caso, bem ainda seus desdobramentos (administrativos e jurisdicionais), devem observar os termos dos três acordos interfederativos (e seus fluxos) homologados pelo Supremo Tribunal Federal, em governança judicial colaborativa, no tema 1.234 da sistemática da repercussão geral (RE 1.366.243).",
+   explicacao:"Como súmula vinculante, obriga administração e Judiciário a seguirem os fluxos e acordos interfederativos definidos no Tema 1.234 quando o assunto for pedido e judicialização de fármacos.",
+   dispositivos:[],precedentes:"Vinculada ao Tema 1.234 (RE 1.366.243)",vinculos:["stf-t1234"]},
+
+  {id:"stj-jt160-1",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Ministério Público","Ônus da prova","Processo civil"],
+   numero:"Jurisp. em Teses, ed. 160, tese 1",fonte:"STJ — Direito do Consumidor IV (julgados até 13/11/2020)",
+   titulo:"Inversão do ônus da prova em favor do Ministério Público na ação consumerista",
+   resumo:"Na ação consumerista, o Ministério Público faz jus à inversão do ônus da prova, independentemente daqueles que figurem como autores ou réus da demanda.",
+   completo:"Na ação consumerista, o Ministério Público faz jus à inversão do ônus da prova, independentemente daqueles que figurem como autores ou réus da demanda.",
+   explicacao:"O Ministério Público, quando atua na defesa do consumidor, também pode se beneficiar da inversão do ônus da prova — não importa se figura como autor ou réu —, por incidência da facilitação da defesa prevista no CDC.",
+   dispositivos:[CDC6VIII],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-jt160-2",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Proteção de dados","Dano moral"],
+   numero:"Jurisp. em Teses, ed. 160, tese 2",fonte:"STJ — Direito do Consumidor IV",
+   titulo:"Dano moral in re ipsa pela ausência de comunicação sobre uso de dados pessoais",
+   resumo:"A ausência de comunicação acerca da disponibilização ou comercialização de informações pessoais do consumidor em bancos de dados configura dano moral presumido (in re ipsa).",
+   completo:"A ausência de comunicação acerca da disponibilização/comercialização de informações pessoais do consumidor em bancos de dados configura dano moral presumido (in re ipsa).",
+   explicacao:"Se dados pessoais do consumidor são disponibilizados ou vendidos sem que ele seja avisado, o dano moral é presumido: não é preciso provar o prejuízo concreto, basta a falta de comunicação.",
+   dispositivos:[CDC43],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-jt160-4",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Cadastro de crédito","Dano moral"],
+   numero:"Jurisp. em Teses, ed. 160, tese 4",fonte:"STJ — Direito do Consumidor IV",
+   titulo:"Flexibilização da Súmula 385/STJ diante de inscrição preexistente ilegítima",
+   resumo:"É possível flexibilizar a Súmula 385/STJ para reconhecer dano moral por inscrição indevida em cadastro restritivo, quando houver nos autos elementos aptos a demonstrar a ilegitimidade da anotação preexistente.",
+   completo:"É possível a flexibilização da orientação contida na Súmula n. 385/STJ, para reconhecer dano moral decorrente de inscrição indevida do nome do consumidor em cadastro restritivo de crédito, quando existentes nos autos elementos aptos a demonstrar a ilegitimidade da preexistente anotação.",
+   explicacao:"A Súmula 385 diz que, havendo inscrição legítima anterior, não há dano moral por nova anotação irregular. Aqui o STJ admite exceção: se os autos mostram que a própria inscrição anterior era ilegítima, o dano moral pode ser reconhecido.",
+   dispositivos:[],precedentes:"Relaciona-se à Súmula 385/STJ",vinculos:["stj-s385"]},
+
+  {id:"stj-jt160-5",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Prescrição","Imóvel","Vício do produto"],
+   numero:"Jurisp. em Teses, ed. 160, tese 5",fonte:"STJ — Direito do Consumidor IV",
+   titulo:"Prazo prescricional da pretensão indenizatória por vício no imóvel",
+   resumo:"A pretensão indenizatória do consumidor por prejuízos decorrentes de vício no imóvel submete-se ao prazo prescricional do art. 205 do Código Civil.",
+   completo:"A pretensão indenizatória do consumidor de receber ressarcimento por prejuízos decorrentes de vício no imóvel se submete ao prazo prescricional previsto no art. 205 do Código Civil.",
+   explicacao:"Quando o consumidor busca indenização por prejuízos de um vício no imóvel, o prazo não é o do CDC, mas o prazo geral de dez anos do Código Civil, por ausência de regra específica.",
+   dispositivos:[CC205],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-jt161-8",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Contratos bancários","Instituições financeiras","Responsabilidade civil"],
+   numero:"Jurisp. em Teses, ed. 161, tese 8",fonte:"STJ — Direito do Consumidor V (julgados até 27/11/2020)",
+   titulo:"Responsabilidade do banco por uso indevido de cartão furtado ou extraviado",
+   resumo:"As instituições financeiras respondem pelos danos ao consumidor por cartão roubado, furtado ou extraviado e utilizado indevidamente, ressalvada a culpa exclusiva do consumidor ou de terceiros.",
+   completo:"As instituições financeiras são responsáveis por reparar os danos sofridos pelo consumidor que tenha o cartão de crédito roubado, furtado ou extraviado e que venha a ser utilizado indevidamente, ressalvadas as hipóteses de culpa exclusiva do consumidor ou de terceiros.",
+   explicacao:"Cartão roubado, furtado ou extraviado e usado por terceiro gera responsabilidade do banco pelos danos, salvo se o próprio consumidor ou um terceiro tiver culpa exclusiva.",
+   dispositivos:[],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-jt161-10",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","FIES","Contratos"],
+   numero:"Jurisp. em Teses, ed. 161, tese 10",fonte:"STJ — Direito do Consumidor V",
+   titulo:"Inaplicabilidade do CDC aos contratos do FIES",
+   resumo:"As regras do CDC não se aplicam aos contratos do Programa de Financiamento Estudantil (FIES), por não se tratar de serviço bancário, mas de programa governamental custeado pela União.",
+   completo:"As regras do CDC não se aplicam aos contratos firmados no âmbito do Programa de Financiamento Estudantil – FIES, pois não se trata de serviço bancário, mas de programa governamental custeado pela União.",
+   explicacao:"Contratos do FIES não seguem o CDC, porque não são serviço bancário, e sim programa do governo custeado pela União.",
+   dispositivos:[],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-jt162-6",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Proteção de dados","Contratos bancários","Cláusula abusiva"],
+   numero:"Jurisp. em Teses, ed. 162, tese 6",fonte:"STJ — Direito do Consumidor VI (julgados até 04/12/2020)",
+   titulo:"Abusividade de cláusula que autoriza compartilhamento de dados sem opção de recusa",
+   resumo:"É abusiva e ilegal a cláusula, em contrato de cartão de crédito, que autoriza o banco a compartilhar dados dos consumidores com outras entidades sem opção de discordar, por violar a transparência e a confiança.",
+   completo:"É abusiva e ilegal cláusula prevista em contrato de prestação de serviços de cartão de crédito que autoriza o banco contratante a compartilhar dados dos consumidores com outras entidades financeiras ou mantenedoras de cadastros positivos e negativos de consumidores, sem que haja opção de discordar daquele compartilhamento, por desrespeitar os princípios da transparência e da confiança.",
+   explicacao:"É nula a cláusula que autoriza o banco a repassar dados do cliente a terceiros sem lhe dar a opção de recusar, pois viola a transparência e a confiança que regem a relação de consumo.",
+   dispositivos:[CDC6III],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-jt163-4",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Imóvel","Contratos","Cláusula abusiva"],
+   numero:"Jurisp. em Teses, ed. 163, tese 4",fonte:"STJ — Direito do Consumidor VII (julgados até 18/12/2020)",
+   titulo:"Cláusula de tolerância de 180 dias na entrega de imóvel em construção",
+   resumo:"Não é abusiva a cláusula de tolerância que prorroga por até 180 dias o prazo de entrega de imóvel em construção, desde que observado o direito de informação ao consumidor.",
+   completo:"Não é abusiva a cláusula de tolerância nos contratos de promessa de compra e venda de imóvel em construção que prevê prorrogação do prazo inicial para a entrega da obra pelo lapso máximo de 180 (cento e oitenta) dias, desde que observado o direito de informação ao consumidor.",
+   explicacao:"O prazo extra de até 180 dias para entregar o imóvel em construção é válido, desde que essa tolerância seja informada claramente ao consumidor.",
+   dispositivos:[],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-jt165-13",tribunal:"STJ",especie:"JT",area:"Direito do Consumidor",obrigatorio:false,validade:"Vigente",
+   situacao:"Jurisprudência em Teses (compilação — não vinculante por si)",assuntos:["Consumidor","Telecomunicações","Cláusula abusiva","Contratos"],
+   numero:"Jurisp. em Teses, ed. 165, tese 13",fonte:"STJ — Direito do Consumidor XI (julgados até 12/02/2021)",
+   titulo:"Multa de fidelização proporcional em contratos de telecomunicação",
+   resumo:"Nos contratos de telecomunicação com permanência mínima, é abusiva a cobrança integral da multa de fidelização, que deve ser proporcional ao período de carência remanescente.",
+   completo:"Nos contratos de telecomunicação com previsão de permanência mínima, é abusiva a cobrança integral da multa rescisória de fidelização, que deve ser calculada de forma proporcional ao período de carência remanescente.",
+   explicacao:"Se o cliente rompe antes o contrato com fidelização, a operadora não pode cobrar a multa cheia: ela deve ser reduzida proporcionalmente ao tempo que faltava para cumprir a carência.",
+   dispositivos:[],precedentes:"Jurisprudência em Teses, STJ",vinculos:[]},
+
+  {id:"stj-s385",tribunal:"STJ",especie:"SUM",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Súmula em vigor",assuntos:["Consumidor","Cadastro de crédito","Dano moral"],
+   numero:"Súmula 385",fonte:"STJ",
+   titulo:"Anotação irregular e dano moral diante de inscrição preexistente legítima",
+   resumo:"Havendo inscrição legítima preexistente, a anotação irregular em cadastro de proteção ao crédito não gera indenização por dano moral, ressalvado o direito ao cancelamento.",
+   completo:"Da anotação irregular em cadastro de proteção ao crédito, não cabe indenização por dano moral, quando preexistente legítima inscrição, ressalvado o direito ao cancelamento.",
+   explicacao:"Se já existe uma inscrição legítima no cadastro de inadimplentes, uma anotação irregular adicional não rende dano moral — mas o consumidor pode exigir o cancelamento dessa anotação indevida.",
+   dispositivos:[CDC43],precedentes:"Enunciado de súmula",vinculos:["stj-jt160-4"]},
+
+  {id:"stj-s543",tribunal:"STJ",especie:"SUM",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Súmula em vigor",assuntos:["Consumidor","Imóvel","Contratos","Restituição"],
+   numero:"Súmula 543",fonte:"STJ",
+   titulo:"Restituição de parcelas na resolução da promessa de compra e venda de imóvel",
+   resumo:"Na resolução de promessa de compra e venda de imóvel sob o CDC, as parcelas pagas são restituídas de imediato: integralmente se a culpa for do vendedor/construtor, parcialmente se o comprador deu causa.",
+   completo:"Na hipótese de resolução de contrato de promessa de compra e venda de imóvel submetido ao Código de Defesa do Consumidor, deve ocorrer a imediata restituição das parcelas pagas pelo promitente comprador – integralmente, em caso de culpa exclusiva do promitente vendedor/construtor, ou parcialmente, caso tenha sido o comprador quem deu causa ao desfazimento.",
+   explicacao:"Desfeito o contrato de compra de imóvel, o dinheiro pago volta imediatamente: por inteiro se a culpa foi do vendedor/construtor, ou em parte se foi o comprador que deu causa.",
+   dispositivos:[],precedentes:"Enunciado de súmula",vinculos:[]},
+
+  {id:"stj-s566",tribunal:"STJ",especie:"SUM",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Súmula em vigor",assuntos:["Consumidor","Contratos bancários","Instituições financeiras"],
+   numero:"Súmula 566",fonte:"STJ",
+   titulo:"Cobrança da tarifa de cadastro no início do relacionamento bancário",
+   resumo:"Nos contratos bancários posteriores a 30/4/2008, é possível cobrar a tarifa de cadastro no início do relacionamento entre consumidor e instituição financeira.",
+   completo:"Nos contratos bancários posteriores ao início da vigência da Resolução-CMN n. 3.518/2007, em 30/4/2008, pode ser cobrada a tarifa de cadastro no início do relacionamento entre o consumidor e a instituição financeira.",
+   explicacao:"Depois de 30/4/2008, o banco pode cobrar a tarifa de cadastro uma única vez, no começo do relacionamento com o cliente.",
+   dispositivos:[],precedentes:"Enunciado de súmula",vinculos:[]},
+
+  {id:"stj-s597",tribunal:"STJ",especie:"SUM",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Súmula em vigor",assuntos:["Consumidor","Plano de saúde","Saúde suplementar","Cláusula abusiva"],
+   numero:"Súmula 597",fonte:"STJ",
+   titulo:"Carência abusiva em urgência e emergência no plano de saúde",
+   resumo:"A cláusula de plano de saúde que prevê carência para urgência ou emergência é abusiva se ultrapassado o prazo máximo de 24 horas da contratação.",
+   completo:"A cláusula contratual de plano de saúde que prevê carência para utilização dos serviços de assistência médica nas situações de emergência ou de urgência é considerada abusiva se ultrapassado o prazo máximo de 24 horas contado da data da contratação.",
+   explicacao:"Em urgência ou emergência, a carência do plano de saúde não pode passar de 24 horas da contratação; cláusula que exija mais é abusiva.",
+   dispositivos:[],precedentes:"Enunciado de súmula",vinculos:[]},
+
+  {id:"stj-s602",tribunal:"STJ",especie:"SUM",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Súmula em vigor",assuntos:["Consumidor","Cooperativa habitacional","Imóvel"],
+   numero:"Súmula 602",fonte:"STJ",
+   titulo:"Aplicação do CDC aos empreendimentos habitacionais de cooperativas",
+   resumo:"O Código de Defesa do Consumidor é aplicável aos empreendimentos habitacionais promovidos pelas sociedades cooperativas.",
+   completo:"O Código de Defesa do Consumidor é aplicável aos empreendimentos habitacionais promovidos pelas sociedades cooperativas.",
+   explicacao:"Mesmo quando a moradia é oferecida por cooperativa habitacional, aplica-se o CDC à relação com o consumidor.",
+   dispositivos:[],precedentes:"Enunciado de súmula",vinculos:[]},
+
+  {id:"stj-s609",tribunal:"STJ",especie:"SUM",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Súmula em vigor",assuntos:["Consumidor","Seguro","Saúde suplementar","Boa-fé"],
+   numero:"Súmula 609",fonte:"STJ",
+   titulo:"Recusa de cobertura por doença preexistente sem exame prévio",
+   resumo:"É ilícita a recusa de cobertura sob alegação de doença preexistente se não houve exame médico prévio à contratação nem demonstração de má-fé do segurado.",
+   completo:"A recusa de cobertura securitária, sob a alegação de doença preexistente, é ilícita se não houve a exigência de exames médicos prévios à contratação ou a demonstração de má-fé do segurado.",
+   explicacao:"A seguradora não pode negar cobertura alegando doença anterior se não exigiu exame médico na contratação nem provou má-fé do segurado.",
+   dispositivos:[],precedentes:"Enunciado de súmula",vinculos:[]},
+
+  {id:"stj-s638",tribunal:"STJ",especie:"SUM",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Súmula em vigor",assuntos:["Consumidor","Penhor civil","Instituições financeiras","Cláusula abusiva"],
+   numero:"Súmula 638",fonte:"STJ",
+   titulo:"Cláusula que restringe responsabilidade do banco no penhor civil",
+   resumo:"É abusiva a cláusula que restringe a responsabilidade da instituição financeira por roubo, furto ou extravio de bem entregue em garantia no contrato de penhor civil.",
+   completo:"É abusiva a cláusula contratual que restringe a responsabilidade de instituição financeira pelos danos decorrentes de roubo, furto ou extravio de bem entregue em garantia no âmbito de contrato de penhor civil.",
+   explicacao:"O banco não pode, no penhor civil, limitar por cláusula sua responsabilidade por roubo, furto ou extravio do bem dado em garantia.",
+   dispositivos:[],precedentes:"Enunciado de súmula",vinculos:[]},
+
+  {id:"tjma-irdr4",tribunal:"TJMA",especie:"IRDR",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente",
+   situacao:"Tema 4/TJMA — transitado em julgado em 18/12/2018 (Acórdão 229.940/2018, Tribunal Pleno)",
+   assuntos:["Consumidor","Contratos bancários","Instituições financeiras","INSS","Tarifas","TJMA"],
+   numero:"IRDR — Tema 4/TJMA",fonte:"IRDR 0000340-95.2017.8.10.0000 (3.043/2017) — Rel. Des. Paulo Sérgio Velten Pereira, Tribunal Pleno do TJMA",
+   titulo:"Tarifas bancárias em conta de beneficiários do INSS",
+   resumo:"É ilícita a cobrança de tarifas bancárias para o recebimento de proventos e benefícios previdenciários por cartão magnético do INSS e conta com pacote essencial; a cobrança só é possível em pacote remunerado contratado ou quando excedidos os limites de gratuidade da Res. 3.919/2010 do BACEN, com prévia e efetiva informação ao aposentado.",
+   completo:"É ilícita a cobrança de tarifas bancárias para o recebimento de proventos e/ou benefícios previdenciários, por meio de cartão magnético do INSS e através da conta de depósito com pacote essencial, sendo possível a cobrança de tarifas bancárias na contratação de pacote remunerado de serviços ou quando excedidos os limites de gratuidade previstos na Res. 3.919/2010 do BACEN, desde que o aposentado seja prévia e efetivamente informado pela instituição financeira.",
+   explicacao:"Vincula toda a Justiça estadual maranhense (art. 927, III, e art. 985 do CPC). O banco não pode cobrar tarifa da conta usada apenas para receber o benefício do INSS. A cobrança só se legitima se o aposentado contratou pacote remunerado ou ultrapassou a gratuidade regulamentar — e, ainda assim, mediante informação prévia e efetiva.",
+   dispositivos:[],precedentes:"Ficha oficial do NUGEPNAC/TJMA (NUT CNJ 8.10.1.000006); paradigma: ApCiv 39.668/2016",vinculos:["tjma-irdr5"]},
+
+  {id:"tjma-irdr5",tribunal:"TJMA",especie:"IRDR",area:"Direito do Consumidor",obrigatorio:true,validade:"Vigente — em revisão",
+   situacao:"Tema 5/TJMA — trânsito em julgado em 25/05/2022; teses submetidas a revisão no Tema 12/TJMA (IRDR 0827453-44.2024.8.10.0000); a 1ª tese relaciona-se ao Tema 1.061/STJ",
+   assuntos:["Consumidor","Empréstimo consignado","Contratos bancários","Ônus da prova","Analfabeto","Repetição de indébito","TJMA"],
+   numero:"IRDR — Tema 5/TJMA",fonte:"IRDR 0008932-65.2016.8.10.0000 (53.983/2016) — Rel. Des. Jaime Ferreira de Araújo, Tribunal Pleno do TJMA",
+   titulo:"Empréstimos consignados: ônus da prova, contratação por analfabeto, repetição em dobro e modalidades de mútuo",
+   resumo:"Quatro teses: (1) impugnada a assinatura, o ônus de provar a autenticidade é da instituição financeira; (2) o analfabeto pode contratar consignado sem procuração ou escritura pública; (3) inexistente ou inválido o contrato e demonstrada a má-fé do banco, cabe repetição do indébito em dobro, ressalvado engano justificável; (4) é lícita a contratação de qualquer modalidade de mútuo, discutindo-se eventuais vícios pelas regras dos defeitos do negócio jurídico.",
+   completo:"1ª TESE: Na hipótese em que o consumidor/autor impugnar a autenticidade da assinatura constante em contrato bancário juntado ao processo pela instituição financeira, caberá a esta o ônus de provar a sua autenticidade (CPC, arts. 6º, 368 e 429, II). 2ª TESE: A pessoa analfabeta é plenamente capaz para os atos da vida civil (CC, art. 2º) e pode exarar sua manifestação de vontade por quaisquer meios admitidos em direito, não sendo necessária a utilização de procuração pública ou de escritura pública para a contratação de empréstimo consignado, de sorte que eventual vício existente na contratação do empréstimo deve ser discutido à luz das hipóteses legais que autorizam a anulação por defeito do negócio jurídico (CC, arts. 138, 145, 151, 156, 157 e 158). 3ª TESE (aclarada em embargos de declaração): Nos casos de empréstimos consignados, quando restar configurada a inexistência ou invalidade do contrato celebrado entre a instituição financeira e a parte autora, bem como demonstrada a má-fé da instituição bancária, será cabível a repetição de indébito em dobro, resguardadas as hipóteses de enganos justificáveis. 4ª TESE: Não estando vedada pelo ordenamento jurídico, é lícita a contratação de quaisquer modalidades de mútuo financeiro, de modo que, havendo vício na contratação, sua anulação deve ser discutida à luz das hipóteses legais que versam sobre os defeitos do negócio jurídico (CC, arts. 138, 145, 151, 156, 157 e 158) e dos deveres legais de probidade, boa-fé (CC, art. 422) e de informação adequada e clara sobre os diferentes produtos, especificando corretamente as características do contrato (art. 4º, IV e art. 6º, III, do CDC), observando-se, todavia, a possibilidade de convalidação do negócio anulável, segundo os princípios da conservação dos negócios jurídicos (CC, art. 170).",
+   explicacao:"É o precedente central do contencioso bancário na Justiça maranhense, de aplicação diária na vara. Atenção à vigência: as teses estão sob revisão no Tema 12/TJMA (2024), e a 1ª tese dialoga com o Tema 1.061/STJ sobre o custeio da perícia grafotécnica — convém verificar o estado da revisão antes de aplicar.",
+   dispositivos:[CDC6III],precedentes:"Ficha oficial do NUGEPNAC/TJMA (NUT CNJ 8.10.1.000007); 3ª tese aclarada no Acórdão 244.485/2019",vinculos:["tjma-irdr4"]},
+];
+
+/* ===================== ENRIQUECIMENTO DIDÁTICO (verificado) ===================== */
+const ENRIQ = {
+  "stf-t6":{emSuma:"Medicamento registrado na ANVISA e fora do SUS só por decisão judicial em caráter excepcional, cumpridos, juntos, três requisitos.",
+    mnemonico:"NIS — Negativa administrativa · Ilegalidade da não incorporação · Substituição impossível.",
+    fluxograma:[{t:"inicio",txt:"Pedido de medicamento registrado na ANVISA e não incorporado ao SUS"},
+      {t:"decisao",txt:"Houve negativa na via administrativa? (requisito a)",nao:"Não se concede",sim:null},
+      {t:"decisao",txt:"A não incorporação pela Conitec é ilegal, ou há omissão/mora? (requisito b)",nao:"Não se concede",sim:null},
+      {t:"decisao",txt:"É impossível substituir por medicamento do SUS? (requisito c)",nao:"Não se concede",sim:null},
+      {t:"fim",txt:"Concessão judicial excepcional cabível"}]},
+  "stf-t1234":{emSuma:"Em medicamento não padronizado no SUS, a competência (Justiça Federal ou Estadual) e o custeio seguem faixas de valor, com legitimidade da União."},
+  "stf-t793":{emSuma:"União, Estados e Municípios respondem solidariamente pela saúde; o cidadão aciona qualquer um deles.",
+    mnemonico:"Saúde é SOS — Solidariedade de todos os entes."},
+  "stf-t500":{emSuma:"Medicamento sem registro na ANVISA, em regra, não é fornecido; a exceção corre na Justiça Federal, contra a União."},
+  "stf-sv60":{emSuma:"Fármacos: pedido, judicialização e desdobramentos seguem os acordos interfederativos do Tema 1.234."},
+  "stj-jt160-1":{emSuma:"O MP, na ação consumerista, também tem direito à inversão do ônus da prova."},
+  "stj-jt160-2":{emSuma:"Usar ou compartilhar dados do consumidor sem avisá-lo gera dano moral presumido."},
+  "stj-jt160-4":{emSuma:"A Súmula 385 pode ser afastada quando a inscrição anterior também for ilegítima."},
+  "stj-jt160-5":{emSuma:"Indenização por vício no imóvel prescreve em 10 anos (art. 205 CC), não no prazo do CDC.",
+    mnemonico:"Imóvel com vício → 10 anos (art. 205 CC)."},
+  "stj-jt161-8":{emSuma:"Banco responde por cartão furtado/extraviado usado por terceiro, salvo culpa exclusiva do consumidor ou de terceiro."},
+  "stj-jt161-10":{emSuma:"FIES não é serviço bancário: não se aplica o CDC."},
+  "stj-jt162-6":{emSuma:"Cláusula que compartilha dados do cliente sem opção de recusa é abusiva."},
+  "stj-jt163-4":{emSuma:"Tolerância de até 180 dias para entregar imóvel é válida, se informada ao consumidor."},
+  "stj-jt165-13":{emSuma:"Multa de fidelização é proporcional ao tempo que faltava, não integral.",
+    mnemonico:"Fidelidade quebrada, multa rateada."},
+  "stj-s385":{emSuma:"Com inscrição legítima anterior, anotação irregular não gera dano moral — só cancelamento.",
+    mnemonico:"Legítima antes → sem dano (só cancela).",
+    fluxograma:[{t:"inicio",txt:"Anotação irregular em cadastro de proteção ao crédito"},
+      {t:"decisao",txt:"Existe inscrição legítima preexistente?",sim:"Não cabe dano moral — apenas cancelamento",nao:"Cabe dano moral"}]},
+  "stj-s543":{emSuma:"Desfeita a compra do imóvel, devolve-se já: tudo (culpa do vendedor) ou parte (culpa do comprador).",
+    mnemonico:"Vendedor → tudo; comprador → parte.",
+    fluxograma:[{t:"inicio",txt:"Resolução da promessa de compra e venda de imóvel (CDC)"},
+      {t:"decisao",txt:"A culpa foi exclusiva do vendedor/construtor?",sim:"Restituição integral e imediata",nao:"Restituição parcial e imediata (comprador deu causa)"}]},
+  "stj-s566":{emSuma:"Tarifa de cadastro só nos contratos após 30/04/2008, no início da relação.",
+    mnemonico:"Cadastro: só a partir de 30/04/2008."},
+  "stj-s597":{emSuma:"Carência em urgência/emergência: no máximo 24h da contratação.",
+    mnemonico:"24h — urgência e emergência não esperam.",
+    fluxograma:[{t:"inicio",txt:"Cláusula de carência em urgência ou emergência"},
+      {t:"decisao",txt:"A carência ultrapassa 24h da contratação?",sim:"Cláusula abusiva",nao:"Cláusula válida"}]},
+  "stj-s602":{emSuma:"Cooperativa habitacional também se sujeita ao CDC."},
+  "stj-s609":{emSuma:"Sem exame prévio nem má-fé, não vale negar cobertura por doença preexistente."},
+  "stj-s638":{emSuma:"No penhor civil, banco não pode limitar responsabilidade por roubo/furto/extravio do bem."},
+  "tjma-irdr4":{emSuma:"Conta só para receber INSS não paga tarifa; cobrança exige pacote contratado ou gratuidade excedida, com informação prévia.",
+    mnemonico:"Benefício do INSS não paga tarifa — salvo pacote informado.",
+    fluxograma:[{t:"inicio",txt:"Tarifa bancária em conta de beneficiário do INSS"},
+      {t:"decisao",txt:"A conta serve apenas ao recebimento do benefício (cartão INSS / pacote essencial)?",sim:"Cobrança ilícita",nao:null},
+      {t:"decisao",txt:"Há pacote remunerado contratado, ou gratuidade da Res. 3.919/2010 excedida, com informação prévia e efetiva?",sim:"Cobrança possível",nao:"Cobrança ilícita"}]},
+  "tjma-irdr5":{emSuma:"Assinatura impugnada: banco prova. Analfabeto contrata sem escritura. Má-fé + contrato inválido: devolução em dobro. Qualquer mútuo é lícito; vício segue as regras do negócio jurídico.",
+    mnemonico:"BADM — Banco prova · Analfabeto contrata · Dobro na má-fé · Mútuo livre.",
+    fluxograma:[{t:"inicio",txt:"Ação sobre empréstimo consignado (Tema 5/TJMA)"},
+      {t:"decisao",txt:"O autor impugnou a autenticidade da assinatura?",sim:"Ônus da prova da autenticidade é do banco (1ª tese)",nao:null},
+      {t:"decisao",txt:"Contrato inexistente/ inválido E má-fé do banco demonstrada?",sim:"Repetição do indébito em dobro (3ª tese)",nao:"Sem dobra: seguir regras gerais (2ª e 4ª teses)"}]},
+};
+DADOS.forEach(d=>{const e=ENRIQ[d.id]||{};d.emSuma=e.emSuma||d.resumo;d.mnemonico=e.mnemonico||"";d.fluxograma=e.fluxograma||null;});
+
+function fluxoHTML(fx){
+  let h=`<div class="flow"><div class="disp-h">Fluxograma</div>`;
+  fx.forEach((n)=>{
+    if(n.t==="inicio")h+=`<div class="fcol"><div class="fnode ini">${esc(n.txt)}</div></div>`;
+    else if(n.t==="fim")h+=`<div class="farrow">↓</div><div class="fcol"><div class="fnode fim">${esc(n.txt)}</div></div>`;
+    else if(n.t==="passo")h+=`<div class="farrow">↓</div><div class="fcol"><div class="fnode">${esc(n.txt)}</div></div>`;
+    else if(n.t==="decisao"){h+=`<div class="farrow">↓</div><div class="fcol"><div class="fnode dec">${esc(n.txt)}</div><div class="fbranch">`;
+      if(n.nao)h+=`<span class="fpill no">Não → ${esc(n.nao)}</span>`;
+      if(n.sim)h+=`<span class="fpill sim">Sim → ${esc(n.sim)}</span>`;else h+=`<span class="fpill sim">Sim ↓ (continua)</span>`;
+      h+=`</div></div>`;}
+  });
+  return h+`</div>`;
+}
+function fluxoMermaid(fx){
+  const q=t=>'"'+String(t).replace(/"/g,"'").replace(/\n/g," ")+'"';
+  let s="```mermaid\nflowchart TD\n";let leaf=0;
+  fx.forEach((n,i)=>{s+= n.t==="decisao" ? `  N${i}{${q(n.txt)}}\n` : `  N${i}[${q(n.txt)}]\n`;});
+  fx.forEach((n,i)=>{
+    if(n.t==="decisao"){
+      if(n.nao){s+=`  X${leaf}[${q(n.nao)}]\n  N${i} -->|Não| X${leaf}\n`;leaf++;}
+      if(n.sim){s+=`  Y${leaf}[${q(n.sim)}]\n  N${i} -->|Sim| Y${leaf}\n`;leaf++;}
+      else if(fx[i+1])s+=`  N${i} -->|Sim| N${i+1}\n`;
+    }else if(n.t!=="fim"){ if(fx[i+1])s+=`  N${i} --> N${i+1}\n`; }
+  });
+  return s+"```\n";
+}
+
+/* ===================== ESTADO ===================== */
+/* ===================== SINCRONIZAÇÃO AUTOMÁTICA =====================
+   Preencha DATA_URL com o endereço do arquivo dados.json publicado pelo
+   coletor (ex.: GitHub Pages). Vazio = usa apenas a base incorporada.   */
+/* ===================== PERFIS LOCAIS (organização por pessoa neste dispositivo) =====================
+   O perfil "Gestor" usa as chaves originais (preserva todos os dados já existentes).
+   Perfis adicionais têm armazenamento próprio e isolado neste navegador.
+   Nota honesta: perfis locais ORGANIZAM; quem controla o ACESSO ao site é a
+   camada de autenticação (Cloudflare Access), descrita no LEIA-ME.            */
+const PERFIS_KEY="pq__perfis";
+let PERFIS={ativo:"Gestor",lista:["Gestor"]};
+try{const p=JSON.parse(localStorage.getItem(PERFIS_KEY));if(p&&Array.isArray(p.lista)&&p.lista.length&&p.lista.includes("Gestor"))PERFIS=p;}catch(e){}
+if(!PERFIS.lista.includes(PERFIS.ativo))PERFIS.ativo="Gestor";
+function salvarPerfis(){try{localStorage.setItem(PERFIS_KEY,JSON.stringify(PERFIS));}catch(e){}}
+function pslug(n){return String(n).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");}
+function SK(k){return PERFIS.ativo==="Gestor"?("pq_"+k):("pq_"+pslug(PERFIS.ativo)+"__"+k);}
+const CHAVES_PERFIL=["favoritos","sabidos","revisar","progresso","notas","cadernos","importados","config","dados","novidades_vistas","theme","sessao","obsgab","explic"];
+function trocarPerfil(nome){
+  if(!PERFIS.lista.includes(nome))return;
+  PERFIS.ativo=nome;salvarPerfis();location.reload();
+}
+function criarPerfil(nome){
+  nome=(nome||"").trim().slice(0,30);
+  if(nome.length<2)return "Nome muito curto.";
+  if(PERFIS.lista.some(n=>pslug(n)===pslug(nome)))return "Já existe perfil com esse nome.";
+  PERFIS.lista.push(nome);salvarPerfis();return null;
+}
+function apagarPerfil(nome){
+  if(nome==="Gestor")return;
+  PERFIS.lista=PERFIS.lista.filter(n=>n!==nome);
+  const pref="pq_"+pslug(nome)+"__";
+  CHAVES_PERFIL.forEach(k=>{try{localStorage.removeItem(pref+k);}catch(e){}});
+  if(PERFIS.ativo===nome){PERFIS.ativo="Gestor";salvarPerfis();location.reload();return;}
+  salvarPerfis();render();
+}
+function loadObj(k){try{return JSON.parse(localStorage.getItem(SK(k)))||{};}catch(e){return {};}}
+function saveObj(k,o){try{localStorage.setItem(SK(k),JSON.stringify(o));}catch(e){}
+  if(["progresso","notas","cadernos","importados"].includes(k)&&typeof agendarPushNuvem==="function")agendarPushNuvem();}
+const DATA_URL_PADRAO = ""; // pode ficar vazio: configure pela própria interface (⚙ Configurações)
+
+/* ===================== CONFIGURAÇÕES DO USUÁRIO ===================== */
+const CONFIG_PADRAO = {
+  dataUrl: "",                 // endereço do dados.json publicado pelo coletor
+  leitura: "resumido",         // modo de leitura inicial: resumido | completo
+  mostrarEmSuma: true, mostrarMnemonicos: true, mostrarExplicacoes: true,
+  mostrarFluxogramas: true, mostrarDispositivos: true,
+  notifNovidades: true, notifRevisoes: true,
+  nuvemUrl: "", nuvemChave: "",
+  atalhos: true,
+  fonte: 100,                  // % de zoom da interface (90–125)
+  intervalos: [1, 7, 15, 30],  // botões rápidos do agendamento MANUAL (dias)
+  nuvemUrl: "", nuvemKey: "",  // Supabase do gabinete (⚙ Configurações → Nuvem)
+  claudeKey: "", claudeModel: "claude-haiku-4-5-20251001",  // integração opcional com o Claude (IA)
+  stjUrl: "https://dadosabertos.web.stj.jus.br/dataset/4238da2f-c07b-4c1a-b345-4402accacdcf/resource/df29da13-7d6b-41ba-ad96-cd1a5bbd191c/download/temas.csv",
+};
+let CONFIG = { ...CONFIG_PADRAO, ...loadObj("config") };
+function salvarConfig(){ saveObj("config", CONFIG); }
+function aplicarConfigVisual(){
+  try{ document.body.style.zoom = CONFIG.fonte + "%"; }catch(e){}
+}
+let DATA_URL = CONFIG.dataUrl || DATA_URL_PADRAO || (location.protocol.indexOf("http")===0?"dados.json":"");
+
+let DB = DADOS, byId = {}, ASSUNTOS = [];
+function repararTexto(s){
+  if(typeof s!=="string"||!s)return s;
+  // Assinatura de mojibake (UTF-8 lido como Latin-1): "Ã" seguido de byte de
+  // continuação (0x80–0xBF), "Â" + símbolo, etc. Palavras corretas como
+  // "UNIÃO" e "SÃO" (Ã seguido de letra ASCII) NÃO acionam o reparo.
+  if(!/[ÃÂ][\x80-\xBF]/.test(s))return s;
+  try{
+    const bytes=Uint8Array.from([...s].map(c=>c.charCodeAt(0)&0xff));
+    const dec=new TextDecoder("utf-8",{fatal:false}).decode(bytes);
+    const antes=(s.match(/[ÃÂ]/g)||[]).length, depois=(dec.match(/[ÃÂ]/g)||[]).length;
+    if(dec && !dec.includes("\uFFFD") && depois<antes) return dec;
+  }catch(e){}
+  return s;
+}
+function repararItem(d){
+  ["titulo","resumo","completo","explicacao","emSuma","mnemonico","situacao","fonte","numero","area","precedentes"].forEach(k=>{if(d[k])d[k]=repararTexto(d[k]);});
+  if(Array.isArray(d.assuntos))d.assuntos=d.assuntos.map(repararTexto);
+  if(Array.isArray(d.dispositivos))d.dispositivos.forEach(x=>{if(x){x.ref=repararTexto(x.ref);x.texto=repararTexto(x.texto);}});
+  if(Array.isArray(d.fluxograma))d.fluxograma.forEach(n=>{if(n){n.txt=repararTexto(n.txt);n.sim=repararTexto(n.sim);n.nao=repararTexto(n.nao);}});
+  return d;
+}
+function normalizarItens(arr){
+  arr.forEach(d=>{
+    d.assuntos=d.assuntos||[];d.dispositivos=d.dispositivos||[];d.vinculos=d.vinculos||[];
+    d.resumo=d.resumo||d.completo||"";d.completo=d.completo||d.resumo||"";
+    d.emSuma=d.emSuma||d.resumo;d.mnemonico=d.mnemonico||"";d.fluxograma=d.fluxograma||null;
+    d.explicacao=d.explicacao||"";d.validade=d.validade||"Vigente";d.situacao=d.situacao||"";
+    d.precedentes=d.precedentes||"";d.fonte=d.fonte||"";
+    if(!ESP[d.especie])d.especie="SUM";
+    if(!TRIB[d.tribunal])d.tribunal="STJ";
+    if(!AREA_COR[d.area])AREA_COR[d.area]="#7A8590";
+    repararItem(d);
+  });
+  return arr;
+}
+function reindex(){
+  byId=Object.fromEntries(DB.map(d=>[d.id,d]));
+  ASSUNTOS=[...new Set(DB.flatMap(d=>d.assuntos))].sort((a,b)=>a.localeCompare(b,'pt'));
+}
+function setSync(txt,ok){
+  const el=document.getElementById("syncStatus");if(el)el.textContent=txt;
+  const dot=document.getElementById("syncDot");if(dot)dot.style.background=ok===false?"#C9A15A":"#7BB88A";
+}
+function aplicarDados(itens,rotulo,ok){DB=normalizarItens(itens);reindex();mesclarImportados();render();setSync(rotulo,ok);}
+/* ===================== COLETOR LOCAL (roda no próprio aplicativo) =====================
+   Ao abrir com internet, busca o arquivo oficial do STJ (Temas.csv), interpreta
+   todos os precedentes qualificados de TODAS as matérias e reconstrói a base,
+   somando-a à base curada (STF/TJMA/Súmulas). Guarda o resultado para uso
+   offline. Sem servidor, sem GitHub, sem nuvem. Se o navegador bloquear o
+   download direto (política CORS de origem local), há a importação do CSV. */
+function parseCSV(txt){
+  if(txt.charCodeAt(0)===0xFEFF)txt=txt.slice(1);
+  const linhas=[];let campo="",linha=[],i=0,aspas=false;
+  while(i<txt.length){const c=txt[i];
+    if(aspas){if(c==='"'){if(txt[i+1]==='"'){campo+='"';i+=2;continue;}aspas=false;i++;continue;}campo+=c;i++;continue;}
+    if(c==='"'){aspas=true;i++;continue;}
+    if(c===','){linha.push(campo);campo="";i++;continue;}
+    if(c==='\r'){i++;continue;}
+    if(c==='\n'){linha.push(campo);campo="";linhas.push(linha);linha=[];i++;continue;}
+    campo+=c;i++;}
+  if(campo.length||linha.length){linha.push(campo);linhas.push(linha);}
+  return linhas;
+}
+function _normk(k){return String(k||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]/g,"");}
+function _titlePt(s){const min=new Set(["do","da","de","dos","das","e","em","a","o"]);
+  return s.toLowerCase().split(/\s+/).map((w,i)=>(min.has(w)&&i>0)?w:(w.charAt(0).toUpperCase()+w.slice(1))).join(" ");}
+function parseAssuntos(bruto){
+  const partes=String(bruto||"").split(",").map(p=>p.replace(/^\s*\d+\s*-\s*/,"").trim()).filter(Boolean);
+  const ramos=[],subs=[];
+  for(const p of partes){const letras=p.replace(/[^A-Za-zÀ-ÿ]/g,"");
+    if(letras&&letras===letras.toUpperCase()&&letras.length>3)ramos.push(_titlePt(p));else subs.push(p);}
+  return [ramos[0]||"Precedentes do STJ", ramos.concat(subs)];
+}
+function espSTJ(t){t=(t||"").toLowerCase();
+  if(t.indexOf("repetitivo")>=0)return["REP",true];
+  if(t.indexOf("assun")>=0||t.indexOf("iac")>=0)return["IAC",true];
+  if(t.indexOf("puil")>=0||t.indexOf("uniformiza")>=0)return["PUIL",true];
+  if(t.indexOf("sirdr")>=0||t.indexOf("suspens")>=0)return["SIRDR",false];
+  return[null,false];}
+function validadeSTJ(sit,tese){const s=(sit||"").toLowerCase();
+  if(s.indexOf("cancelad")>=0)return"Atenção — verificar";
+  if(s.indexOf("revis")>=0)return"Vigente — em revisão";
+  if(!tese)return"Pendente — mérito não julgado";return"Vigente";}
+function coletarSTJ(csv){
+  const linhas=parseCSV(csv);if(linhas.length<2)return[];
+  const head=linhas[0].map(_normk);const out=[];
+  const rot={REP:"Tema",IAC:"IAC",PUIL:"PUIL",SIRDR:"SIRDR"};
+  for(let r=1;r<linhas.length;r++){
+    const cel=linhas[r];if(!cel||!cel.length)continue;
+    const o={};head.forEach((h,idx)=>o[h]=(cel[idx]||"").trim());
+    const [esp,obrig]=espSTJ(o.tipoprecedente);if(!esp)continue;
+    const num=(o.numeroprecedente||"").trim();if(!num)continue;
+    const tese=o.tesefirmada||"",questao=o.questaosubmetidaajulgamento||"";
+    const [materia,assuntos]=parseAssuntos(o.assuntos);
+    const rg=(o.numerorepercussaogeralstf||"").replace(/\D/g,"");
+    out.push({id:"stj-"+esp.toLowerCase()+"-"+num,tribunal:"STJ",especie:esp,area:materia,
+      obrigatorio:obrig,validade:validadeSTJ(o.situacao,tese),
+      situacao:[o.situacao,o.datajulgamento?("julgado em "+o.datajulgamento):"",o.orgaojulgador?("órgão: "+o.orgaojulgador):""].filter(Boolean).join(" · "),
+      assuntos:assuntos.length?assuntos:["Precedentes do STJ"],
+      numero:rot[esp]+" "+num+"/STJ",fonte:"STJ — Dados Abertos (Precedentes Qualificados)",
+      titulo:questao?(questao.length>180?questao.slice(0,180)+"…":questao):(rot[esp]+" "+num+"/STJ"),
+      resumo:(tese||questao||"").slice(0,400),completo:tese||questao||"",
+      pendente:(!tese),
+      precedentes:o.sumulaoriginada?("Súmula originada: "+o.sumulaoriginada):"",
+      vinculos:rg?["stf-tema-"+rg]:[]});
+  }
+  return out;
+}
+function aplicarColeta(stj,rotulo){
+  const ids=new Set(DADOS.map(d=>d.id));
+  const merged=DADOS.concat(stj.filter(i=>!ids.has(i.id)));
+  const quando=new Date().toLocaleString("pt-BR");
+  DB=normalizarItens(merged);reindex();mesclarImportados();
+  try{localStorage.setItem(SK("dados"),JSON.stringify({quando,itens:merged}));}catch(e){}
+  const materias=new Set(merged.map(d=>d.area)).size;
+  setSync((rotulo||"Atualizado")+" em "+quando+" · "+merged.length+" julgados · "+materias+" matérias",true);
+  render();
+}
+async function atualizarLocal(manual){
+  const lbl=document.getElementById("refreshLbl"),btn=document.getElementById("refreshBtn");
+  if(!navigator.onLine){setSync("Sem internet — usando a última base baixada.",false);
+    if(lbl){lbl.textContent="Sem rede";setTimeout(()=>lbl.textContent="Atualizar agora",2000);}return;}
+  if(btn)btn.disabled=true;if(lbl)lbl.textContent="Atualizando…";setSync("Baixando os precedentes do STJ…",true);
+  try{
+    const url=CONFIG.stjUrl+(CONFIG.stjUrl.indexOf("?")>=0?"&":"?")+"t="+Date.now();
+    const r=await fetch(url,{cache:"no-store"});
+    if(!r.ok)throw new Error("HTTP "+r.status);
+    const buf=await r.arrayBuffer();
+    const csv=new TextDecoder("utf-8").decode(buf);   // UTF-8 correto: sem desconfiguração
+    const stj=coletarSTJ(csv);
+    if(!stj.length)throw new Error("nenhum precedente lido");
+    aplicarColeta(stj,"Atualizado");
+    if(lbl)lbl.textContent="Atualizado ✓";
+  }catch(e){
+    setSync("Não foi possível baixar direto do STJ agora ("+e.message+"). Use “Importar CSV do STJ” em ⚙ Configurações, ou tente mais tarde. A base atual foi mantida.",false);
+    if(lbl)lbl.textContent="Tentar depois";
+  }
+  if(btn)btn.disabled=false;
+  setTimeout(()=>{if(lbl)lbl.textContent="Atualizar agora";},2600);
+}
+function exportarBase(){
+  const itens=DB.filter(d=>!d.importado);
+  if(!itens.length)return;
+  baixar("base-precedentes.json",
+    JSON.stringify({app:"precedentes-base",gerado_em:hojeISO(),total:itens.length,itens}),
+    "application/json;charset=utf-8");
+}
+function importarArquivoBase(txt){
+  const t=String(txt||"").trim();
+  if(t.startsWith("{")){
+    try{
+      const j=JSON.parse(t);
+      if(j.app!=="precedentes-base"||!Array.isArray(j.itens)||!j.itens.length)
+        throw new Error("o arquivo não é uma base exportada deste aplicativo");
+      aplicarColeta(j.itens.filter(i=>!i.importado),"Base completa importada");
+      return;
+    }catch(e){setSync("Falha ao importar a base: "+e.message,false);return;}
+  }
+  importarCSVsTexto(t);
+}
+function importarCSVsTexto(csv){
+  try{const stj=coletarSTJ(csv);
+    if(!stj.length){setSync("O arquivo não continha precedentes reconhecíveis.",false);return;}
+    aplicarColeta(stj,"Importado do arquivo");
+  }catch(e){setSync("Falha ao ler o CSV: "+e.message,false);}
+}
+async function sincronizar(){return atualizarLocal(false);}   // compatibilidade
+window.addEventListener("online",()=>atualizarLocal(false));
+
+/* Partida: base curada na hora, restaura a última coleta (offline) e atualiza se online */
+normalizarItens(DADOS);reindex();
+try{const c=localStorage.getItem(SK("dados"));if(c){const j=JSON.parse(c);
+  if(j&&Array.isArray(j.itens)&&j.itens.length){DB=normalizarItens(j.itens);reindex();
+    setSync("Última base baixada em "+(j.quando||"?")+" · "+j.itens.length+" julgados",true);}}}catch(e){}
+mesclarImportados();
+setTimeout(()=>{render();if(navigator.onLine)atualizarLocal(false);},0);
+
+/* ===================== NUVEM DO GABINETE (Supabase, sem bibliotecas) =====================
+   Perfis por convite do gestor; login por código de e-mail (OTP); sincronização
+   pessoal por UNIÃO (nunca apaga automaticamente); observações compartilhadas
+   por julgado com autoria. As regras de segurança vivem no banco (RLS).
+   A sessão é isolada por perfil local (SK), permitindo contas distintas. */
+let SESSAO = loadObj("sessao");            // {access_token,refresh_token,email,uid,expira}
+let OBSG   = loadObj("obsgab");            // {julgado_id:[{id,texto,autor_email,autor,atualizado_em}]}
+let NUVEM_STATUS = "";
+function nuvemConfigurada(){return !!(CONFIG.nuvemUrl&&CONFIG.nuvemKey);}
+function nuvemLogada(){return nuvemConfigurada()&&!!SESSAO.access_token;}
+function salvarSessao(){saveObj("sessao",SESSAO);}
+function setNuvemStatus(t){NUVEM_STATUS=t;const e=document.getElementById("nv-status");if(e)e.textContent=t;}
+async function nvAuth(caminho,body){
+  const r=await fetch(CONFIG.nuvemUrl.replace(/\/$/,"")+"/auth/v1/"+caminho,{
+    method:"POST",headers:{apikey:CONFIG.nuvemKey,"Content-Type":"application/json"},
+    body:JSON.stringify(body)});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(j.msg||j.error_description||j.message||("HTTP "+r.status));
+  return j;
+}
+async function nvRest(caminho,opts){
+  opts=opts||{};
+  const r=await fetch(CONFIG.nuvemUrl.replace(/\/$/,"")+"/rest/v1/"+caminho,{
+    method:opts.method||"GET",
+    headers:Object.assign({apikey:CONFIG.nuvemKey,Authorization:"Bearer "+SESSAO.access_token,
+      "Content-Type":"application/json"},opts.headers||{}),
+    body:opts.body?JSON.stringify(opts.body):undefined});
+  if(r.status===401){const ok=await renovarSessao();if(ok)return nvRest(caminho,opts);throw new Error("sessão expirada");}
+  if(!r.ok){const t=await r.text().catch(()=>"");throw new Error("HTTP "+r.status+" "+t.slice(0,120));}
+  const tx=await r.text();return tx?JSON.parse(tx):null;
+}
+async function enviarCodigoNuvem(email){await nvAuth("otp",{email,create_user:false});}
+async function verificarCodigoNuvem(email,codigo){
+  const j=await nvAuth("verify",{type:"email",email,token:codigo});
+  SESSAO={access_token:j.access_token,refresh_token:j.refresh_token,
+    email:(j.user&&j.user.email)||email,uid:j.user&&j.user.id,
+    expira:Date.now()+((j.expires_in||3600)-90)*1000};
+  salvarSessao();
+}
+async function renovarSessao(){
+  if(!SESSAO.refresh_token)return false;
+  try{
+    const r=await fetch(CONFIG.nuvemUrl.replace(/\/$/,"")+"/auth/v1/token?grant_type=refresh_token",{
+      method:"POST",headers:{apikey:CONFIG.nuvemKey,"Content-Type":"application/json"},
+      body:JSON.stringify({refresh_token:SESSAO.refresh_token})});
+    const j=await r.json();
+    if(!r.ok)throw new Error(j.msg||"refresh");
+    SESSAO.access_token=j.access_token;SESSAO.refresh_token=j.refresh_token||SESSAO.refresh_token;
+    SESSAO.expira=Date.now()+((j.expires_in||3600)-90)*1000;salvarSessao();return true;
+  }catch(e){SESSAO={};salvarSessao();return false;}
+}
+function sairNuvem(){SESSAO={};salvarSessao();setNuvemStatus("Sessão encerrada neste dispositivo.");render();}
+
+/* ---- Sincronização pessoal por UNIÃO (nunca remove) ---- */
+function pacotePessoal(){
+  return {progresso:PROG,notas:NOTAS,cadernos:CADERNOS,importados:IMPORTADOS,
+    favoritos:[...state.favoritos],sabidos:[...state.eSabidos],revisar:[...state.eRevisar]};
+}
+function unirMapas(loc,rem){const s={...(rem||{})};for(const k in (loc||{}))s[k]=loc[k];return s;}
+function unirListas(a,b){return [...new Set([...(a||[]),...(b||[])])];}
+function unirCadernos(loc,rem){const s={...(rem||{})};for(const n in (loc||{}))s[n]=unirListas(loc[n],s[n]);return s;}
+function aplicarPessoal(remoto){
+  if(!remoto)return;
+  PROG=unirMapas(PROG,remoto.progresso);saveObj("progresso",PROG);
+  NOTAS=unirMapas(NOTAS,remoto.notas);saveObj("notas",NOTAS);
+  IMPORTADOS=unirMapas(IMPORTADOS,remoto.importados);salvarImportados();
+  CADERNOS=unirCadernos(CADERNOS,remoto.cadernos);salvarCadernos();
+  state.favoritos=new Set(unirListas([...state.favoritos],remoto.favoritos));save("favoritos",state.favoritos);
+  state.eSabidos=new Set(unirListas([...state.eSabidos],remoto.sabidos));save("sabidos",state.eSabidos);
+  state.eRevisar=new Set(unirListas([...state.eRevisar],remoto.revisar));save("revisar",state.eRevisar);
+  mesclarImportados();
+}
+async function pullPessoal(){
+  const rows=await nvRest("dados_pessoais?select=dados&user_id=eq."+SESSAO.uid);
+  if(rows&&rows[0])aplicarPessoal(rows[0].dados);
+}
+async function pushPessoal(){
+  await nvRest("dados_pessoais?on_conflict=user_id",{method:"POST",
+    headers:{Prefer:"resolution=merge-duplicates,return=minimal"},
+    body:[{user_id:SESSAO.uid,dados:pacotePessoal()}]});
+}
+let _pushTimer=null;
+function agendarPushNuvem(){
+  if(!nuvemLogada()||!navigator.onLine)return;
+  clearTimeout(_pushTimer);
+  _pushTimer=setTimeout(()=>{pushPessoal().catch(()=>{});},4000);
+}
+
+/* ---- Observações compartilhadas do gabinete ---- */
+async function pullObsGabinete(){
+  const rows=await nvRest("obs_gabinete?select=id,julgado_id,texto,autor,autor_email,atualizado_em&order=atualizado_em.asc");
+  const g={};(rows||[]).forEach(r=>{r.texto=repararTexto(r.texto);r.autor_email=repararTexto(r.autor_email);(g[r.julgado_id]=g[r.julgado_id]||[]).push(r);});
+  OBSG=g;saveObj("obsgab",OBSG);
+}
+async function addObsGabinete(julgadoId,texto){
+  texto=(texto||"").trim();if(!texto)return;
+  await nvRest("obs_gabinete",{method:"POST",headers:{Prefer:"return=minimal"},
+    body:[{julgado_id:julgadoId,texto}]});
+  await pullObsGabinete();render();
+}
+async function delObsGabinete(rowId){
+  await nvRest("obs_gabinete?id=eq."+rowId,{method:"DELETE",headers:{Prefer:"return=minimal"}});
+  await pullObsGabinete();render();
+}
+async function sincronizarNuvem(manual){
+  if(!nuvemLogada()){if(manual)setNuvemStatus("Entre com seu e-mail para sincronizar.");return;}
+  if(!navigator.onLine){setNuvemStatus("Sem internet — usando dados locais.");return;}
+  try{
+    if(Date.now()>(SESSAO.expira||0))await renovarSessao();
+    if(!SESSAO.access_token)return;
+    setNuvemStatus("Sincronizando…");
+    await pullPessoal();await pushPessoal();await pullObsGabinete();
+    setNuvemStatus("Nuvem sincronizada em "+new Date().toLocaleTimeString("pt-BR")+" · "+(SESSAO.email||""));
+    render();
+  }catch(e){setNuvemStatus("Falha na nuvem: "+e.message);}
+}
+window.addEventListener("online",()=>{sincronizarNuvem();});
+function obsGabHTML(d){
+  if(!nuvemConfigurada())return "";
+  const lista=(OBSG[d.id]||[]);
+  const linhas=lista.map(o=>`<div class="nt" style="margin-bottom:8px"><b style="font-size:11px;color:var(--stf)">${esc(o.autor_email||"colega")}</b> <span style="font-size:10.5px;color:var(--ink3)">· ${esc((o.atualizado_em||"").slice(0,10))}</span><br>${esc(o.texto)}${SESSAO.uid&&o.autor===SESSAO.uid?` <button class="abtn" data-gab-del="${o.id}" style="font-size:10.5px;padding:2px 7px">apagar</button>`:""}</div>`).join("");
+  const form=nuvemLogada()
+    ?`<textarea id="gab-txt-${d.id}" placeholder="Observação para o gabinete…" style="width:100%;min-height:56px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;font-family:inherit;background:var(--input);color:var(--ink)"></textarea>
+      <div class="nbtns"><button class="abtn lido" data-gab-add="${d.id}">Publicar para o gabinete</button></div>`
+    :`<div style="font-size:12px;color:var(--ink3)">Entre na nuvem (⚙ Configurações) para escrever.</div>`;
+  return `<div class="nota"><div class="nh">🏛 Observações do gabinete${lista.length?` (${lista.length})`:""}</div>${linhas||'<div style="font-size:12px;color:var(--ink3);margin-bottom:6px">Nenhuma observação compartilhada ainda.</div>'}${form}</div>`;
+}
+
+/* ===================== INTEGRAÇÃO COM O CLAUDE (explicação sob demanda) =====================
+   Chave pessoal do usuário, guardada apenas neste navegador/perfil. A IA APENAS
+   reformula a tese oficial em linguagem simples; por instrução, é proibida de
+   citar norma, número, precedente, data ou fato que não conste da tese. Todo
+   resultado é marcado como gerado por IA e exige conferência do magistrado. */
+let EXPLIC = loadObj("explic");   // {id:{texto,quando,modelo}}
+function salvarExplic(){saveObj("explic",EXPLIC);}
+function claudeConfigurado(){return !!(CONFIG.claudeKey);}
+const SYS_EXPLICAR = "Você é assistente de um juiz de direito brasileiro. Explique, "
+ +"em português do Brasil formal e simples, a TESE OFICIAL fornecida, para fins de "
+ +"estudo. REGRAS ABSOLUTAS E INEGOCIÁVEIS: baseie-se EXCLUSIVAMENTE no texto da tese; "
+ +"NÃO cite artigos, números, precedentes, súmulas, datas ou fatos que não constem "
+ +"literalmente dela; NÃO afirme nada de que não tenha certeza a partir do texto; se a "
+ +"tese for insuficiente para explicar, diga isso expressamente. NÃO invente em hipótese "
+ +"alguma. Escreva de 2 a 4 frases corridas, sem listas e sem subtópicos.";
+async function chamarClaudeExplicacao(d){
+  const r=await fetch("https://api.anthropic.com/v1/messages",{
+    method:"POST",
+    headers:{"content-type":"application/json","x-api-key":CONFIG.claudeKey,
+      "anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},
+    body:JSON.stringify({model:CONFIG.claudeModel||"claude-haiku-4-5-20251001",max_tokens:600,
+      system:SYS_EXPLICAR,
+      messages:[{role:"user",content:`TÍTULO: ${d.titulo}\n\nTESE OFICIAL:\n${d.completo}`}]})});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error((j.error&&j.error.message)||("HTTP "+r.status));
+  const txt=(j.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n").trim();
+  if(!txt)throw new Error("resposta vazia");
+  return txt;
+}
+async function gerarExplicacao(id){
+  const d=byId[id];if(!d)return;
+  if(!claudeConfigurado()){state.explicando=id;render();return;}
+  state.explicandoLoading=id;render();
+  try{
+    const texto=await chamarClaudeExplicacao(d);
+    EXPLIC[id]={texto,quando:new Date().toLocaleString("pt-BR"),modelo:CONFIG.claudeModel||"claude-haiku-4-5-20251001"};
+    salvarExplic();
+  }catch(e){
+    EXPLIC[id]={erro:e.message};
+  }
+  state.explicandoLoading=null;state.explicando=id;render();
+}
+function explicarHTML(d){
+  const cache=EXPLIC[d.id];
+  const carregando=state.explicandoLoading===d.id;
+  let corpo;
+  if(carregando){
+    corpo=`<div style="font-size:12.5px;color:var(--ink3)">Consultando o Claude…</div>`;
+  }else if(cache&&cache.texto){
+    corpo=`<div class="nt">${esc(cache.texto)}</div>
+      <div style="font-size:10.5px;color:var(--ink3);margin-top:6px">💡 Explicação gerada por IA a partir da tese oficial — confira antes de citar. Modelo: ${esc(cache.modelo||"")} · ${esc(cache.quando||"")}</div>
+      <div class="nbtns"><button class="abtn" data-expl-gera="${d.id}">Gerar novamente</button><button class="abtn" data-expl-apaga="${d.id}">Remover</button></div>`;
+  }else if(cache&&cache.erro){
+    corpo=`<div style="font-size:12.5px;color:var(--crimson)">Não foi possível gerar: ${esc(cache.erro)}</div>
+      <div class="nbtns"><button class="abtn" data-expl-gera="${d.id}">Tentar novamente</button></div>`;
+  }else if(!claudeConfigurado()){
+    corpo=`<div style="font-size:12.5px;color:var(--ink3)">Para gerar uma explicação em linguagem simples da tese, configure sua chave do Claude em <b>⚙ Configurações → Integração com o Claude</b>. A explicação é produzida a partir da tese oficial e marcada como gerada por IA.</div>`;
+  }else{
+    corpo=`<div class="nbtns"><button class="abtn lido" data-expl-gera="${d.id}">Gerar explicação da tese</button></div>`;
+  }
+  return `<div class="nota"><div class="nh">💡 Explicação da tese${d.explicacao?" (didática verificada acima)":""}</div>${corpo}</div>`;
+}
+async function buscarNovidades(){
+  if(!DATA_URL)return;
+  try{
+    const r=await fetch(DATA_URL.replace(/dados\.json(\?.*)?$/,"changelog.json"),{cache:"no-store"});
+    if(r.ok){const j=await r.json();
+      NOVIDADES={data:j.data||"",novos:j.novos||[],alterados:j.alterados||[]};renderNotifs();}
+  }catch(e){}
+}
+
+/* ===================== PESQUISA EXTERNA (sites oficiais e Dizer o Direito) ===================== */
+const BUSCAS_EXTERNAS = [
+  ["STF (oficial)", q=>"https://jurisprudencia.stf.jus.br/pages/search?base=acordaos&pesquisa_inteiro_teor=false&sinonimo=true&plural=true&page=1&pageSize=10&queryString="+encodeURIComponent(q)],
+  ["STJ (oficial)", q=>"https://scon.stj.jus.br/SCON/pesquisar.jsp?b=ACOR&p=true&livre="+encodeURIComponent(q)],
+  ["Informativos STJ", q=>"https://scon.stj.jus.br/jurisprudencia/externo/informativo/?livre="+encodeURIComponent(q)],
+  ["TJMA (site oficial)", q=>"https://www.google.com/search?q=site%3Atjma.jus.br+"+encodeURIComponent(q)],
+  ["Dizer o Direito (blog)", q=>"https://www.dizerodireito.com.br/search?q="+encodeURIComponent(q)],
+  ["Buscador DoD (assinantes)", q=>"https://buscadordizerodireito.com.br/jurisprudencia?palavra-chave="+encodeURIComponent(q)],
+];
+function abrirBusca(fn,q){try{window.open(fn(q),"_blank","noopener");}catch(e){}}
+
+/* ===================== IMPORTAÇÃO PESSOAL (colar julgados selecionados) =====================
+   O usuário cola trechos que ele mesmo selecionou (ex.: a lista de teses da
+   versão resumida do informativo que já lê). Cada linha/parágrafo vira um
+   cartão pessoal, pesquisável, anotável e agendável. Nada é raspado de
+   terceiros pelo aplicativo; a curadoria e a responsabilidade são do usuário. */
+let IMPORTADOS = loadObj("importados");   // {id:item}
+function salvarImportados(){saveObj("importados",IMPORTADOS);}
+function hash36(s){let h=5381;for(let i=0;i<s.length;i++)h=((h<<5)+h+s.charCodeAt(i))>>>0;return h.toString(36);}
+function dividirColagem(texto){
+  const brutas=texto.split(/\n/).map(l=>l.trim());
+  const linhas=[];let buf=[];
+  const fecha=()=>{if(buf.length){const t=buf.join(" ").trim();if(t.length>=25)linhas.push(t);buf=[];}};
+  for(const l of brutas){
+    if(!l){fecha();continue;}
+    const marcada=/^[§•\-–▪‣]|^\d+[\.)]\s/.test(l);
+    if(marcada){fecha();buf=[l.replace(/^[§•\-–▪‣]\s*|^\d+[\.)]\s*/,"")];}
+    else buf.push(l);
+  }
+  fecha();
+  return linhas;
+}
+function importarColagem(texto,tribunal,referencia){
+  const linhas=dividirColagem(texto);let novos=0;
+  for(const t of linhas){
+    const id="imp-"+hash36(tribunal+"|"+t);
+    if(IMPORTADOS[id])continue;
+    IMPORTADOS[id]={
+      id,tribunal,especie:"INF",area:"Importados (seleção pessoal)",obrigatorio:false,
+      validade:"Vigente",situacao:"Importação pessoal em "+fmtBR(hojeISO())+(referencia?" · ref.: "+referencia:""),
+      assuntos:["Importados"],numero:referencia?referencia.slice(0,40):"Importado",
+      fonte:"Seleção pessoal do usuário"+(referencia?" — "+referencia:""),
+      titulo:t.length>150?t.slice(0,150)+"…":t,resumo:t.slice(0,400),completo:t,
+      precedentes:"",vinculos:[],importado:true};
+    novos++;
+  }
+  salvarImportados();mesclarImportados();render();
+  return {novos,total:linhas.length};
+}
+function removerImportado(id){delete IMPORTADOS[id];salvarImportados();DB=DB.filter(d=>d.id!==id);reindex();render();}
+function limparImportados(){IMPORTADOS={};salvarImportados();DB=DB.filter(d=>!d.importado);reindex();render();}
+function mesclarImportados(){
+  const ids=new Set(DB.map(d=>d.id));
+  const novos=Object.values(IMPORTADOS).filter(i=>!ids.has(i.id));
+  if(novos.length){normalizarItens(novos);DB=DB.concat(novos);reindex();}
+}
+/* ===================== PROGRESSO DE ESTUDO E AGENDA DE REVISÕES ===================== */
+const INTERVALOS = [1, 3, 7, 15, 30, 60, 120];           // dias (revisão espaçada)
+let CADERNOS = loadObj("cadernos");   // {nome:[ids]}
+function salvarCadernos(){saveObj("cadernos",CADERNOS);}
+function toggleCaderno(nome,id){
+  const l=CADERNOS[nome]||[];const i=l.indexOf(id);
+  if(i>=0)l.splice(i,1);else l.push(id);
+  if(l.length)CADERNOS[nome]=l;else delete CADERNOS[nome];
+  salvarCadernos();render();
+}
+function criarCaderno(nome,id){
+  nome=(nome||"").trim().slice(0,40);if(!nome)return;
+  CADERNOS[nome]=CADERNOS[nome]||[];
+  if(id&&!CADERNOS[nome].includes(id))CADERNOS[nome].push(id);
+  salvarCadernos();render();
+}
+function apagarCaderno(nome){delete CADERNOS[nome];if(state.caderno===nome)state.caderno=null;salvarCadernos();render();}
+function hl(txt){
+  const s=esc(txt);const q=state.q.trim();
+  if(q.length<2)return s;
+  const alvo=esc(q).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  try{return s.replace(new RegExp("("+alvo+")","gi"),"<mark>$1</mark>");}catch(e){return s;}
+}
+function ordenar(list){
+  const o=state.ordem;
+  if(o==="tribunal")return [...list].sort((a,b)=>a.tribunal.localeCompare(b.tribunal)||a.numero.localeCompare(b.numero,"pt",{numeric:true}));
+  if(o==="numero")return [...list].sort((a,b)=>a.numero.localeCompare(b.numero,"pt",{numeric:true}));
+  if(o==="titulo")return [...list].sort((a,b)=>a.titulo.localeCompare(b.titulo,"pt"));
+  return list; // padrão: agrupamento por área na ordem da base
+}
+let PROG = loadObj("progresso");   // {id:{lidoEm, revisoes:[datas], proxima, nivel}}
+function hojeISO(){return new Date().toISOString().slice(0,10);}
+function addDias(iso,n){const d=new Date(iso+"T12:00:00");d.setDate(d.getDate()+n);return d.toISOString().slice(0,10);}
+function fmtBR(iso){if(!iso)return "—";const [a,m,d]=iso.split("-");return `${d}/${m}/${a}`;}
+function marcarLido(id){
+  const p=PROG[id]||{revisoes:[]};
+  p.lidoEm=p.lidoEm||hojeISO();
+  PROG[id]=p;saveObj("progresso",PROG);render();   // NÃO agenda nada: agendamento é manual
+}
+function desmarcarLido(id){delete PROG[id];saveObj("progresso",PROG);render();}
+function concluirRevisao(id){
+  const p=PROG[id]||{revisoes:[],lidoEm:hojeISO()};
+  p.revisoes=p.revisoes||[];p.revisoes.push(hojeISO());
+  delete p.proxima;                                  // próxima só se o usuário agendar
+  PROG[id]=p;saveObj("progresso",PROG);render();
+}
+function agendarPara(id,dataISO){
+  if(!dataISO)return;
+  const p=PROG[id]||{revisoes:[],lidoEm:hojeISO()};
+  p.proxima=dataISO;PROG[id]=p;saveObj("progresso",PROG);
+  state.agendando=null;render();
+}
+function agendarEmDias(id,dias){agendarPara(id,addDias(hojeISO(),dias));}
+function cancelarAgendamento(id){const p=PROG[id];if(p){delete p.proxima;saveObj("progresso",PROG);}state.agendando=null;render();}
+function devidasHoje(){const h=hojeISO();return DB.filter(d=>PROG[d.id]&&PROG[d.id].proxima&&PROG[d.id].proxima<=h);}
+function proximasRevisoes(){const h=hojeISO();return DB.filter(d=>PROG[d.id]&&PROG[d.id].proxima&&PROG[d.id].proxima>h)
+  .sort((a,b)=>PROG[a.id].proxima.localeCompare(PROG[b.id].proxima));}
+function lidos(){return DB.filter(d=>PROG[d.id]&&PROG[d.id].lidoEm);}
+
+/* ---- Notificações da página inicial: novidades da base + revisões do dia ---- */
+let NOVIDADES = {data:"", novos:[], alterados:[]};
+function irParaCard(id){
+  state.estudo=false;state.painel=false;state.config=false;
+  $("#studyBtn").classList.remove("on");$("#painelBtn").classList.remove("on");$("#cfgBtn").classList.remove("on");
+  state.abertos.add(id);render();
+  const el=document.getElementById("card-"+id);
+  if(el)el.scrollIntoView({behavior:"smooth",block:"center"});
+}
+function renderNotifs(){
+  const box=document.getElementById("notifs");if(!box)return;
+  if(state.estudo||state.painel||state.config){box.innerHTML="";return;}
+  const partes=[];
+  const dev=devidasHoje();
+  if(dev.length&&CONFIG.notifRevisoes){
+    partes.push(`<div class="notif due">📅 <div><b>${dev.length} ${dev.length===1?"revisão agendada":"revisões agendadas"}</b> para hoje ou em atraso.</div><button class="ver" data-abrepainel="1">Abrir estudos</button></div>`);
+  }
+  const vistaAte=localStorage.getItem(SK("novidades_vistas"))||"";
+  const tot=(NOVIDADES.novos||[]).length+(NOVIDADES.alterados||[]).length;
+  if(tot&&NOVIDADES.data&&NOVIDADES.data>vistaAte&&CONFIG.notifNovidades){
+    const li=[...(NOVIDADES.novos||[]).map(n=>({...n,tag:"novo"})),...(NOVIDADES.alterados||[]).map(n=>({...n,tag:"alterado"}))]
+      .slice(0,6).map(n=>`<button class="link" data-goto-notif="${n.id}">${n.tag==="novo"?"＋":"↻"} ${esc(n.numero||n.id)}</button>`).join(" ");
+    partes.push(`<div class="notif">🔔 <div><b>Julgados recentes na base</b> (coleta de ${fmtBR(NOVIDADES.data)}): ${(NOVIDADES.novos||[]).length} novos, ${(NOVIDADES.alterados||[]).length} alterados.<div class="links" style="margin-top:6px">${li}</div></div><button class="fechar" title="Dispensar" data-dispensa="1">✕</button></div>`);
+  }
+  box.innerHTML=partes.join("");
+  box.querySelectorAll("[data-abrepainel]").forEach(b=>b.onclick=()=>{state.painel=true;state.estudo=false;$("#painelBtn").classList.add("on");$("#studyBtn").classList.remove("on");render();});
+  box.querySelectorAll("[data-goto-notif]").forEach(b=>b.onclick=()=>irParaCard(b.dataset.gotoNotif));
+  box.querySelectorAll("[data-dispensa]").forEach(b=>b.onclick=()=>{localStorage.setItem(SK("novidades_vistas"),NOVIDADES.data||hojeISO());renderNotifs();});
+}
+
+
+const state = {
+  painel:false, config:false, agendando:null, editandoNota:null, editandoImp:null, explicando:null, explicandoLoading:null, editandoNotaG:null, areasExpandidas:new Set(),
+  acervo:"todos", caderno:null, ordem:"padrao", filtrosAbertos:false, qAssunto:"", leituraSeq:false, seqIdx:0, cadernando:null,
+  q:"",tribunal:"Todos",especie:"Todas",area:"Todas",assuntos:new Set(),soObrig:false,
+  completo:(CONFIG.leitura==="completo"),estudo:false,refOpen:false,favoritos:load("favoritos"),abertos:new Set(),
+  eIdx:0,eRevelado:false,eDeck:"todos",eSabidos:load("sabidos"),eRevisar:load("revisar")
+};
+function load(k){try{const v=localStorage.getItem(SK(k));return new Set(v?JSON.parse(v):[]);}catch(e){return new Set();}}
+function save(k,set){try{localStorage.setItem(SK(k),JSON.stringify([...set]));}catch(e){}
+  if(["favoritos","sabidos","revisar"].includes(k)&&typeof agendarPushNuvem==="function")agendarPushNuvem();}
+
+/* ===================== FILTRAGEM ===================== */
+function filtrar(){
+  const q=state.q.trim().toLowerCase();
+  return DB.filter(d=>{
+    if(state.tribunal!=="Todos"&&d.tribunal!==state.tribunal)return false;
+    if(state.especie!=="Todas"&&d.especie!==state.especie)return false;
+    if(state.area!=="Todas"&&d.area!==state.area)return false;
+    if(state.soObrig&&!d.obrigatorio)return false;
+    for(const a of state.assuntos){if(!d.assuntos.includes(a))return false;}
+    if(state.acervo==="lidos"&&!(PROG[d.id]&&PROG[d.id].lidoEm))return false;
+    if(state.acervo==="naolidos"&&PROG[d.id]&&PROG[d.id].lidoEm)return false;
+    if(state.acervo==="favoritos"&&!state.favoritos.has(d.id))return false;
+    if(state.acervo==="comnotas"&&!NOTAS[d.id])return false;
+    if(state.caderno&&!(CADERNOS[state.caderno]||[]).includes(d.id))return false;
+    if(q){const blob=[d.titulo,d.resumo,d.completo,d.explicacao,d.emSuma,d.mnemonico,d.numero,d.fonte,d.area,NOTAS[d.id]||"",...d.assuntos,...d.dispositivos.map(x=>x.ref+" "+x.texto)].join(" ").toLowerCase();if(!blob.includes(q))return false;}
+    return true;
+  });
+}
+
+/* ===================== RENDER ===================== */
+const $=(s)=>document.querySelector(s);
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function renderRef(){
+  const p=$("#refPanel");
+  if(!state.refOpen){p.style.display="none";p.innerHTML="";return;}
+  p.style.display="block";
+  p.innerHTML=`<div class="refbox"><h3>Fundamento da observância obrigatória — art. 927 do CPC</h3><pre>${esc(ART927)}</pre></div>`;
+}
+
+function renderFilters(){
+  const f=$("#filters");
+  const areas=[...new Set(DB.map(d=>d.area))].sort((a,b)=>a.localeCompare(b,'pt'));
+  const contArea={};DB.forEach(d=>{contArea[d.area]=(contArea[d.area]||0)+1;});
+  const espPresentes=new Set(DB.map(d=>d.especie));
+  const nAtivos=(state.assuntos.size?1:0)+(state.soObrig?1:0)+(state.acervo!=="todos"?1:0)+(state.caderno?1:0);
+
+  const chipsTrib=["Todos","STF","STJ","TJMA"].map(o=>{
+    const on=state.tribunal===o;const c=TRIB[o]&&TRIB[o].cor;
+    const st=on?`style="background:${c||"var(--ink)"};border-color:${c||"var(--ink)"};color:#fff"`:"";
+    return `<button class="chip" ${st} data-ftrib="${o}">${o}</button>`;}).join("");
+
+  const selArea=`<select class="fsel" id="f-area" title="Filtrar por matéria">
+    <option value="Todas">Matéria: todas</option>
+    ${areas.map(a=>`<option value="${esc(a)}" ${state.area===a?"selected":""}>${esc(a)} (${contArea[a]})</option>`).join("")}</select>`;
+  const selEsp=`<select class="fsel" id="f-esp" title="Filtrar por espécie">
+    <option value="Todas">Espécie: todas</option>
+    ${Object.keys(ESP).filter(k=>espPresentes.has(k)).map(k=>`<option value="${k}" ${state.especie===k?"selected":""}>${ESP[k].label}</option>`).join("")}</select>`;
+  const selOrd=`<select class="fsel" id="f-ord" title="Ordenação">
+    ${[["padrao","Ordenar: por matéria"],["tribunal","Ordenar: tribunal"],["numero","Ordenar: número"],["titulo","Ordenar: título A–Z"]].map(([k,l])=>`<option value="${k}" ${state.ordem===k?"selected":""}>${l}</option>`).join("")}</select>`;
+
+  let painel="";
+  if(state.filtrosAbertos){
+    const q=state.qAssunto.trim().toLowerCase();
+    const sel=[...state.assuntos];
+    const rest=ASSUNTOS.filter(a=>!state.assuntos.has(a)&&(!q||a.toLowerCase().includes(q)));
+    const mostraveis=rest.slice(0,24);
+    const chipsSel=sel.map(a=>`<button class="chip" style="background:#3E4C5B;border-color:#3E4C5B;color:#fff" data-assunto="${esc(a)}">${esc(a)}<span class="x">✕</span></button>`).join("");
+    const chipsRest=mostraveis.map(a=>`<button class="chip" data-assunto="${esc(a)}">${esc(a)}</button>`).join("");
+    const mais=rest.length>mostraveis.length?`<span class="amais">+${rest.length-mostraveis.length} assuntos — refine a busca ao lado</span>`:"";
+    const acervo=[["todos","Todos"],["naolidos","Não lidos"],["lidos","Lidos"],["favoritos","★ Favoritos"],["comnotas","📝 Com observações"]]
+      .map(([k,l])=>`<button class="chip" ${state.acervo===k?'style="background:#5C6673;border-color:#5C6673;color:#fff"':''} data-acervo="${k}">${l}</button>`).join("");
+    const cads=Object.keys(CADERNOS).sort((a,b)=>a.localeCompare(b,'pt'))
+      .map(n=>`<button class="cadchip ${state.caderno===n?'on':''}" data-fcad="${esc(n)}">📓 ${esc(n)} (${CADERNOS[n].length})</button>`).join("");
+    painel=`<div class="fpanel">
+      <div class="frow"><span class="flabel">Assuntos</span>
+        <input class="asearch" id="f-abusca" placeholder="buscar assunto…" value="${esc(state.qAssunto)}"/>
+        <div class="chips" id="a-chips" style="align-items:center">${chipsSel}${chipsRest}${mais}</div></div>
+      <div class="frow"><span class="flabel">Meu acervo</span><div class="chips">${acervo}${cads}</div></div>
+      <div class="frow"><span class="flabel">Vinculação</span><div class="chips">
+        <label class="switch"><input type="checkbox" id="soObrig" ${state.soObrig?'checked':''}/> Somente observância obrigatória (art. 927 CPC)</label></div></div>
+    </div>`;
+  }
+
+  f.innerHTML=`<div class="fbar">${chipsTrib}${selArea}${selEsp}${selOrd}
+    <button class="fmore" id="f-mais">${state.filtrosAbertos?"▴":"▾"} Mais filtros ${nAtivos?`<span class="badge-n">${nAtivos}</span>`:""}</button></div>${painel}`;
+
+  f.querySelectorAll('[data-ftrib]').forEach(b=>b.onclick=()=>{state.tribunal=b.dataset.ftrib;render();});
+  $("#f-area").onchange=(e)=>{state.area=e.target.value;render();};
+  $("#f-esp").onchange=(e)=>{state.especie=e.target.value;render();};
+  $("#f-ord").onchange=(e)=>{state.ordem=e.target.value;render();};
+  $("#f-mais").onclick=()=>{state.filtrosAbertos=!state.filtrosAbertos;render();};
+  if(state.filtrosAbertos){
+    const inp=$("#f-abusca");
+    inp.oninput=()=>{               // atualização direcionada: preserva o foco
+      state.qAssunto=inp.value;
+      const q=state.qAssunto.trim().toLowerCase();
+      const sel=[...state.assuntos];
+      const rest=ASSUNTOS.filter(a=>!state.assuntos.has(a)&&(!q||a.toLowerCase().includes(q)));
+      const mostraveis=rest.slice(0,24);
+      const box=$("#a-chips");
+      box.innerHTML=sel.map(a=>`<button class="chip" style="background:#3E4C5B;border-color:#3E4C5B;color:#fff" data-assunto="${esc(a)}">${esc(a)}<span class="x">✕</span></button>`).join("")
+        +mostraveis.map(a=>`<button class="chip" data-assunto="${esc(a)}">${esc(a)}</button>`).join("")
+        +(rest.length>mostraveis.length?`<span class="amais">+${rest.length-mostraveis.length} assuntos — refine a busca ao lado</span>`:"");
+      box.querySelectorAll('[data-assunto]').forEach(b=>b.onclick=()=>{const a=b.dataset.assunto;state.assuntos.has(a)?state.assuntos.delete(a):state.assuntos.add(a);render();});
+    };
+    f.querySelectorAll('[data-assunto]').forEach(b=>b.onclick=()=>{const a=b.dataset.assunto;state.assuntos.has(a)?state.assuntos.delete(a):state.assuntos.add(a);render();});
+    f.querySelectorAll('[data-acervo]').forEach(b=>b.onclick=()=>{state.acervo=b.dataset.acervo;render();});
+    f.querySelectorAll('[data-fcad]').forEach(b=>b.onclick=()=>{state.caderno=state.caderno===b.dataset.fcad?null:b.dataset.fcad;render();});
+    $("#soObrig").onchange=(e)=>{state.soObrig=e.target.checked;render();};
+  }
+}
+function renderSelInfo(list){
+  const el=$("#selinfo");const parts=[];
+  if(state.assuntos.size)parts.push(`assuntos: <b>${[...state.assuntos].map(esc).join(" ∩ ")}</b>`);
+  if(state.tribunal!=="Todos")parts.push(`tribunal: <b>${state.tribunal}</b>`);
+  if(state.especie!=="Todas")parts.push(`espécie: <b>${ESP[state.especie].label}</b>`);
+  if(state.area!=="Todas")parts.push(`área: <b>${esc(state.area)}</b>`);
+  if(state.soObrig)parts.push(`<b>observância obrigatória</b>`);
+  if(state.acervo!=="todos")parts.push(`acervo: <b>${{todos:"",naolidos:"não lidos",lidos:"lidos",favoritos:"favoritos",comnotas:"com observações"}[state.acervo]}</b>`);
+  if(state.caderno)parts.push(`caderno: <b>📓 ${esc(state.caderno)}</b>`);
+  const filtro=parts.length?`Filtrando por ${parts.join(" · ")} — `:"";
+  const limpar=(parts.length||state.q)?`<button class="clearall" id="clearAll">limpar tudo</button>`:"";
+  const extras=list.length?` · <button class="clearall" id="btnSeq">▶ Leitura sequencial</button> · <button class="clearall" id="btnSorte" title="Abrir um julgado aleatório do resultado">🎲 Aleatório</button>`:"";
+  el.innerHTML=`${filtro}<b>${list.length}</b> ${list.length===1?'precedente':'precedentes'} ${limpar}${extras}`;
+  if(state.q.trim().length>=2){el.innerHTML+=`<div class="extrow">Pesquisar fora do aplicativo: `+BUSCAS_EXTERNAS.map((b,i)=>`<button class="extbtn" data-ext="${i}">${b[0]} ↗</button>`).join("")+`</div>`;el.querySelectorAll("[data-ext]").forEach(b=>b.onclick=()=>abrirBusca(BUSCAS_EXTERNAS[b.dataset.ext][1],state.q.trim()));}
+  if($("#btnSeq"))$("#btnSeq").onclick=()=>{state.leituraSeq=true;state.seqIdx=0;render();};
+  if($("#btnSorte"))$("#btnSorte").onclick=()=>{const l=ordenar(list);if(!l.length)return;irParaCard(l[Math.floor(Math.random()*l.length)].id);};
+  if($("#clearAll"))$("#clearAll").onclick=()=>{state.q="";state.tribunal="Todos";state.especie="Todas";state.area="Todas";state.assuntos=new Set();state.soObrig=false;state.acervo="todos";state.caderno=null;state.ordem="padrao";state.areasExpandidas=new Set();state.qAssunto="";state.filtrosAbertos=false;$("#q").value="";render();};
+}
+
+function cardHTML(d,forceFull){
+  const esp=ESP[d.especie],trib=TRIB[d.tribunal];
+  const full=forceFull||state.completo||state.abertos.has(d.id);
+  const fav=state.favoritos.has(d.id);
+  const obl=d.obrigatorio?`<span class="oblig" title="Observância obrigatória — art. 927 do CPC">Obrigatório</span>`:`<span class="oblig no" title="Ferramenta de consulta, não vinculante por si">Consulta</span>`;
+  const corr=(d.vinculos||[]).filter(v=>byId[v]);
+  const vincs=corr.map(v=>`<button class="link" data-goto="${v}">↔ ${esc(byId[v].numero)}</button>`).join("");
+  const mnem=(d.mnemonico&&CONFIG.mostrarMnemonicos)?`<div class="mnem">🧠 <span><b>Mnemônico:</b> ${esc(d.mnemonico)}</span></div>`:"";
+  const emsuma=CONFIG.mostrarEmSuma?`<div class="emsuma"><span>Em suma</span>${hl(d.emSuma)}</div>`:"";
+  let body;
+  if(full){
+    const disp=(d.dispositivos.length&&CONFIG.mostrarDispositivos)?`<div class="disp"><div class="disp-h">Dispositivos legais adotados (na íntegra)</div>`+d.dispositivos.map(x=>`<div class="disp-i"><div class="disp-ref">${esc(x.ref)}</div><div class="disp-tx">${esc(x.texto)}</div></div>`).join("")+`</div>`:"";
+    const flow=(d.fluxograma&&CONFIG.mostrarFluxogramas)?fluxoHTML(d.fluxograma):"";
+    const qCard=(d.numero+" "+d.titulo.split(" ").slice(0,6).join(" ")).trim();
+    const extCard=`<div class="links" style="margin-top:4px"><span style="font-size:11px;color:var(--ink3);font-weight:700">🔎 Ver fora:</span>`+
+      BUSCAS_EXTERNAS.filter(b=>b[0].startsWith(d.tribunal)||b[0].includes("Dizer")||b[0].includes("DoD")).map((b)=>`<button class="extbtn" data-extcard="${esc(qCard)}|${BUSCAS_EXTERNAS.indexOf(b)}">${b[0]} ↗</button>`).join("")+`</div>`;
+    const meta=`<div class="meta"><div><strong>Origem:</strong> ${esc(d.fonte)}</div>${extCard}${d.precedentes?`<div><strong>Referência:</strong> ${esc(d.precedentes)}</div>`:""}${vincs?`<div><strong>Correlatos:</strong></div><div class="links">${vincs}</div>`:""}<div class="tags">${d.assuntos.map(a=>`<span class="tag" data-assunto="${esc(a)}">${esc(a)}</span>`).join("")}</div></div>`;
+    body=`${emsuma}${CONFIG.mostrarExplicacoes&&d.explicacao?`<div class="expl"><b>Explicação</b>${esc(d.explicacao)}</div>`:""}${flow}<p class="ctext" style="margin-top:12px"><strong>${d.pendente?"Questão submetida (tese ainda não firmada)":"Tese na íntegra"}: </strong>${hl(d.completo)}</p>${disp}${mnem}${meta}`;
+  }else{
+    body=`${emsuma}${mnem}`;
+  }
+  return `<article class="card" style="border-left-color:${trib.cor}" id="card-${d.id}">
+    <div class="ctop"><div class="badges"><span class="badge" style="background:${trib.bg};color:${trib.cor};font-weight:700">${d.tribunal}</span><span class="badge" style="background:${esp.bg};color:${esp.cor}">${esp.curto}</span>${obl}<span class="num">${esc(d.numero)}</span></div><button class="fav" data-fav="${d.id}" title="Favoritar">${fav?'★':'☆'}</button></div>
+    <h3 class="ctitle">${hl(d.titulo)}</h3>
+    <div class="status"><span class="vig${d.validade.includes('revis')?' warn':''}">● ${esc(d.validade)}</span><span class="sit">${esc(d.situacao)}</span></div>
+    ${body}
+    <div class="actrow">
+      <button class="abtn ${PROG[d.id]&&PROG[d.id].lidoEm?'lido':''}" data-lido="${d.id}">${PROG[d.id]&&PROG[d.id].lidoEm?'✓ Lido em '+fmtBR(PROG[d.id].lidoEm):'Marcar como lido'}</button>
+      ${PROG[d.id]&&PROG[d.id].proxima?`<span class="duechip ${PROG[d.id].proxima<=hojeISO()?'hoje':''}">Revisão: ${PROG[d.id].proxima<=hojeISO()?'hoje':fmtBR(PROG[d.id].proxima)}</span><button class="abtn" data-rev="${d.id}">✓ Revisado</button><button class="abtn" data-ag-abre="${d.id}">Reagendar</button><button class="abtn" data-ag-cancela="${d.id}">Cancelar</button>`
+        :`<button class="abtn" data-ag-abre="${d.id}">📅 Agendar revisão</button>`}
+      ${!state.editandoNota&&!NOTAS[d.id]?`<button class="abtn" data-nota-edita="${d.id}">📝 Observação</button>`:""}
+      ${NUVEM.user&&!NOTASG[d.id]&&state.editandoNotaG!==d.id?`<button class="abtn" data-notag-edita="${d.id}">🏛 Obs. gabinete</button>`:""}
+      <button class="abtn" data-cad-abre="${d.id}">📓 Caderno</button>
+      <button class="abtn" data-explicar="${d.id}">💡 Explicar</button>
+      <button class="abtn" data-citar="${d.id}">⧉ Citar</button>
+      <button class="abtn" data-obs1="${d.id}" title="Baixar nota estruturada (.md) deste julgado para o Obsidian">🟣 Obsidian</button>
+      <button class="abtn" data-obsi="${d.id}" title="Baixar nota estruturada .md para o Obsidian">🟣 Nota .md</button>
+      ${d.importado?`<button class="abtn" data-imp-edit="${d.id}">✎ Editar</button><button class="abtn" data-imp-del="${d.id}" style="color:var(--crimson);border-color:var(--crimson)">Excluir importado</button>`:""}
+      ${NOTAS[d.id]&&!full?`<span class="notachip">📝 com observações</span>`:""}
+    </div>
+    ${state.agendando===d.id?agendadorHTML(d.id):""}
+    ${state.cadernando===d.id?cadernoMenuHTML(d.id):""}
+    ${state.editandoImp===d.id?editorImportadoHTML(d):""}
+    ${(full||state.editandoNota===d.id)?notaHTML(d):""}
+    ${(full||state.editandoNotaG===d.id)?notaGabineteHTML(d):""}
+    ${full?obsGabHTML(d):""}
+    ${state.explicando===d.id||state.explicandoLoading===d.id?explicarHTML(d):""}
+    ${!state.completo?`<button class="expand" data-exp="${d.id}">${state.abertos.has(d.id)?'Recolher':'Ver completo (tese, explicação, fluxograma, dispositivos)'} ▾</button>`:""}
+  </article>`;
+}
+
+function filtrosAtivos(){
+  return !!(state.q.trim()||state.tribunal!=="Todos"||state.especie!=="Todas"||state.area!=="Todas"
+    ||(state.assuntos&&state.assuntos.size)||state.soObrig||(state.acervo&&state.acervo!=="todos")||state.caderno);
+}
+function renderList(list){
+  const foco=filtrosAtivos();
+  const m=$("#main");
+  if(list.length===0){m.innerHTML=`<div class="empty"><h3>Nenhum precedente encontrado.</h3><p>Ajuste a busca ou limpe os filtros para ver todos os itens da base.</p></div>`;return;}
+  if(state.ordem!=="padrao"){
+    const LIM=60;const exp=state.areasExpandidas.has("__flat__");
+    const vis=exp?list:list.slice(0,LIM);const resto=list.length-vis.length;
+    m.innerHTML=`<section class="area${foco?' foco':''}"><div class="grid${foco?' foco':''}">${vis.map(d=>cardHTML(d)).join("")}</div>${resto>0?`<div style="text-align:center;margin-top:12px"><button class="abtn" data-maisflat="1">Mostrar os demais ${resto} ▾</button></div>`:""}</section>`;
+    bindCardAcoes(m);
+    m.querySelectorAll("[data-maisflat]").forEach(b=>b.onclick=()=>{state.areasExpandidas.add("__flat__");render();});
+    return;
+  }
+  const groups={};list.forEach(d=>{(groups[d.area]=groups[d.area]||[]).push(d);});
+  const LIMITE=30;
+  m.innerHTML=Object.entries(groups).map(([area,itens])=>{
+    const exp=state.areasExpandidas.has(area);
+    const vis=exp?itens:itens.slice(0,LIMITE);
+    const resto=itens.length-vis.length;
+    return `<section class="area${foco?' foco':''}"><div class="area-h"><span class="area-bar" style="background:${AREA_COR[area]||'#888'}"></span><h2 class="area-t">${esc(area)}</h2><span class="area-c">${itens.length}</span></div><div class="grid${foco?' foco':''}">${vis.map(d=>cardHTML(d)).join("")}</div>${resto>0?`<div style="text-align:center;margin-top:12px"><button class="abtn" data-maisarea="${esc(area)}">Mostrar os demais ${resto} desta área ▾</button></div>`:""}</section>`;
+  }).join("");
+  m.querySelectorAll("[data-maisarea]").forEach(b=>b.onclick=()=>{state.areasExpandidas.add(b.dataset.maisarea);render();});
+  m.querySelectorAll('[data-fav]').forEach(b=>b.onclick=()=>{const id=b.dataset.fav;state.favoritos.has(id)?state.favoritos.delete(id):state.favoritos.add(id);save("favoritos",state.favoritos);render();});
+  m.querySelectorAll('[data-exp]').forEach(b=>b.onclick=()=>{const id=b.dataset.exp;state.abertos.has(id)?state.abertos.delete(id):state.abertos.add(id);render();});
+  m.querySelectorAll('[data-assunto]').forEach(b=>b.onclick=()=>{const a=b.dataset.assunto;state.assuntos.add(a);render();});
+  m.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>{const id=b.dataset.goto;state.abertos.add(id);render();const el=document.getElementById("card-"+id);if(el)el.scrollIntoView({behavior:"smooth",block:"center"});});
+  m.querySelectorAll('[data-lido]').forEach(b=>b.onclick=()=>{const id=b.dataset.lido;PROG[id]&&PROG[id].lidoEm?desmarcarLido(id):marcarLido(id);});
+  m.querySelectorAll('[data-rev]').forEach(b=>b.onclick=()=>concluirRevisao(b.dataset.rev));
+  m.querySelectorAll('[data-ag-abre]').forEach(b=>b.onclick=()=>{state.agendando=state.agendando===b.dataset.agAbre?null:b.dataset.agAbre;render();});
+  m.querySelectorAll('[data-ag-fecha]').forEach(b=>b.onclick=()=>{state.agendando=null;render();});
+  m.querySelectorAll('[data-ag-cancela]').forEach(b=>b.onclick=()=>cancelarAgendamento(b.dataset.agCancela));
+  m.querySelectorAll('[data-ag-d]').forEach(b=>b.onclick=()=>{const [id,n]=b.dataset.agD.split("|");agendarEmDias(id,parseInt(n,10));});
+  m.querySelectorAll('[data-ag-data]').forEach(b=>b.onclick=()=>{const id=b.dataset.agData;const inp=document.getElementById("agdata-"+id);if(inp&&inp.value)agendarPara(id,inp.value);});
+  m.querySelectorAll('[data-nota-edita]').forEach(b=>b.onclick=()=>{state.editandoNota=b.dataset.notaEdita;state.abertos.add(b.dataset.notaEdita);render();const t=document.getElementById("nota-txt-"+b.dataset.notaEdita);if(t){t.focus();t.selectionStart=t.value.length;}});
+  m.querySelectorAll('[data-nota-salva]').forEach(b=>b.onclick=()=>{const id=b.dataset.notaSalva;const t=document.getElementById("nota-txt-"+id);salvarNota(id,t?t.value:"");});
+  m.querySelectorAll('[data-nota-cancela]').forEach(b=>b.onclick=()=>{state.editandoNota=null;render();});
+  m.querySelectorAll('[data-cad-abre]').forEach(b=>b.onclick=()=>{state.cadernando=state.cadernando===b.dataset.cadAbre?null:b.dataset.cadAbre;render();});
+  m.querySelectorAll('[data-cad-fecha]').forEach(b=>b.onclick=()=>{state.cadernando=null;render();});
+  m.querySelectorAll('[data-cad-tgl]').forEach(b=>b.onclick=()=>{const [n,id]=b.dataset.cadTgl.split("|");toggleCaderno(n,id);});
+  m.querySelectorAll('[data-cad-cria]').forEach(b=>b.onclick=()=>{const id=b.dataset.cadCria;const inp=document.getElementById("cadnovo-"+id);criarCaderno(inp?inp.value:"",id);});
+  m.querySelectorAll('[data-citar]').forEach(b=>b.onclick=()=>copiarCitacao(b.dataset.citar));
+  m.querySelectorAll('[data-explicar]').forEach(b=>b.onclick=()=>{const id=b.dataset.explicar;if(state.explicando===id&&!EXPLIC[id]){state.explicando=null;render();}else if(claudeConfigurado()&&!EXPLIC[id]){gerarExplicacao(id);}else{state.explicando=state.explicando===id?null:id;state.abertos.add(id);render();}});
+  m.querySelectorAll('[data-expl-gera]').forEach(b=>b.onclick=()=>gerarExplicacao(b.dataset.explGera));
+  m.querySelectorAll('[data-expl-apaga]').forEach(b=>b.onclick=()=>{delete EXPLIC[b.dataset.explApaga];salvarExplic();render();});
+  m.querySelectorAll('[data-notag-edita]').forEach(b=>b.onclick=()=>{state.editandoNotaG=b.dataset.notagEdita;state.abertos.add(b.dataset.notagEdita);render();});
+  m.querySelectorAll('[data-notag-salva]').forEach(b=>b.onclick=()=>{const id=b.dataset.notagSalva;const t=document.getElementById("notag-txt-"+id);salvarNotaGabinete(id,t?t.value:"");});
+  m.querySelectorAll('[data-notag-cancela]').forEach(b=>b.onclick=()=>{state.editandoNotaG=null;render();});
+  m.querySelectorAll('[data-obs1]').forEach(b=>b.onclick=()=>exportarNotaUnica(b.dataset.obs1));
+  m.querySelectorAll('[data-gab-add]').forEach(b=>b.onclick=()=>{const id=b.dataset.gabAdd;const t=document.getElementById("gab-txt-"+id);addObsGabinete(id,t?t.value:"").catch(e=>alert("Não foi possível publicar: "+e.message));});
+  m.querySelectorAll('[data-gab-del]').forEach(b=>b.onclick=()=>{if(confirm("Apagar sua observação do gabinete?"))delObsGabinete(b.dataset.gabDel).catch(e=>alert("Não foi possível apagar: "+e.message));});
+  m.querySelectorAll('[data-obsi]').forEach(b=>b.onclick=()=>baixarNotaObsidian(b.dataset.obsi));
+  m.querySelectorAll('[data-extcard]').forEach(b=>b.onclick=()=>{const [q,i]=b.dataset.extcard.split("|");abrirBusca(BUSCAS_EXTERNAS[parseInt(i,10)][1],q);});
+  m.querySelectorAll('[data-imp-del]').forEach(b=>b.onclick=()=>{if(confirm("Excluir este julgado importado?"))removerImportado(b.dataset.impDel);});
+  m.querySelectorAll('[data-imp-edit]').forEach(b=>b.onclick=()=>{state.editandoImp=state.editandoImp===b.dataset.impEdit?null:b.dataset.impEdit;render();});
+  m.querySelectorAll('[data-impe-salva]').forEach(b=>b.onclick=()=>salvarEdicaoImportado(b.dataset.impeSalva));
+  m.querySelectorAll('[data-impe-canc]').forEach(b=>b.onclick=()=>{state.editandoImp=null;render();});
+}
+
+/* ---------- Estudo ---------- */
+function deckList(){
+  let l=filtrar();
+  if(state.eDeck==="obrig")l=l.filter(d=>d.obrigatorio);
+  else if(state.eDeck==="fav")l=l.filter(d=>state.favoritos.has(d.id));
+  else if(state.eDeck==="revisar")l=l.filter(d=>state.eRevisar.has(d.id));
+  return l;
+}
+function renderEstudo(){
+  const m=$("#main");const list=deckList();
+  const decks=[["todos","Todos"],["obrig","Obrigatórios"],["fav","Favoritos"],["revisar","A revisar"]];
+  const deckBar=`<div class="decks">`+decks.map(([k,lbl])=>`<button class="chip" ${state.eDeck===k?'style="background:#A9791C;border-color:#A9791C;color:#fff"':''} data-deck="${k}">${lbl}</button>`).join("")+`</div>`;
+  if(list.length===0){m.innerHTML=`<div class="study">${deckBar}<div class="empty"><p>Sem itens neste baralho. Escolha outro baralho ou ajuste os filtros.</p></div></div>`;bindDeck();return;}
+  const d=list[Math.min(state.eIdx,list.length-1)];const esp=ESP[d.especie],trib=TRIB[d.tribunal];
+  m.innerHTML=`<div class="study">${deckBar}
+    <div class="sstats"><span class="scount">${state.eIdx+1} / ${list.length}</span><div class="track"><div class="fill" style="width:${((state.eIdx+1)/list.length)*100}%"></div></div><span class="smini">✓ ${state.eSabidos.size}</span><span class="smini">↻ ${state.eRevisar.size}</span></div>
+    <div class="flash" style="border-top-color:${trib.cor}">
+      <div class="badges"><span class="badge" style="background:${trib.bg};color:${trib.cor};font-weight:700">${d.tribunal}</span><span class="badge" style="background:${esp.bg};color:${esp.cor}">${esp.curto}</span><span class="oblig ${d.obrigatorio?'':'no'}">${d.obrigatorio?'Obrigatório':'Consulta'}</span><span class="num">${esc(d.numero)}</span></div>
+      <p class="fprompt">${esc(d.titulo)}</p>
+      ${state.eRevelado?`<div class="answer">${esc(d.completo)}<div class="why"><strong>Por que importa:</strong> ${esc(d.explicacao)}</div>${d.mnemonico&&CONFIG.mostrarMnemonicos?`<div class="why"><strong>🧠 Mnemônico:</strong> ${esc(d.mnemonico)}</div>`:""}${NOTAS[d.id]?`<div class="why"><strong>📝 Suas observações:</strong> ${esc(NOTAS[d.id])}</div>`:""}</div><div class="fmeta">${esc(d.fonte)} · ${esc(d.validade)} — ${esc(d.situacao)}</div><div class="factions"><button class="mark rev" id="mRev">↻ Revisar depois</button><button class="mark know" id="mKnow">✓ Já domino</button></div>`:`<button class="reveal" id="reveal">Revelar entendimento</button>`}
+    </div>
+    <button class="skip" id="skip">Pular sem marcar →</button>
+    <div class="khint">Atalhos: espaço revela · 1 revisar · 2 já domino · → pular</div>
+  </div>`;
+  bindDeck();
+  const adv=()=>{state.eRevelado=false;state.eIdx=(state.eIdx+1)%list.length;render();};
+  if($("#reveal"))$("#reveal").onclick=()=>{state.eRevelado=true;render();};
+  if($("#mRev"))$("#mRev").onclick=()=>{state.eRevisar.add(d.id);save("revisar",state.eRevisar);adv();};
+  if($("#mKnow"))$("#mKnow").onclick=()=>{state.eSabidos.add(d.id);save("sabidos",state.eSabidos);state.eRevisar.delete(d.id);save("revisar",state.eRevisar);adv();};
+  $("#skip").onclick=adv;
+}
+function bindDeck(){document.querySelectorAll('[data-deck]').forEach(b=>b.onclick=()=>{state.eDeck=b.dataset.deck;state.eIdx=0;state.eRevelado=false;render();});}
+
+
+/* ===================== OBSERVAÇÕES DO USUÁRIO POR JULGADO ===================== */
+let NOTAS = loadObj("notas");           // {id: texto}
+function salvarNota(id, txt){
+  txt=(txt||"").trim();
+  if(txt) NOTAS[id]=txt; else delete NOTAS[id];
+  saveObj("notas",NOTAS);state.editandoNota=null;render();
+}
+function agendadorHTML(id){
+  const botoes=(CONFIG.intervalos||[1,7,15,30]).map(n=>`<button class="abtn" data-ag-d="${id}|${n}">+${n}d</button>`).join("");
+  return `<div class="agmenu"><span class="agl">Agendar revisão:</span>${botoes}
+    <input type="date" id="agdata-${id}" min="${hojeISO()}"/>
+    <button class="abtn lido" data-ag-data="${id}">Confirmar data</button>
+    <button class="abtn" data-ag-fecha="${id}">Fechar</button></div>`;
+}
+function notaHTML(d){
+  if(state.editandoNota===d.id){
+    return `<div class="nota"><div class="nh">📝 Observações</div>
+      <textarea id="nota-txt-${d.id}">${esc(NOTAS[d.id]||"")}</textarea>
+      <div class="nbtns"><button class="abtn lido" data-nota-salva="${d.id}">Salvar</button>
+      <button class="abtn" data-nota-cancela="${d.id}">Cancelar</button></div></div>`;
+  }
+  if(NOTAS[d.id]){
+    return `<div class="nota"><div class="nh">📝 Observações</div>
+      <div class="nt">${esc(NOTAS[d.id])}</div>
+      <div class="nbtns"><button class="abtn" data-nota-edita="${d.id}">Editar</button></div></div>`;
+  }
+  return "";
+}
+
+function cadernoMenuHTML(id){
+  const nomes=Object.keys(CADERNOS).sort((a,b)=>a.localeCompare(b,'pt'));
+  const chips=nomes.map(n=>`<button class="cadchip ${(CADERNOS[n]||[]).includes(id)?'on':''}" data-cad-tgl="${esc(n)}|${id}">📓 ${esc(n)}</button>`).join("");
+  return `<div class="cadmenu"><span class="agl">Cadernos:</span>${chips||'<span style="font-size:12px;color:var(--ink3)">nenhum caderno ainda</span>'}
+    <input type="text" id="cadnovo-${id}" placeholder="novo caderno…" maxlength="40"/>
+    <button class="abtn lido" data-cad-cria="${id}">Criar e incluir</button>
+    <button class="abtn" data-cad-fecha="${id}">Fechar</button></div>`;
+}
+function copiarCitacao(id){
+  const d=byId[id];if(!d)return;
+  const txt=`${d.numero} (${d.tribunal} — ${ESP[d.especie].label}). ${d.titulo}. Tese: ${d.completo} [${d.fonte}]`;
+  const feito=()=>{const b=document.querySelector(`[data-citar="${id}"]`);if(b){const o=b.textContent;b.textContent="✓ Copiado";setTimeout(()=>{b.textContent=o;},1400);}};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(feito).catch(()=>{});}
+  else{const t=document.createElement("textarea");t.value=txt;document.body.appendChild(t);t.select();try{document.execCommand("copy");feito();}catch(e){}t.remove();}
+}
+/* ---------- Edição de julgados importados (classificação pessoal) ---------- */
+function editorImportadoHTML(d){
+  const areas=[...new Set(DB.map(x=>x.area))].sort((a,b)=>a.localeCompare(b,'pt'));
+  const assuntosTodos=ASSUNTOS.filter(a=>a!=="Importados");
+  return `<div class="nota"><div class="nh">✎ Editar classificação (item importado)</div>
+    <div class="imp-row"><label style="font-size:11px;font-weight:700;color:var(--ink3)">Título</label></div>
+    <textarea id="impe-titulo-${d.id}" class="imp-ta" style="min-height:56px">${esc(d.titulo)}</textarea>
+    <div class="imp-row">
+      <select id="impe-trib-${d.id}">${["STJ","STF","TJMA"].map(t=>`<option ${d.tribunal===t?"selected":""}>${t}</option>`).join("")}</select>
+      <input type="text" id="impe-num-${d.id}" value="${esc(d.numero)}" placeholder="Referência (ex.: Info 894/STJ)" maxlength="40" style="flex:1 1 160px"/>
+    </div>
+    <div class="imp-row">
+      <input type="text" id="impe-area-${d.id}" list="impe-areas" value="${esc(d.area)}" placeholder="Área (ex.: Direito do Consumidor)" maxlength="60" style="flex:1 1 200px"/>
+      <datalist id="impe-areas">${areas.map(a=>`<option value="${esc(a)}">`).join("")}</datalist>
+    </div>
+    <div class="imp-row">
+      <input type="text" id="impe-ass-${d.id}" list="impe-assuntos" value="${esc(d.assuntos.filter(a=>a!=="Importados").join(", "))}" placeholder="Assuntos, separados por vírgula" style="flex:1 1 260px"/>
+      <datalist id="impe-assuntos">${assuntosTodos.map(a=>`<option value="${esc(a)}">`).join("")}</datalist>
+    </div>
+    <div class="nbtns"><button class="abtn lido" data-impe-salva="${d.id}">Salvar classificação</button>
+    <button class="abtn" data-impe-canc="${d.id}">Cancelar</button>
+    <span style="font-size:11px;color:var(--ink3)">O marcador “Importados” é mantido para o item continuar localizável.</span></div></div>`;
+}
+function salvarEdicaoImportado(id){
+  const it=IMPORTADOS[id];if(!it)return;
+  const v=(x)=>{const e=document.getElementById(x);return e?e.value.trim():"";};
+  const titulo=v("impe-titulo-"+id);if(titulo)it.titulo=titulo.length>180?titulo.slice(0,180):titulo;
+  const trib=v("impe-trib-"+id);if(TRIB[trib])it.tribunal=trib;
+  const num=v("impe-num-"+id);if(num)it.numero=num.slice(0,40);
+  const area=v("impe-area-"+id);if(area)it.area=area.slice(0,60);
+  let ass=v("impe-ass-"+id).split(",").map(a=>a.trim()).filter(a=>a&&a!=="Importados").slice(0,10);
+  ass.push("Importados");it.assuntos=[...new Set(ass)];
+  salvarImportados();
+  const i=DB.findIndex(x=>x.id===id);
+  if(i>=0){normalizarItens([it]);DB[i]=it;}
+  reindex();state.editandoImp=null;render();
+}
+/* ===================== NUVEM: PERFIS E SINCRONIZAÇÃO (Supabase, opcional) =====================
+   Sem URL e chave configuradas, nada disto é carregado e o aplicativo
+   permanece 100% local. Com a nuvem ativa: login por código no e-mail
+   (somente usuários criados pelo gestor), sincronização dos registros
+   pessoais entre dispositivos e observações compartilhadas do gabinete. */
+const NUVEM={cli:null,user:null,pushT:null,lib:false,msg:""};
+let NOTASG=loadObj("notasg");   // cache local das observações do gabinete {id:{texto,autor,quando}}
+function nuvemConfigurada(){return !!(CONFIG.nuvemUrl&&CONFIG.nuvemChave);}
+function nuvemLib(){
+  return new Promise((res,rej)=>{
+    if(window.supabase&&window.supabase.createClient)return res();
+    if(NUVEM.lib){const t=setInterval(()=>{if(window.supabase){clearInterval(t);res();}},200);setTimeout(()=>{clearInterval(t);rej(new Error("biblioteca não carregou"));},10000);return;}
+    NUVEM.lib=true;
+    const s=document.createElement("script");
+    s.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+    s.onload=()=>res();s.onerror=()=>rej(new Error("sem acesso à biblioteca (internet?)"));
+    document.head.appendChild(s);
+  });
+}
+async function nuvemIniciar(){
+  if(!nuvemConfigurada())return;
+  try{
+    await nuvemLib();
+    NUVEM.cli=window.supabase.createClient(CONFIG.nuvemUrl,CONFIG.nuvemChave);
+    const {data}=await NUVEM.cli.auth.getSession();
+    if(data&&data.session){NUVEM.user=data.session.user;await nuvemAposLogin(false);}
+    render();
+  }catch(e){NUVEM.msg="Nuvem indisponível: "+e.message;render();}
+}
+async function nuvemEnviarCodigo(email){
+  const {error}=await NUVEM.cli.auth.signInWithOtp({email,options:{shouldCreateUser:false}});
+  if(error)throw error;
+}
+async function nuvemVerificarCodigo(email,codigo){
+  const {data,error}=await NUVEM.cli.auth.verifyOtp({email,token:codigo,type:"email"});
+  if(error)throw error;
+  NUVEM.user=data.user;await nuvemAposLogin(true);
+}
+async function nuvemSair(){try{await NUVEM.cli.auth.signOut();}catch(e){}NUVEM.user=null;render();}
+function estadoParaBackup(){
+  return {app:"precedentes-qualificados",versao:1,exportado_em:new Date().toISOString(),
+    favoritos:[...state.favoritos],sabidos:[...state.eSabidos],revisar:[...state.eRevisar],
+    progresso:PROG,notas:NOTAS,cadernos:CADERNOS,importados:IMPORTADOS,config:CONFIG,
+    tema:localStorage.getItem("pq_theme")||"light"};
+}
+function aplicarBackupObj(b){
+  state.favoritos=new Set(b.favoritos||[]);save("favoritos",state.favoritos);
+  state.eSabidos=new Set(b.sabidos||[]);save("sabidos",state.eSabidos);
+  state.eRevisar=new Set(b.revisar||[]);save("revisar",state.eRevisar);
+  PROG=b.progresso||{};saveObj("progresso",PROG);
+  NOTAS=b.notas||{};saveObj("notas",NOTAS);
+  CADERNOS=b.cadernos||{};salvarCadernos();
+  IMPORTADOS=b.importados||{};salvarImportados();mesclarImportados();
+  if(b.config)CONFIG={...CONFIG_PADRAO,...b.config,nuvemUrl:CONFIG.nuvemUrl,nuvemChave:CONFIG.nuvemChave};
+  salvarConfig();aplicarConfigVisual();
+}
+async function nuvemAposLogin(primeira){
+  try{
+    const {data,error}=await NUVEM.cli.from("perfil_dados").select("dados,updated_at").maybeSingle();
+    if(error)throw error;
+    if(data&&data.dados&&data.dados.app==="precedentes-qualificados"){
+      aplicarBackupObj(data.dados);
+      NUVEM.msg="Registros carregados da nuvem ("+new Date(data.updated_at).toLocaleString("pt-BR")+").";
+    }else if(primeira){
+      await nuvemPushAgora();
+      NUVEM.msg="Primeiro acesso: seus registros locais foram enviados à nuvem.";
+    }
+    await nuvemCarregarGabinete();
+  }catch(e){NUVEM.msg="Falha ao carregar da nuvem: "+e.message;}
+  render();
+}
+function agendarPushNuvem(){
+  if(!NUVEM.user||!NUVEM.cli)return;
+  clearTimeout(NUVEM.pushT);
+  NUVEM.pushT=setTimeout(nuvemPushAgora,2500);
+}
+async function nuvemPushAgora(){
+  if(!NUVEM.user||!NUVEM.cli)return;
+  try{
+    await NUVEM.cli.from("perfil_dados").upsert(
+      {user_id:NUVEM.user.id,dados:estadoParaBackup(),updated_at:new Date().toISOString()},
+      {onConflict:"user_id"});
+  }catch(e){}
+}
+async function nuvemCarregarGabinete(){
+  if(!NUVEM.user||!NUVEM.cli)return;
+  try{
+    const {data,error}=await NUVEM.cli.from("notas_gabinete").select("julgado_id,texto,autor_email,updated_at");
+    if(error)throw error;
+    NOTASG={};
+    (data||[]).forEach(r=>{if(r.texto&&r.texto.trim())NOTASG[r.julgado_id]={texto:r.texto,autor:r.autor_email,quando:r.updated_at};});
+    saveObj("notasg",NOTASG);
+  }catch(e){}
+}
+async function salvarNotaGabinete(id,txt){
+  if(!NUVEM.user||!NUVEM.cli)return;
+  txt=(txt||"").trim();
+  try{
+    await NUVEM.cli.from("notas_gabinete").upsert(
+      {julgado_id:id,texto:txt,autor_email:NUVEM.user.email,updated_at:new Date().toISOString()},
+      {onConflict:"julgado_id"});
+    if(txt)NOTASG[id]={texto:txt,autor:NUVEM.user.email,quando:new Date().toISOString()};
+    else delete NOTASG[id];
+    saveObj("notasg",NOTASG);
+  }catch(e){alert("Não foi possível salvar a observação do gabinete: "+e.message);}
+  state.editandoNotaG=null;render();
+}
+function notaGabineteHTML(d){
+  if(!NUVEM.user)return "";
+  if(state.editandoNotaG===d.id){
+    return `<div class="nota"><div class="nh">🏛 Observação do gabinete (compartilhada)</div>
+      <textarea id="notag-txt-${d.id}">${esc(NOTASG[d.id]?NOTASG[d.id].texto:"")}</textarea>
+      <div class="nbtns"><button class="abtn lido" data-notag-salva="${d.id}">Salvar para o gabinete</button>
+      <button class="abtn" data-notag-cancela="${d.id}">Cancelar</button></div></div>`;
+  }
+  if(NOTASG[d.id]){
+    const g=NOTASG[d.id];
+    return `<div class="nota"><div class="nh">🏛 Observação do gabinete (compartilhada)</div>
+      <div class="nt">${esc(g.texto)}</div>
+      <div class="nbtns"><span style="font-size:11px;color:var(--ink3)">por ${esc(g.autor||"—")} · ${g.quando?new Date(g.quando).toLocaleDateString("pt-BR"):""}</span>
+      <button class="abtn" data-notag-edita="${d.id}">Editar</button></div></div>`;
+  }
+  return "";
+}
+/* ---------- Painel de estudos (leituras, revisões, agenda) ---------- */
+function linhaPainel(d,tipo){
+  const p=PROG[d.id]||{};const trib=TRIB[d.tribunal];
+  const info = tipo==="hoje" ? `agendada para ${p.proxima<hojeISO()?fmtBR(p.proxima)+" (em atraso)":"hoje"}`
+    : tipo==="prox" ? `próxima revisão em ${fmtBR(p.proxima)}`
+    : `lido em ${fmtBR(p.lidoEm)} · ${(p.revisoes||[]).length} revisão(ões)${(p.revisoes||[]).length?" · última em "+fmtBR(p.revisoes[p.revisoes.length-1]):""}${p.proxima?" · próxima "+fmtBR(p.proxima):" · sem agendamento"}${NOTAS[d.id]?" · 📝":""}`;
+  const btns = tipo==="hoje"
+    ? `<button class="abtn lido" data-p-rev="${d.id}">✓ Revisado</button><button class="abtn" data-p-ag="${d.id}">Reagendar</button><button class="abtn" data-p-canc="${d.id}">Cancelar</button>`
+    : tipo==="prox"
+    ? `<button class="abtn lido" data-p-rev="${d.id}">✓ Revisado</button><button class="abtn" data-p-ag="${d.id}">Reagendar</button><button class="abtn" data-p-canc="${d.id}">Cancelar</button>`
+    : `${p.proxima?"":`<button class="abtn" data-p-ag="${d.id}">📅 Agendar revisão</button>`}<button class="abtn" data-p-des="${d.id}">Remover registro</button>`;
+  return `<div class="prow"><span class="badge" style="background:${trib.bg};color:${trib.cor};font-weight:700">${d.tribunal}</span>
+    <div class="pt"><b>${esc(d.numero)} — ${esc(d.titulo)}</b><span>${info}</span></div>
+    <div class="pbtns"><button class="abtn" data-p-ver="${d.id}">Ver</button>${btns}</div></div>
+    ${state.agendando===d.id?agendadorHTML(d.id):""}`;
+}
+function renderPainel(){
+  const m=$("#main");
+  const dev=devidasHoje(), prox=proximasRevisoes(), reg=lidos().sort((a,b)=>(PROG[b.id].lidoEm||"").localeCompare(PROG[a.id].lidoEm||""));
+  const totRev=Object.values(PROG).reduce((s,p)=>s+((p.revisoes||[]).length),0);
+  m.innerHTML=`<div class="painel">
+    <div class="pbox"><h3>Meu estudo</h3><p class="psub">Registros salvos neste dispositivo. O agendamento é exclusivamente manual: nada é marcado sem sua ordem. Concluir uma revisão registra a data e deixa a próxima em aberto, para o senhor agendar quando quiser.</p>
+      <div class="pstats">
+        <div class="pstat"><div class="n">${reg.length}</div><div class="l">Lidos</div></div>
+        <div class="pstat"><div class="n">${totRev}</div><div class="l">Revisões feitas</div></div>
+        <div class="pstat"><div class="n" style="color:${dev.length?'var(--crimson)':'var(--green)'}">${dev.length}</div><div class="l">Para hoje</div></div>
+        <div class="pstat"><div class="n">${prox.length}</div><div class="l">Agendadas</div></div>
+      </div></div>
+    <div class="pbox"><h3>📅 Revisões de hoje${dev.length?` (${dev.length})`:""}</h3><p class="psub">Inclui as em atraso.</p>
+      ${dev.length?dev.map(d=>linhaPainel(d,"hoje")).join(""):`<div class="pvazio">Nada para hoje — agenda em dia. ✓</div>`}</div>
+    <div class="pbox"><h3>Próximas revisões</h3>
+      ${prox.length?prox.slice(0,15).map(d=>linhaPainel(d,"prox")).join(""):`<div class="pvazio">Nenhuma revisão futura agendada.</div>`}</div>
+    <div class="pbox"><h3>Registro de leitura</h3>
+      ${reg.length?reg.map(d=>linhaPainel(d,"reg")).join(""):`<div class="pvazio">Nenhum julgado marcado como lido ainda. Use “Marcar como lido” nos cartões.</div>`}</div>
+  </div>`;
+  m.querySelectorAll("[data-p-ver]").forEach(b=>b.onclick=()=>irParaCard(b.dataset.pVer));
+  m.querySelectorAll("[data-p-rev]").forEach(b=>b.onclick=()=>concluirRevisao(b.dataset.pRev));
+  m.querySelectorAll("[data-p-ag]").forEach(b=>b.onclick=()=>{state.agendando=state.agendando===b.dataset.pAg?null:b.dataset.pAg;render();});
+  m.querySelectorAll("[data-p-canc]").forEach(b=>b.onclick=()=>cancelarAgendamento(b.dataset.pCanc));
+  m.querySelectorAll("[data-p-des]").forEach(b=>b.onclick=()=>desmarcarLido(b.dataset.pDes));
+  m.querySelectorAll('[data-ag-fecha]').forEach(b=>b.onclick=()=>{state.agendando=null;render();});
+  m.querySelectorAll('[data-ag-d]').forEach(b=>b.onclick=()=>{const [id,n]=b.dataset.agD.split("|");agendarEmDias(id,parseInt(n,10));});
+  m.querySelectorAll('[data-ag-data]').forEach(b=>b.onclick=()=>{const id=b.dataset.agData;const inp=document.getElementById("agdata-"+id);if(inp&&inp.value)agendarPara(id,inp.value);});
+}
+
+
+/* ---------- Leitura sequencial (anterior/próximo sobre o resultado filtrado) ---------- */
+function renderLeitura(list){
+  const m=$("#main");
+  if(!list.length){state.leituraSeq=false;renderList(list);return;}
+  state.seqIdx=Math.min(state.seqIdx,list.length-1);
+  const d=list[state.seqIdx];
+  m.innerHTML=`<div class="seqwrap">
+    <div class="seqbar">
+      <button class="abtn" id="seqSai">✕ Sair</button>
+      <div class="track"><div class="fill" style="width:${((state.seqIdx+1)/list.length)*100}%"></div></div>
+      <span class="scount">${state.seqIdx+1} / ${list.length}</span>
+      <button class="abtn" id="seqAnt" ${state.seqIdx===0?"disabled":""}>← Anterior</button>
+      <button class="abtn lido" id="seqProx">${state.seqIdx===list.length-1?"Concluir":"Próximo →"}</button>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr">${cardHTML(d,true)}</div>
+  </div>`;
+  $("#seqSai").onclick=()=>{state.leituraSeq=false;render();};
+  $("#seqAnt").onclick=()=>{if(state.seqIdx>0){state.seqIdx--;render();}};
+  $("#seqProx").onclick=()=>{if(state.seqIdx<list.length-1){state.seqIdx++;render();}else{state.leituraSeq=false;render();}};
+  bindCardAcoes(m);
+}
+function bindCardAcoes(m){
+  m.querySelectorAll('[data-fav]').forEach(b=>b.onclick=()=>{const id=b.dataset.fav;state.favoritos.has(id)?state.favoritos.delete(id):state.favoritos.add(id);save("favoritos",state.favoritos);render();});
+  m.querySelectorAll('[data-assunto]').forEach(b=>b.onclick=()=>{const a=b.dataset.assunto;state.assuntos.add(a);state.leituraSeq=false;render();});
+  m.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>{state.leituraSeq=false;irParaCard(b.dataset.goto);});
+  m.querySelectorAll('[data-lido]').forEach(b=>b.onclick=()=>{const id=b.dataset.lido;PROG[id]&&PROG[id].lidoEm?desmarcarLido(id):marcarLido(id);});
+  m.querySelectorAll('[data-rev]').forEach(b=>b.onclick=()=>concluirRevisao(b.dataset.rev));
+  m.querySelectorAll('[data-ag-abre]').forEach(b=>b.onclick=()=>{state.agendando=state.agendando===b.dataset.agAbre?null:b.dataset.agAbre;render();});
+  m.querySelectorAll('[data-ag-fecha]').forEach(b=>b.onclick=()=>{state.agendando=null;render();});
+  m.querySelectorAll('[data-ag-cancela]').forEach(b=>b.onclick=()=>cancelarAgendamento(b.dataset.agCancela));
+  m.querySelectorAll('[data-ag-d]').forEach(b=>b.onclick=()=>{const [id,n]=b.dataset.agD.split("|");agendarEmDias(id,parseInt(n,10));});
+  m.querySelectorAll('[data-ag-data]').forEach(b=>b.onclick=()=>{const id=b.dataset.agData;const inp=document.getElementById("agdata-"+id);if(inp&&inp.value)agendarPara(id,inp.value);});
+  m.querySelectorAll('[data-nota-edita]').forEach(b=>b.onclick=()=>{state.editandoNota=b.dataset.notaEdita;state.abertos.add(b.dataset.notaEdita);render();const t=document.getElementById("nota-txt-"+b.dataset.notaEdita);if(t){t.focus();}});
+  m.querySelectorAll('[data-nota-salva]').forEach(b=>b.onclick=()=>{const id=b.dataset.notaSalva;const t=document.getElementById("nota-txt-"+id);salvarNota(id,t?t.value:"");});
+  m.querySelectorAll('[data-nota-cancela]').forEach(b=>b.onclick=()=>{state.editandoNota=null;render();});
+  m.querySelectorAll('[data-cad-abre]').forEach(b=>b.onclick=()=>{state.cadernando=state.cadernando===b.dataset.cadAbre?null:b.dataset.cadAbre;render();});
+  m.querySelectorAll('[data-cad-fecha]').forEach(b=>b.onclick=()=>{state.cadernando=null;render();});
+  m.querySelectorAll('[data-cad-tgl]').forEach(b=>b.onclick=()=>{const [n,id]=b.dataset.cadTgl.split("|");toggleCaderno(n,id);});
+  m.querySelectorAll('[data-cad-cria]').forEach(b=>b.onclick=()=>{const id=b.dataset.cadCria;const inp=document.getElementById("cadnovo-"+id);criarCaderno(inp?inp.value:"",id);});
+  m.querySelectorAll('[data-citar]').forEach(b=>b.onclick=()=>copiarCitacao(b.dataset.citar));
+  m.querySelectorAll('[data-explicar]').forEach(b=>b.onclick=()=>{const id=b.dataset.explicar;if(state.explicando===id&&!EXPLIC[id]){state.explicando=null;render();}else if(claudeConfigurado()&&!EXPLIC[id]){gerarExplicacao(id);}else{state.explicando=state.explicando===id?null:id;state.abertos.add(id);render();}});
+  m.querySelectorAll('[data-expl-gera]').forEach(b=>b.onclick=()=>gerarExplicacao(b.dataset.explGera));
+  m.querySelectorAll('[data-expl-apaga]').forEach(b=>b.onclick=()=>{delete EXPLIC[b.dataset.explApaga];salvarExplic();render();});
+  m.querySelectorAll('[data-notag-edita]').forEach(b=>b.onclick=()=>{state.editandoNotaG=b.dataset.notagEdita;state.abertos.add(b.dataset.notagEdita);render();});
+  m.querySelectorAll('[data-notag-salva]').forEach(b=>b.onclick=()=>{const id=b.dataset.notagSalva;const t=document.getElementById("notag-txt-"+id);salvarNotaGabinete(id,t?t.value:"");});
+  m.querySelectorAll('[data-notag-cancela]').forEach(b=>b.onclick=()=>{state.editandoNotaG=null;render();});
+  m.querySelectorAll('[data-obs1]').forEach(b=>b.onclick=()=>exportarNotaUnica(b.dataset.obs1));
+  m.querySelectorAll('[data-gab-add]').forEach(b=>b.onclick=()=>{const id=b.dataset.gabAdd;const t=document.getElementById("gab-txt-"+id);addObsGabinete(id,t?t.value:"").catch(e=>alert("Não foi possível publicar: "+e.message));});
+  m.querySelectorAll('[data-gab-del]').forEach(b=>b.onclick=()=>{if(confirm("Apagar sua observação do gabinete?"))delObsGabinete(b.dataset.gabDel).catch(e=>alert("Não foi possível apagar: "+e.message));});
+  m.querySelectorAll('[data-obsi]').forEach(b=>b.onclick=()=>baixarNotaObsidian(b.dataset.obsi));
+  m.querySelectorAll('[data-extcard]').forEach(b=>b.onclick=()=>{const [q,i]=b.dataset.extcard.split("|");abrirBusca(BUSCAS_EXTERNAS[parseInt(i,10)][1],q);});
+  m.querySelectorAll('[data-imp-del]').forEach(b=>b.onclick=()=>{if(confirm("Excluir este julgado importado?"))removerImportado(b.dataset.impDel);});
+  m.querySelectorAll('[data-imp-edit]').forEach(b=>b.onclick=()=>{state.editandoImp=state.editandoImp===b.dataset.impEdit?null:b.dataset.impEdit;render();});
+  m.querySelectorAll('[data-impe-salva]').forEach(b=>b.onclick=()=>salvarEdicaoImportado(b.dataset.impeSalva));
+  m.querySelectorAll('[data-impe-canc]').forEach(b=>b.onclick=()=>{state.editandoImp=null;render();});
+  m.querySelectorAll('[data-exp]').forEach(b=>b.onclick=()=>{const id=b.dataset.exp;state.abertos.has(id)?state.abertos.delete(id):state.abertos.add(id);render();});
+}
+/* ---------- Painel de configurações ---------- */
+function tgl(chave,label,desc){
+  return `<div class="cfgrow"><div class="cl"><b>${label}</b><span>${desc||""}</span></div>
+    <label class="tgl"><input type="checkbox" data-cfg-tgl="${chave}" ${CONFIG[chave]?"checked":""}/><i></i></label></div>`;
+}
+function renderConfig(){
+  const m=$("#main");
+  m.innerHTML=`<div class="painel">
+    <div class="pbox"><h3>⚙ Configurações</h3><p class="psub">Tudo é salvo neste dispositivo e aplicado na hora.</p></div>
+
+    <div class="pbox" id="box-conta"><h3>🔐 Entrar e sincronizar entre máquinas</h3>
+      <p class="psub">Ao entrar com seu e-mail, seus dados de estudo (favoritos, leituras, revisões, observações, cadernos e importações) passam a acompanhar o senhor em qualquer computador em que fizer login. É o único recurso que usa um ponto na internet — porque sincronizar entre máquinas exige um lugar central para guardar os dados. É gratuito e configurado uma só vez (veja o GUIA-LOGIN.md). Sem entrar, o aplicativo funciona normalmente, apenas sem levar os dados a outras máquinas.</p>
+      <div class="cfgrow"><input type="text" id="nv-url" placeholder="Project URL (https://xxxx.supabase.co)" value="${esc(CONFIG.nuvemUrl||"")}" style="flex:1 1 240px"/>
+        <input type="text" id="nv-key" placeholder="anon public key" value="${esc(CONFIG.nuvemKey||"")}" style="flex:1 1 240px"/>
+        <button class="abtn" id="nv-salvacfg">Salvar</button></div>
+      ${nuvemConfigurada()?(nuvemLogada()
+        ?`<div class="cfgrow"><div class="cl"><b>Sessão ativa</b><span>${esc(SESSAO.email||"")}</span></div>
+           <button class="abtn lido" id="nv-sync">Sincronizar agora</button>
+           <button class="abtn" id="nv-sair">Sair neste dispositivo</button></div>`
+        :`<div class="cfgrow"><input type="text" id="nv-email" placeholder="seu e-mail convidado" style="flex:1 1 200px"/>
+           <button class="abtn" id="nv-envia">Enviar código</button>
+           <input type="text" id="nv-cod" placeholder="código recebido" style="max-width:140px"/>
+           <button class="abtn lido" id="nv-entra">Entrar</button></div>`):""}
+      <div class="cfgrow"><span id="nv-status" style="font-size:12px;color:var(--ink3)">${esc(NUVEM_STATUS||(nuvemLogada()?"Sessão ativa.":"Não configurada."))}</span></div>
+      <p class="psub" style="margin-top:6px">A junção é por união: ao sincronizar, os dados das máquinas se somam e nada é apagado automaticamente. Seus dados ficam guardados na sua própria conta, sob regras que impedem outras pessoas de lê-los.</p></div>
+
+    <div class="pbox"><h3>🤖 Integração com o Claude (IA)</h3>
+      <p class="psub">Habilita o botão “💡 Explicar” dos julgados, que gera uma explicação em linguagem simples a partir da tese oficial. A explicação é produzida sob instrução estrita de não inventar nada além do que consta da tese e vem sempre marcada como gerada por IA, para conferência.</p>
+      <div class="cfgrow"><input type="password" id="cl-key" placeholder="sua chave da API Anthropic (sk-ant-…)" value="${esc(CONFIG.claudeKey||"")}" style="flex:1 1 260px"/>
+        <input type="text" id="cl-model" value="${esc(CONFIG.claudeModel||"claude-haiku-4-5-20251001")}" title="Modelo" style="flex:1 1 180px"/>
+        <button class="abtn lido" id="cl-salva">Salvar</button>
+        ${claudeConfigurado()?`<button class="abtn" id="cl-limpa-cache">Apagar explicações geradas</button>`:""}</div>
+      <div class="cfgrow"><span id="cl-status" style="font-size:12px;color:var(--ink3)">${claudeConfigurado()?"Integração ativa. As explicações são geradas sob demanda.":"Não configurada."}</span></div>
+      <p class="psub" style="margin-top:6px"><b>Sobre a chave, com franqueza:</b> ela fica guardada apenas neste navegador/perfil e só é enviada à Anthropic quando o senhor pede uma explicação; não trafega para o site nem para o gabinete. Em ambiente compartilhado, cada pessoa usa a própria chave — <b>nunca publique uma chave no repositório do site</b>, pois ficaria exposta. Para uso do gabinete inteiro sem distribuir chaves, a via segura é o enriquecimento pelo coletor (chave como segredo do GitHub), que já existe no pacote.</p></div>
+
+    <div class="pbox"><h3>🔄 Atualização dos precedentes</h3>
+      <p class="psub">O aplicativo baixa os precedentes qualificados direto do STJ ao abrir com internet e guarda para uso offline. Use “Atualizar agora” na barra a qualquer momento. Se o navegador bloquear o download direto, baixe o arquivo do STJ e importe-o abaixo.</p>
+      <div class="cfgrow"><div class="cl"><b>Fonte oficial (STJ — Dados Abertos)</b><span>Endereço do arquivo de precedentes qualificados. Não precisa alterar.</span></div>
+        <button class="abtn" id="stj-abrir">Abrir página do STJ</button></div>
+      <div class="cfgrow"><div class="cl"><b>Importar base (CSV do STJ ou base exportada)</b><span>Se o download automático for bloqueado: baixe o “temas.csv” no STJ e selecione-o aqui — ele contém TODO o histórico, não só os recentes. Aceita também o arquivo “base-precedentes.json” exportado de outra máquina.</span></div>
+        <input type="file" id="stj-arq" accept=".csv,.json,text/csv,application/json" style="font-size:12px"/></div>
+      <div class="cfgrow"><div class="cl"><b>Exportar base completa</b><span>Gera o arquivo “base-precedentes.json” com todo o acervo atual, para carregar em qualquer outra máquina em segundos, sem internet.</span></div>
+        <button class="abtn lido" id="base-exporta">⬇ Exportar base</button></div>
+      <div class="cfgrow"><span style="font-size:12px;color:var(--ink3)">Este aplicativo é local: não depende de servidor, nuvem ou conta. A base curada (STF/TJMA/súmulas) está sempre embutida.</span></div></div>
+
+    <div class="pbox"><h3>Leitura</h3>
+      <div class="cfgrow"><div class="cl"><b>Modo de leitura inicial</b><span>Como os cartões abrem ao iniciar o aplicativo.</span></div>
+        <div class="chips"><button class="chip" ${CONFIG.leitura==="resumido"?'style="background:var(--ink);border-color:var(--ink);color:var(--bg)"':""} data-cfg-leitura="resumido">Resumido</button>
+        <button class="chip" ${CONFIG.leitura==="completo"?'style="background:var(--ink);border-color:var(--ink);color:var(--bg)"':""} data-cfg-leitura="completo">Completo</button></div></div>
+      ${tgl("mostrarEmSuma","Mostrar “Em suma”","Síntese de uma linha no topo do cartão.")}
+      ${tgl("mostrarExplicacoes","Mostrar explicações","Texto didático na leitura completa.")}
+      ${tgl("mostrarFluxogramas","Mostrar fluxogramas","Diagramas de decisão na leitura completa.")}
+      ${tgl("mostrarMnemonicos","Mostrar mnemônicos","Nos cartões e nos flashcards.")}
+      ${tgl("mostrarDispositivos","Mostrar dispositivos legais","Transcrições na leitura completa.")}
+      <div class="cfgrow"><div class="cl"><b>Tamanho da interface</b><span>Zoom geral: <b id="cfg-fonte-v">${CONFIG.fonte}%</b></span></div>
+        <input type="range" min="90" max="125" step="5" value="${CONFIG.fonte}" id="cfg-fonte"/></div></div>
+
+    <div class="pbox"><h3>Notificações da página inicial</h3>
+      ${tgl("notifNovidades","Julgados recentes","Aviso com os novos e alterados da última coleta.")}
+      ${tgl("notifRevisoes","Revisões do dia","Aviso com as revisões agendadas para hoje ou em atraso.")}</div>
+
+    <div class="pbox"><h3>Estudo</h3>
+      <div class="cfgrow"><div class="cl"><b>Botões rápidos de agendamento</b><span>Dias oferecidos no agendador manual (separados por vírgula).</span></div>
+        <input type="text" id="cfg-int" value="${(CONFIG.intervalos||[]).join(", ")}" style="max-width:180px"/>
+        <button class="abtn" id="cfg-int-salva">Aplicar</button></div>
+      ${tgl("atalhos","Atalhos de teclado nos flashcards","Espaço revela · 1 revisar · 2 domino · → pular.")}</div>
+
+    <div class="pbox"><h3>📥 Importação pessoal (colar julgados selecionados)</h3>
+      <p class="psub">Cole aqui os julgados que o senhor mesmo selecionou nas suas leituras — por exemplo, a lista de teses da versão resumida do informativo comentado que já acompanha. Cada linha iniciada por §, •, – ou número (ou cada parágrafo) vira um cartão pessoal, pesquisável, anotável e agendável, marcado como seleção sua. O aplicativo não copia nada de sites de terceiros; a curadoria é do usuário.</p>
+      <textarea class="imp-ta" id="imp-texto" placeholder="§ Primeira tese selecionada…&#10;§ Segunda tese selecionada…"></textarea>
+      <div class="imp-row">
+        <select id="imp-trib"><option>STJ</option><option>STF</option><option>TJMA</option></select>
+        <input type="text" id="imp-ref" placeholder="Referência (ex.: Info 894/STJ)" maxlength="60"/>
+        <button class="abtn lido" id="imp-vai">Importar</button>
+        <span id="imp-msg" style="font-size:12px;color:var(--ink3)"></span>
+      </div>
+      ${Object.keys(IMPORTADOS).length?`<div class="cfgrow" style="margin-top:10px"><div class="cl"><b>${Object.keys(IMPORTADOS).length} julgado(s) importado(s)</b><span>aparecem na área “Importados (seleção pessoal)” e no filtro de assuntos.</span></div><button class="abtn" data-imp-ver="1">Ver</button><button class="abtn" id="imp-limpa" style="color:var(--crimson);border-color:var(--crimson)">Apagar todos</button></div>`:""}
+    </div>
+
+    <div class="pbox"><h3>📓 Cadernos</h3><p class="psub">Coleções pessoais de julgados (como no Buscador Dizer o Direito). Crie e inclua julgados pelo botão “Caderno” de cada cartão.</p>
+      ${Object.keys(CADERNOS).length?Object.keys(CADERNOS).sort((a,b)=>a.localeCompare(b,'pt')).map(n=>`<div class="cfgrow"><div class="cl"><b>📓 ${esc(n)}</b><span>${CADERNOS[n].length} julgado(s)</span></div><button class="abtn" data-cfg-cadver="${esc(n)}">Ver</button><button class="abtn" data-cfg-cadobsi="${esc(n)}">🟣 Obsidian (.zip)</button><button class="abtn" data-cfg-cadapaga="${esc(n)}" style="color:var(--crimson);border-color:var(--crimson)">Apagar caderno</button></div>`).join(""):'<div class="pvazio">Nenhum caderno criado.</div>'}</div>
+
+    <div class="pbox"><h3>👤 Perfis locais deste dispositivo</h3>
+      <p class="psub">Perfil ativo: <b>${esc(PERFIS.ativo)}</b>. Cada perfil tem favoritos, leituras, observações, cadernos e configurações próprios e isolados neste navegador. Atenção: perfis organizam o uso compartilhado do computador, mas não são senha — o controle de quem acessa o site é feito pela camada de autenticação (ver LEIA-ME).</p>
+      ${PERFIS.ativo==="Gestor"?`
+      <div class="cfgrow"><div class="cl"><b>Criar perfil</b><span>Para outra pessoa usar este dispositivo com dados separados.</span></div>
+        <input type="text" id="perfil-novo" placeholder="Nome (ex.: Assessor João)" maxlength="30" style="max-width:200px"/>
+        <button class="abtn lido" id="perfil-cria">Criar</button><span id="perfil-msg" style="font-size:12px;color:var(--crimson)"></span></div>
+      ${PERFIS.lista.filter(n=>n!=="Gestor").map(n=>`<div class="cfgrow"><div class="cl"><b>👤 ${esc(n)}</b><span>dados isolados neste navegador</span></div><button class="abtn" data-perfil-usa="${esc(n)}">Usar</button><button class="abtn" data-perfil-apaga="${esc(n)}" style="color:var(--crimson);border-color:var(--crimson)">Apagar perfil e dados</button></div>`).join("")||'<div class="pvazio">Nenhum perfil adicional criado.</div>'}
+      `:`<div class="pvazio">A criação e a exclusão de perfis são feitas no perfil <b>Gestor</b>. Use o seletor 👤 na barra superior para trocar.</div>`}
+    </div>
+
+    <div class="pbox"><h3>Meus dados (favoritos, leituras, revisões, observações, cadernos, configurações)</h3>
+      <p class="psub">Guardados no navegador deste dispositivo. Faça backups periódicos.</p>
+      <div class="cfgrow"><div class="cl"><b>Backup</b><span>Exporta um arquivo .json com todos os seus registros.</span></div>
+        <button class="abtn lido" id="cfg-backup">⬇ Exportar backup</button></div>
+      <div class="cfgrow"><div class="cl"><b>Restaurar</b><span>Importa um backup e substitui os registros atuais.</span></div>
+        <input type="file" id="cfg-restaura" accept="application/json" style="font-size:12px"/></div>
+      <div class="cfgrow"><div class="cl"><b>Apagar tudo</b><span>Remove definitivamente todos os registros pessoais deste dispositivo.</span></div>
+        <button class="abtn" id="cfg-limpa" style="color:var(--crimson);border-color:var(--crimson)">Apagar meus dados</button></div></div>
+
+    <div class="pbox"><h3>☁ Nuvem — perfis e sincronização (opcional)</h3>
+      <p class="psub">Com um projeto Supabase configurado (ver GUIA-SINCRONIZACAO.md), o login por código no e-mail sincroniza seus registros entre dispositivos e habilita as observações compartilhadas do gabinete. Os perfis são criados pelo gestor no painel do Supabase; este aplicativo não cria contas.</p>
+      <div class="cfgrow"><input type="text" id="nuv-url" placeholder="URL do projeto (https://xxxx.supabase.co)" value="${esc(CONFIG.nuvemUrl||"")}"/></div>
+      <div class="cfgrow"><input type="text" id="nuv-chave" placeholder="Chave pública (anon key)" value="${esc(CONFIG.nuvemChave||"")}"/>
+        <button class="abtn lido" id="nuv-salva">Salvar e conectar</button></div>
+      ${nuvemConfigurada()?(NUVEM.user?`
+        <div class="cfgrow"><div class="cl"><b>Sessão ativa</b><span>${esc(NUVEM.user.email||"")}</span></div>
+          <button class="abtn" id="nuv-recarrega">Recarregar da nuvem</button>
+          <button class="abtn" id="nuv-envia">Enviar agora</button>
+          <button class="abtn" id="nuv-sai" style="color:var(--crimson);border-color:var(--crimson)">Sair</button></div>`:`
+        <div class="cfgrow"><input type="text" id="nuv-email" placeholder="Seu e-mail autorizado"/>
+          <button class="abtn" id="nuv-codigo">Enviar código</button></div>
+        <div class="cfgrow"><input type="text" id="nuv-otp" placeholder="Código recebido por e-mail"/>
+          <button class="abtn lido" id="nuv-entra">Entrar</button></div>`):""}
+      ${NUVEM.msg?`<p class="psub" style="margin-top:8px">${esc(NUVEM.msg)}</p>`:""}
+    </div>
+
+    <div class="pbox"><h3>Restaurar padrões</h3>
+      <div class="cfgrow"><div class="cl"><b>Voltar às configurações originais</b><span>Não afeta leituras, revisões, observações ou favoritos.</span></div>
+        <button class="abtn" id="cfg-reset">Restaurar padrões</button></div></div>
+  </div>`;
+  m.querySelectorAll("[data-cfg-tgl]").forEach(t=>t.onchange=()=>{CONFIG[t.dataset.cfgTgl]=t.checked;salvarConfig();render();});
+  if($("#perfil-cria"))$("#perfil-cria").onclick=()=>{const err=criarPerfil($("#perfil-novo").value);const msg=document.getElementById("perfil-msg");if(err){if(msg)msg.textContent=err;}else{render();}};
+  m.querySelectorAll("[data-perfil-usa]").forEach(b=>b.onclick=()=>trocarPerfil(b.dataset.perfilUsa));
+  m.querySelectorAll("[data-perfil-apaga]").forEach(b=>b.onclick=()=>{if(confirm(`Apagar o perfil “${b.dataset.perfilApaga}” e TODOS os seus dados neste dispositivo?`))apagarPerfil(b.dataset.perfilApaga);});
+  if($("#imp-vai"))$("#imp-vai").onclick=()=>{
+    const t=$("#imp-texto").value;if(!t.trim())return;
+    const r=importarColagem(t,$("#imp-trib").value,$("#imp-ref").value.trim());
+    const m2=document.getElementById("imp-msg");if(m2)m2.textContent=`${r.novos} novo(s) de ${r.total} identificado(s).`;
+    $("#imp-texto").value="";};
+  m.querySelectorAll("[data-imp-ver]").forEach(b=>b.onclick=()=>{state.config=false;$("#cfgBtn").classList.remove("on");state.q="";$("#q").value="";state.assuntos=new Set(["Importados"]);render();});
+  if($("#imp-limpa"))$("#imp-limpa").onclick=()=>{if(confirm("Apagar todos os julgados importados?"))limparImportados();};
+  m.querySelectorAll("[data-cfg-cadver]").forEach(b=>b.onclick=()=>{state.caderno=b.dataset.cfgCadver;state.config=false;$("#cfgBtn").classList.remove("on");render();});
+  m.querySelectorAll("[data-cfg-cadobsi]").forEach(b=>b.onclick=()=>{
+    const n=b.dataset.cfgCadobsi;const ids=new Set(CADERNOS[n]||[]);
+    const list=DB.filter(d=>ids.has(d.id));
+    exportObsidianZipDe(list,"obsidian-caderno-"+fileSafe(n).toLowerCase().replace(/\s+/g,"-")+".zip","Caderno — "+n);
+  });
+  m.querySelectorAll("[data-cfg-cadapaga]").forEach(b=>b.onclick=()=>{if(confirm(`Apagar o caderno “${b.dataset.cfgCadapaga}”? Os julgados permanecem na base.`))apagarCaderno(b.dataset.cfgCadapaga);});
+  m.querySelectorAll("[data-cfg-leitura]").forEach(b=>b.onclick=()=>{CONFIG.leitura=b.dataset.cfgLeitura;salvarConfig();state.completo=(CONFIG.leitura==="completo");$("#viewLbl").textContent=state.completo?"Completo":"Resumido";$("#viewBtn").classList.toggle("on",state.completo);render();});
+  $("#cfg-fonte").oninput=(e)=>{CONFIG.fonte=parseInt(e.target.value,10);document.getElementById("cfg-fonte-v").textContent=CONFIG.fonte+"%";salvarConfig();aplicarConfigVisual();};
+  if($("#cl-salva"))$("#cl-salva").onclick=()=>{CONFIG.claudeKey=$("#cl-key").value.trim();CONFIG.claudeModel=$("#cl-model").value.trim()||"claude-haiku-4-5-20251001";salvarConfig();render();};
+  if($("#cl-limpa-cache"))$("#cl-limpa-cache").onclick=()=>{if(confirm("Apagar todas as explicações geradas por IA?")){EXPLIC={};salvarExplic();render();}};
+  if($("#nv-salvacfg"))$("#nv-salvacfg").onclick=()=>{CONFIG.nuvemUrl=$("#nv-url").value.trim();CONFIG.nuvemKey=$("#nv-key").value.trim();salvarConfig();render();};
+  if($("#nv-envia"))$("#nv-envia").onclick=()=>{const em=$("#nv-email").value.trim();if(!em)return;setNuvemStatus("Enviando código…");enviarCodigoNuvem(em).then(()=>setNuvemStatus("Código enviado para "+em+". Digite-o ao lado.")).catch(e=>setNuvemStatus("Falha ao enviar: "+e.message+" (o e-mail foi convidado pelo gestor?)"));};
+  if($("#nv-entra"))$("#nv-entra").onclick=()=>{const em=$("#nv-email").value.trim(),cd=$("#nv-cod").value.trim();if(!em||!cd)return;setNuvemStatus("Verificando…");verificarCodigoNuvem(em,cd).then(()=>{setNuvemStatus("Sessão iniciada.");sincronizarNuvem(true);render();}).catch(e=>setNuvemStatus("Código recusado: "+e.message));};
+  if($("#nv-sync"))$("#nv-sync").onclick=()=>sincronizarNuvem(true);
+  if($("#nv-sair"))$("#nv-sair").onclick=()=>sairNuvem();
+  if($("#stj-abrir"))$("#stj-abrir").onclick=()=>{try{window.open(CONFIG.stjUrl,"_blank","noopener");}catch(e){}};
+  if($("#stj-arq"))$("#stj-arq").onchange=(e)=>{const f=e.target.files&&e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>importarArquivoBase(String(rd.result||""));rd.readAsText(f,"utf-8");};
+  if($("#base-exporta"))$("#base-exporta").onclick=()=>exportarBase();
+  $("#cfg-int-salva").onclick=()=>{const v=$("#cfg-int").value.split(",").map(x=>parseInt(x.trim(),10)).filter(n=>n>0&&n<=730);if(v.length){CONFIG.intervalos=v;salvarConfig();render();}};
+  $("#cfg-backup").onclick=()=>{
+    const backup={app:"precedentes-qualificados",versao:1,perfil:PERFIS.ativo,exportado_em:new Date().toISOString(),
+      favoritos:[...state.favoritos],sabidos:[...state.eSabidos],revisar:[...state.eRevisar],
+      progresso:PROG,notas:NOTAS,cadernos:CADERNOS,importados:IMPORTADOS,config:CONFIG,tema:localStorage.getItem(SK("theme"))||"light",
+      novidadesVistas:localStorage.getItem(SK("novidades_vistas"))||""};
+    const blob=new Blob([JSON.stringify(backup,null,1)],{type:"application/json"});
+    const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;
+    a.download="backup-precedentes-"+hojeISO()+".json";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);};
+  $("#cfg-restaura").onchange=(e)=>{
+    const f=e.target.files&&e.target.files[0];if(!f)return;
+    const r=new FileReader();
+    r.onload=()=>{try{
+      const b=JSON.parse(r.result);
+      if(b.app!=="precedentes-qualificados")throw new Error("arquivo não é um backup deste aplicativo");
+      if(!confirm("Substituir os registros atuais pelos do backup?"))return;
+      state.favoritos=new Set(b.favoritos||[]);save("favoritos",state.favoritos);
+      state.eSabidos=new Set(b.sabidos||[]);save("sabidos",state.eSabidos);
+      state.eRevisar=new Set(b.revisar||[]);save("revisar",state.eRevisar);
+      PROG=b.progresso||{};saveObj("progresso",PROG);
+      NOTAS=b.notas||{};saveObj("notas",NOTAS);
+      CADERNOS=b.cadernos||{};salvarCadernos();
+      IMPORTADOS=b.importados||{};salvarImportados();mesclarImportados();
+      CONFIG={...CONFIG_PADRAO,...(b.config||{})};salvarConfig();DATA_URL=CONFIG.dataUrl||DATA_URL_PADRAO;
+      if(b.tema)localStorage.setItem(SK("theme"),b.tema);
+      if(b.novidadesVistas)localStorage.setItem(SK("novidades_vistas"),b.novidadesVistas);
+      aplicarConfigVisual();render();alert("Backup restaurado.");
+    }catch(err){alert("Não foi possível restaurar: "+err.message);}};
+    r.readAsText(f);};
+  $("#cfg-limpa").onclick=()=>{
+    if(!confirm("Apagar TODOS os registros pessoais deste dispositivo (leituras, revisões, observações, favoritos e configurações)?"))return;
+    CHAVES_PERFIL.forEach(k=>{try{localStorage.removeItem(SK(k));}catch(e){}});
+    location.reload();};
+  if($("#nuv-salva"))$("#nuv-salva").onclick=()=>{CONFIG.nuvemUrl=$("#nuv-url").value.trim();CONFIG.nuvemChave=$("#nuv-chave").value.trim();salvarConfig();NUVEM.msg="";nuvemIniciar();};
+  if($("#nuv-codigo"))$("#nuv-codigo").onclick=async()=>{const e=$("#nuv-email").value.trim();if(!e)return;try{await nuvemEnviarCodigo(e);NUVEM.msg="Código enviado para "+e+". Verifique o e-mail.";}catch(err){NUVEM.msg="Falha: "+err.message+" (o e-mail precisa ter sido cadastrado pelo gestor).";}render();};
+  if($("#nuv-entra"))$("#nuv-entra").onclick=async()=>{const e=$("#nuv-email")?$("#nuv-email").value.trim():"";const c=$("#nuv-otp").value.trim();if(!e||!c){NUVEM.msg="Informe e-mail e código.";render();return;}try{await nuvemVerificarCodigo(e,c);}catch(err){NUVEM.msg="Código inválido ou expirado: "+err.message;render();}};
+  if($("#nuv-sai"))$("#nuv-sai").onclick=()=>nuvemSair();
+  if($("#nuv-recarrega"))$("#nuv-recarrega").onclick=()=>nuvemAposLogin(false);
+  if($("#nuv-envia"))$("#nuv-envia").onclick=async()=>{await nuvemPushAgora();NUVEM.msg="Registros enviados à nuvem.";render();};
+  $("#cfg-reset").onclick=()=>{CONFIG={...CONFIG_PADRAO,dataUrl:CONFIG.dataUrl,nuvemUrl:CONFIG.nuvemUrl,nuvemChave:CONFIG.nuvemChave};salvarConfig();aplicarConfigVisual();render();};
+}
+/* ---------- Exportar: ZIP offline sem dependências ---------- */
+const CRC_TABLE=(()=>{let c,t=[];for(let n=0;n<256;n++){c=n;for(let k=0;k<8;k++)c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1);t[n]=c>>>0;}return t;})();
+function crc32(b){let c=0xFFFFFFFF;for(let i=0;i<b.length;i++)c=CRC_TABLE[(c^b[i])&0xFF]^(c>>>8);return (c^0xFFFFFFFF)>>>0;}
+function u16(n){return [n&0xFF,(n>>>8)&0xFF];}
+function u32(n){return [n&0xFF,(n>>>8)&0xFF,(n>>>16)&0xFF,(n>>>24)&0xFF];}
+function makeZip(files){
+  const chunks=[],central=[];let offset=0;
+  for(const f of files){const nb=f.name,data=f.data,crc=crc32(data);
+    const lh=new Uint8Array([].concat(u32(0x04034b50),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(nb.length),u16(0)));
+    chunks.push(lh,nb,data);
+    const cd=new Uint8Array([].concat(u32(0x02014b50),u16(20),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(nb.length),u16(0),u16(0),u16(0),u16(0),u32(0),u32(offset)));
+    central.push(cd,nb);offset+=lh.length+nb.length+data.length;}
+  let cdSize=0;central.forEach(c=>cdSize+=c.length);
+  const eocd=new Uint8Array([].concat(u32(0x06054b50),u16(0),u16(0),u16(files.length),u16(files.length),u32(cdSize),u32(offset),u16(0)));
+  return new Blob([...chunks,...central,eocd],{type:"application/zip"});
+}
+function slug(s){return s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");}
+function fileSafe(s){return s.replace(/[\\/:*?"<>|]/g,"-").trim();}
+function ylist(a){return a.map(x=>`  - ${x}`).join("\n");}
+function baixar(nome,conteudo,tipo){const blob=new Blob([conteudo],{type:tipo});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=nome;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);}
+
+function buildNote(d){
+  const tags=[`precedente/${slug(ESP[d.especie].label)}`,`tribunal/${slug(d.tribunal)}`,`area/${slug(d.area)}`,d.obrigatorio?"obrigatorio":"consulta",...d.assuntos.map(a=>`assunto/${slug(a)}`)];
+  const corr=(d.vinculos||[]).filter(v=>byId[v]);
+  let fm=`---\ntitulo: "${d.titulo.replace(/"/g,'\\"')}"\naliases:\n  - "${d.titulo.replace(/"/g,'\\"')}"\ntribunal: ${d.tribunal}\nespecie: "${ESP[d.especie].label}"\nnumero: "${d.numero}"\nobrigatorio: ${d.obrigatorio}\nvalidade: "${d.validade}"\nem_suma: "${d.emSuma.replace(/"/g,'\\"')}"\narea: "${d.area}"\nsituacao: "${d.situacao.replace(/"/g,'\\"')}"\nfonte: "${d.fonte.replace(/"/g,'\\"')}"\nassuntos:\n${ylist(d.assuntos)}\n`;
+  if(corr.length)fm+=`correlatos:\n${ylist(corr.map(v=>`"[[${fileSafe(byId[v].numero)}]]"`))}\n`;
+  if(d.importado)fm+=`origem_pessoal: true\n`;
+  fm+=`tags:\n${ylist(tags)}\n---\n\n`;
+  let b=`# ${d.titulo}\n\n`;
+  b+=d.obrigatorio?`> [!warning] Observância obrigatória — art. 927 do CPC\n> ${d.tribunal} · ${ESP[d.especie].label} · ${d.numero} · ${d.validade}\n\n`:`> [!info] Ferramenta de consulta (não vinculante por si)\n> ${d.tribunal} · ${ESP[d.especie].label} · ${d.numero} · ${d.validade}\n\n`;
+  b+=`## Em suma\n${d.emSuma}\n\n## Explicação\n${d.explicacao}\n\n`;
+  if(d.fluxograma)b+=`## Fluxograma\n${fluxoMermaid(d.fluxograma)}\n`;
+  if(d.mnemonico)b+=`## Mnemônico\n> [!tip] ${d.mnemonico}\n\n`;
+  b+=`## Tese (na íntegra)\n${d.completo}\n\n## Situação / vigência\n${d.validade} — ${d.situacao}\n\n`;
+  if(d.dispositivos.length)b+=`## Dispositivos legais adotados (na íntegra)\n`+d.dispositivos.map(x=>`**${x.ref}**\n\n> ${x.texto.replace(/\n/g,"\n> ")}\n`).join("\n")+`\n`;
+  if(corr.length)b+=`## Precedentes correlatos\n`+corr.map(v=>`- [[${fileSafe(byId[v].numero)}]] — ${byId[v].titulo}`).join("\n")+`\n\n`;
+  b+=`## Origem\n- Fonte: ${d.fonte}\n`;if(d.precedentes)b+=`- Referência: ${d.precedentes}\n`;
+  if(NOTAS[d.id])b+=`\n## Minhas observações\n${NOTAS[d.id]}\n`;
+  b+=`\n## Notas de estudo\n<!-- Anotações pessoais -->\n`;
+  return fm+b;
+}
+function mocMD(list){
+  const hoje=new Date().toLocaleDateString("pt-BR");
+  let s=`---\ntipo: MOC\ntags:\n  - precedentes/indice\n---\n\n# Precedentes Qualificados — Índice (MOC)\n\n_Gerado em ${hoje} · ${list.length} notas._\n\n`;
+  const g={};list.forEach(d=>{(g[d.area]=g[d.area]||[]).push(d);});
+  for(const [area,itens] of Object.entries(g)){s+=`## ${area}\n`;itens.forEach(d=>{s+=`- [[${fileSafe(d.numero)}]] — ${d.titulo}${d.obrigatorio?" `obrigatório`":""}\n`;});s+=`\n`;}
+  s+=`\nVer também: [[Art. 927 do CPC (fundamento)]]\n\n---\n### Consulta rápida (requer plugin Dataview)\n\`\`\`dataview\ntable tribunal, especie, validade, situacao\nfrom #precedente\nsort area asc\n\`\`\`\n`;
+  return s;
+}
+function refNote(){return `---\ntipo: referencia\ntags:\n  - precedentes/fundamento\n---\n\n# Art. 927 do CPC — fundamento da observância obrigatória\n\n> ${ART927.replace(/\n/g,"\n> ")}\n`;}
+
+function baixarNotaObsidian(id){
+  const d=byId[id];if(!d)return;
+  baixar(fileSafe(d.numero)+".md",buildNote(d),"text/markdown;charset=utf-8");
+}
+function exportObsidianZipDe(itens,nomeZip,tituloMoc){
+  if(!itens||!itens.length)return;
+  const enc=new TextEncoder();const files=[];
+  const pasta=fileSafe(tituloMoc||"Precedentes");
+  itens.forEach(d=>files.push({name:enc.encode(`${pasta}/${fileSafe(d.numero)}.md`),data:enc.encode(buildNote(d))}));
+  let moc=`---\ntipo: MOC\ntags:\n  - precedentes/colecao\n---\n\n# ${tituloMoc||"Precedentes"} — Índice\n\n_${itens.length} nota(s) · exportado em ${new Date().toLocaleDateString("pt-BR")}._\n\n`;
+  itens.forEach(d=>{moc+=`- [[${fileSafe(d.numero)}]] — ${d.titulo}\n`;});
+  files.push({name:enc.encode(`${pasta}/${pasta} (MOC).md`),data:enc.encode(moc)});
+  const blob=makeZip(files);const url=URL.createObjectURL(blob);const a=document.createElement("a");
+  a.href=url;a.download=nomeZip||"obsidian-notas.zip";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+}
+function exportarNotaUnica(id){
+  const d=byId[id];if(!d)return;
+  baixar(fileSafe(d.numero)+".md",buildNote(d),"text/markdown;charset=utf-8");
+}
+function exportObsidianZip(list){
+  const enc=new TextEncoder();const files=[];
+  list.forEach(d=>files.push({name:enc.encode(`Precedentes Qualificados/${fileSafe(d.numero)}.md`),data:enc.encode(buildNote(d))}));
+  files.push({name:enc.encode(`Precedentes Qualificados/Precedentes Qualificados (MOC).md`),data:enc.encode(mocMD(list))});
+  files.push({name:enc.encode(`Precedentes Qualificados/Art. 927 do CPC (fundamento).md`),data:enc.encode(refNote())});
+  const blob=makeZip(files);const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="obsidian-precedentes.zip";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+}
+async function exportObsidianNative(list){
+  if(!window.showDirectoryPicker){alert("Este navegador não permite salvar direto na pasta. Use a opção “Notas para Obsidian (.zip)” — as notas já são arquivos .md dentro do pacote.");return;}
+  try{
+    const dir=await window.showDirectoryPicker();
+    const sub=await dir.getDirectoryHandle("Precedentes Qualificados",{create:true});
+    const write=async(nome,txt)=>{const fh=await sub.getFileHandle(nome,{create:true});const w=await fh.createWritable();await w.write(txt);await w.close();};
+    for(const d of list)await write(fileSafe(d.numero)+".md",buildNote(d));
+    await write("Precedentes Qualificados (MOC).md",mocMD(list));
+    await write("Art. 927 do CPC (fundamento).md",refNote());
+    alert("Notas .md salvas na pasta escolhida (subpasta “Precedentes Qualificados”). Abra o vault no Obsidian para consultá-las.");
+  }catch(e){if(e&&e.name!=="AbortError")alert("Não foi possível salvar: "+e.message);}
+}
+function exportMD(list){
+  const hoje=new Date().toLocaleDateString("pt-BR");
+  let s=`# Precedentes Qualificados — STF & STJ\n\n_Extração de estudo · ${hoje} · ${list.length} itens._\n_Observância obrigatória conforme o art. 927 do CPC. Jurisprudência em Teses é compilação de consulta._\n\n`;
+  const g={};list.forEach(d=>{(g[d.area]=g[d.area]||[]).push(d);});
+  for(const [area,itens] of Object.entries(g)){s+=`\n## ${area}\n\n`;itens.forEach(d=>{
+    s+=`### ${d.numero} — ${d.titulo}\n**${d.tribunal} · ${ESP[d.especie].label} · ${d.obrigatorio?'Observância obrigatória':'Consulta'} · ${d.validade}**\n\n> **Em suma:** ${d.emSuma}\n\n_Explicação:_ ${d.explicacao}\n\n`;
+    if(d.mnemonico)s+=`_Mnemônico:_ ${d.mnemonico}\n\n`;
+    if(d.fluxograma)s+=`${fluxoMermaid(d.fluxograma)}\n`;
+    s+=`**Tese:** ${d.completo}\n\n- Situação: ${d.situacao}\n- Origem: ${d.fonte}\n- Assuntos: ${d.assuntos.join(", ")}\n`;
+    if(d.dispositivos.length){s+=`\n**Dispositivos legais adotados (na íntegra):**\n`+d.dispositivos.map(x=>`- ${x.ref}:\n  > ${x.texto.replace(/\n/g,"\n  > ")}`).join("\n")+`\n`;}
+    s+=`\n`;});}
+  s+=`\n---\n### ${'Art. 927 do CPC'}\n\n> ${ART927.replace(/\n/g,"\n> ")}\n\n---\nFontes oficiais: portais do STF e do STJ; legislação vigente. Dados verificados; nada foi presumido.\n`;
+  baixar("precedentes-qualificados.md",s,"text/markdown;charset=utf-8");
+}
+function exportCSV(list){
+  const head=["Tribunal","Especie","Obrigatorio_art927","Validade","Numero","Titulo","EmSuma","Explicacao","Mnemonico","Tese","Dispositivos","Situacao","Area","Assuntos","Origem"];
+  const linha=(a)=>a.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",");
+  const rows=list.map(d=>linha([d.tribunal,ESP[d.especie].label,d.obrigatorio?"SIM":"NAO",d.validade,d.numero,d.titulo,d.emSuma,d.explicacao,d.mnemonico,d.completo,d.dispositivos.map(x=>x.ref+": "+x.texto.replace(/\n/g," ")).join(" | "),d.situacao,d.area,d.assuntos.join("; "),d.fonte]));
+  baixar("precedentes-qualificados.csv","\uFEFF"+linha(head)+"\n"+rows.join("\n"),"text/csv;charset=utf-8");
+}
+
+/* ---------- Render principal ---------- */
+function render(){
+  renderRef();renderFilters();
+  const list=filtrar();renderSelInfo(list);
+  const modoAlt = state.estudo||state.painel||state.config;
+  $("#filters").parentElement.style.display=modoAlt?"none":"block";
+  const listaOrd=ordenar(list);
+  if(state.config)renderConfig();
+  else if(state.painel)renderPainel();
+  else if(state.estudo)renderEstudo();
+  else if(state.leituraSeq)renderLeitura(listaOrd);
+  else renderList(listaOrd);
+  renderNotifs();
+  updateLoginBtn();
+}
+function updateLoginBtn(){
+  const l=document.getElementById("loginLbl");if(!l)return;
+  if(typeof nuvemLogada==="function"&&nuvemLogada()){
+    const em=(SESSAO&&SESSAO.email)||"";l.textContent=em?em.split("@")[0]:"Conta";
+    const b=document.getElementById("loginBtn");if(b)b.classList.add("on");
+  }else{l.textContent="Entrar";const b=document.getElementById("loginBtn");if(b)b.classList.remove("on");}
+}
+/* ---------- Eventos ---------- */
+(function(){
+  let t="light";try{t=localStorage.getItem(SK("theme"))||"light";}catch(e){}
+  document.documentElement.setAttribute("data-theme",t);
+  const btn=$("#themeBtn");btn.textContent=t==="dark"?"☀":"🌙";
+  btn.onclick=()=>{t=t==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",t);btn.textContent=t==="dark"?"☀":"🌙";try{localStorage.setItem(SK("theme"),t);}catch(e){}};
+})();
+$("#q").oninput=(e)=>{state.q=e.target.value;render();};
+$("#refBtn").onclick=()=>{state.refOpen=!state.refOpen;$("#refBtn").classList.toggle("on",state.refOpen);renderRef();};
+$("#viewBtn").onclick=()=>{state.completo=!state.completo;$("#viewLbl").textContent=state.completo?"Completo":"Resumido";$("#viewBtn").classList.toggle("on",state.completo);render();};
+function fecharModos(exceto){
+  if(exceto!=="estudo"){state.estudo=false;$("#studyBtn").classList.remove("on");}
+  if(exceto!=="painel"){state.painel=false;$("#painelBtn").classList.remove("on");}
+  if(exceto!=="config"){state.config=false;$("#cfgBtn").classList.remove("on");}
+}
+$("#studyBtn").onclick=()=>{state.estudo=!state.estudo;fecharModos(state.estudo?"estudo":null);state.eIdx=0;state.eRevelado=false;$("#studyBtn").classList.toggle("on",state.estudo);render();};
+$("#refreshBtn").onclick=()=>atualizarLocal(true);
+$("#painelBtn").onclick=()=>{state.painel=!state.painel;fecharModos(state.painel?"painel":null);$("#painelBtn").classList.toggle("on",state.painel);render();};
+$("#cfgBtn").onclick=()=>{state.config=!state.config;fecharModos(state.config?"config":null);$("#cfgBtn").classList.toggle("on",state.config);render();};
+$("#loginBtn").onclick=()=>{state.config=true;fecharModos("config");$("#cfgBtn").classList.add("on");render();setTimeout(()=>{const el=document.getElementById("box-conta");if(el)el.scrollIntoView({behavior:"smooth",block:"start"});},60);};
+(function(){
+  const s=$("#perfilSel");if(!s)return;
+  s.innerHTML=PERFIS.lista.map(n=>`<option ${n===PERFIS.ativo?"selected":""}>👤 ${n}</option>`).join("");
+  s.onchange=()=>{const nome=s.value.replace(/^👤\s*/,"");if(nome!==PERFIS.ativo)trocarPerfil(nome);};
+})();
+aplicarConfigVisual();
+if(state.completo){$("#viewLbl").textContent="Completo";$("#viewBtn").classList.add("on");}
+$("#dlBtn").onclick=(e)=>{e.stopPropagation();const m=$("#dlMenu");m.style.display=m.style.display==="none"?"block":"none";};
+document.addEventListener("click",()=>{$("#dlMenu").style.display="none";});
+$("#dlMenu").addEventListener("click",(e)=>{const k=e.target.closest("[data-dl]")&&e.target.closest("[data-dl]").dataset.dl;if(!k)return;const list=filtrar();
+  if(k==="obsidian-bloco")exportObsidianZipDe(ordenar(list),"obsidian-bloco-atual.zip","Bloco selecionado");
+  else if(k==="obsidian-native")exportObsidianNative(list);
+  else if(k==="obsidian")exportObsidianZip(list);
+  else if(k==="md")exportMD(list);
+  else if(k==="csv")exportCSV(list);
+  else if(k==="print")window.print();});
+document.addEventListener("keydown",(e)=>{
+  const tag0=(e.target.tagName||"").toLowerCase();
+  if(state.leituraSeq&&tag0!=="input"&&tag0!=="textarea"){
+    if(e.key==="ArrowRight"){e.preventDefault();$("#seqProx")&&$("#seqProx").click();return;}
+    if(e.key==="ArrowLeft"){e.preventDefault();$("#seqAnt")&&$("#seqAnt").click();return;}
+    if(e.key==="Escape"){state.leituraSeq=false;render();return;}
+  }
+  if(!CONFIG.atalhos)return;
+  if(!state.estudo)return;const tag=(e.target.tagName||"").toLowerCase();if(tag==="input"||tag==="textarea")return;
+  if(e.code==="Space"){e.preventDefault();if(!state.eRevelado){state.eRevelado=true;render();}}
+  else if(e.key==="ArrowRight"){state.eRevelado=false;const l=deckList();if(l.length){state.eIdx=(state.eIdx+1)%l.length;render();}}
+  else if(state.eRevelado&&(e.key==="1"||e.key==="2")){const l=deckList();const d=l[Math.min(state.eIdx,l.length-1)];if(!d)return;if(e.key==="1"){state.eRevisar.add(d.id);save("revisar",state.eRevisar);}else{state.eSabidos.add(d.id);save("sabidos",state.eSabidos);state.eRevisar.delete(d.id);save("revisar",state.eRevisar);}state.eRevelado=false;state.eIdx=(state.eIdx+1)%l.length;render();}
+});
+
+render();
+sincronizar();
+sincronizarNuvem();
+</script>
+</body>
+</html>

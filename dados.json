@@ -1,0 +1,780 @@
+{
+ "versao": 1,
+ "gerado_em": "2026-07-08",
+ "fontes": [
+  "STJ (Dados Abertos — Precedentes Qualificados, automático)",
+  "Base curada verificada (STF/TJMA/Súmulas)"
+ ],
+ "itens": [
+  {
+   "id": "stf-t6",
+   "tribunal": "STF",
+   "especie": "RG",
+   "area": "Direito à Saúde",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Mérito julgado em 26/09/2024",
+   "assuntos": [
+    "Saúde",
+    "Medicamentos",
+    "SUS",
+    "Direito Constitucional"
+   ],
+   "numero": "Tema 6",
+   "fonte": "RE 566.471 — Rel. Min. Marco Aurélio",
+   "titulo": "Fornecimento de medicamento registrado na ANVISA, mas não incorporado ao SUS",
+   "resumo": "Como regra, a ausência do fármaco nas listas do SUS impede o fornecimento por decisão judicial, independentemente do custo. Excepcionalmente, admite-se a concessão de medicamento registrado na ANVISA e não incorporado, desde que preenchidos cumulativamente os requisitos fixados na tese.",
+   "completo": "1. A ausência de inclusão de medicamento nas listas de dispensação do SUS (RENAME, RESME, REMUME, entre outras) impede, como regra geral, o fornecimento do fármaco por decisão judicial, independentemente do custo. 2. É possível, excepcionalmente, a concessão judicial de medicamento registrado na ANVISA, mas não incorporado às listas de dispensação do SUS, desde que preenchidos, cumulativamente, os seguintes requisitos, cujo ônus probatório incumbe ao autor da ação: (a) negativa de fornecimento na via administrativa, nos termos do item 4 do Tema 1.234; (b) ilegalidade do ato de não incorporação pela Conitec, ausência de pedido de incorporação ou mora na sua apreciação, observados os prazos e critérios da Lei nº 8.080/1990 e do Decreto nº 7.646/2011; (c) impossibilidade de substituição por outro medicamento constante das listas do SUS. [A íntegra da tese deve ser consultada no portal do STF.]",
+   "explicacao": "Na prática, o juiz só concede medicamento fora das listas do SUS em caráter excepcional. O autor precisa demonstrar, ao mesmo tempo, a negativa na via administrativa, a ilegalidade (ou a mora/omissão) na não incorporação pela Conitec e a inexistência de substituto no SUS. Faltando qualquer desses requisitos, prevalece a regra de não fornecimento.",
+   "emSuma": "Medicamento registrado na ANVISA e fora do SUS só por decisão judicial em caráter excepcional, cumpridos, juntos, três requisitos.",
+   "mnemonico": "NIS — Negativa administrativa · Ilegalidade da não incorporação · Substituição impossível.",
+   "fluxograma": [
+    {
+     "t": "inicio",
+     "txt": "Pedido de medicamento registrado na ANVISA e não incorporado ao SUS"
+    },
+    {
+     "t": "decisao",
+     "txt": "Houve negativa na via administrativa? (requisito a)",
+     "nao": "Não se concede",
+     "sim": null
+    },
+    {
+     "t": "decisao",
+     "txt": "A não incorporação pela Conitec é ilegal, ou há omissão/mora? (requisito b)",
+     "nao": "Não se concede",
+     "sim": null
+    },
+    {
+     "t": "decisao",
+     "txt": "É impossível substituir por medicamento do SUS? (requisito c)",
+     "nao": "Não se concede",
+     "sim": null
+    },
+    {
+     "t": "fim",
+     "txt": "Concessão judicial excepcional cabível"
+    }
+   ],
+   "dispositivos": [],
+   "precedentes": "RE 566.471/RN",
+   "vinculos": [
+    "stf-t1234",
+    "stf-t500",
+    "stf-sv60"
+   ]
+  },
+  {
+   "id": "stf-t1234",
+   "tribunal": "STF",
+   "especie": "RG",
+   "area": "Direito à Saúde",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Tese alterada em Sessão Extraordinária de 19/02/2026",
+   "assuntos": [
+    "Saúde",
+    "Medicamentos",
+    "SUS",
+    "Competência",
+    "Direito Constitucional"
+   ],
+   "numero": "Tema 1.234",
+   "fonte": "RE 1.366.243 — Rel. Min. Gilmar Mendes",
+   "titulo": "Legitimidade passiva da União e competência da Justiça Federal em medicamentos não padronizados no SUS",
+   "resumo": "Define a legitimidade passiva da União e a competência da Justiça Federal nas demandas sobre medicamentos registrados na ANVISA, mas não padronizados no SUS, com critérios de competência por faixa de valor e regras de custeio e ressarcimento entre os entes.",
+   "completo": "Tema 1.234 — Legitimidade passiva da União e competência da Justiça Federal nas demandas que versem sobre fornecimento de medicamentos registrados na ANVISA, mas não padronizados no SUS. A tese estabelece regras de competência conforme faixas de valor do medicamento, custeio integral pela União nos casos de sua competência e regime de ressarcimento entre os entes, aplicável às ações ajuizadas após a publicação da decisão. Redação vigente alterada em Sessão Extraordinária de 19/02/2026. [Consultar a redação integral e atualizada no portal do STF.]",
+   "explicacao": "Fixa quem responde e onde tramita a ação de medicamento não padronizado: a competência varia conforme a faixa de valor do medicamento, com regras de custeio pela União e de ressarcimento entre os entes. Como a redação foi alterada em fevereiro de 2026, convém conferir sempre a versão vigente antes de aplicar.",
+   "emSuma": "Em medicamento não padronizado no SUS, a competência (Justiça Federal ou Estadual) e o custeio seguem faixas de valor, com legitimidade da União.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "RE 1.366.243/SC",
+   "vinculos": [
+    "stf-t6",
+    "stf-sv60",
+    "stf-t500"
+   ]
+  },
+  {
+   "id": "stf-t793",
+   "tribunal": "STF",
+   "especie": "RG",
+   "area": "Direito à Saúde",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Julgado em 16/04/2020",
+   "assuntos": [
+    "Saúde",
+    "SUS",
+    "Responsabilidade solidária",
+    "Federalismo",
+    "Direito Constitucional"
+   ],
+   "numero": "Tema 793",
+   "fonte": "RE 855.178",
+   "titulo": "Responsabilidade solidária dos entes federativos nas demandas prestacionais de saúde",
+   "resumo": "Os entes da federação, em razão da competência comum, são solidariamente responsáveis nas demandas prestacionais de saúde, cabendo o direcionamento do cumprimento e o ressarcimento conforme a repartição de competências.",
+   "completo": "Os entes da federação, em decorrência da competência comum, são solidariamente responsáveis nas demandas prestacionais na área da saúde. [A parte final da tese, sobre o direcionamento do cumprimento e o ressarcimento conforme a repartição de competências, deve ser conferida na íntegra no portal do STF.]",
+   "explicacao": "Reconhece que União, Estados e Municípios respondem juntos (solidariamente) pelas prestações de saúde, de modo que o cidadão pode acionar qualquer um deles. O ente que arcar com o custo pode depois buscar ressarcimento conforme a divisão de competências do SUS.",
+   "emSuma": "União, Estados e Municípios respondem solidariamente pela saúde; o cidadão aciona qualquer um deles.",
+   "mnemonico": "Saúde é SOS — Solidariedade de todos os entes.",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "RE 855.178/PE",
+   "vinculos": [
+    "stf-t6"
+   ]
+  },
+  {
+   "id": "stf-t500",
+   "tribunal": "STF",
+   "especie": "RG",
+   "area": "Direito à Saúde",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Julgado em 2019",
+   "assuntos": [
+    "Saúde",
+    "Medicamentos",
+    "ANVISA",
+    "Competência",
+    "Direito Constitucional"
+   ],
+   "numero": "Tema 500",
+   "fonte": "STF — Repercussão Geral",
+   "titulo": "Fornecimento de medicamento sem registro na ANVISA",
+   "resumo": "O Estado, como regra, não pode ser obrigado a fornecer medicamento sem registro na ANVISA. A exceção foi admitida mediante requisitos específicos, mantida a competência da Justiça Federal, com propositura em face da União.",
+   "completo": "O Estado não pode ser obrigado a fornecer medicamentos sem registro na ANVISA, admitida exceção condicionada ao cumprimento de requisitos definidos pelo STF. Conforme reafirmado no Tema 1.234, mantém-se a competência da Justiça Federal para as ações que demandem fornecimento de medicamentos sem registro na ANVISA, que deverão ser propostas em face da União. [Consultar a redação integral no portal do STF.]",
+   "explicacao": "Trata do medicamento que sequer tem registro na ANVISA. A regra é não fornecer; a exceção depende de requisitos rígidos, e a ação corre na Justiça Federal, contra a União.",
+   "emSuma": "Medicamento sem registro na ANVISA, em regra, não é fornecido; a exceção corre na Justiça Federal, contra a União.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Tema 500/STF",
+   "vinculos": [
+    "stf-t1234",
+    "stf-t6"
+   ]
+  },
+  {
+   "id": "stf-sv60",
+   "tribunal": "STF",
+   "especie": "SV",
+   "area": "Direito à Saúde",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Publicada em 20/09/2024",
+   "assuntos": [
+    "Saúde",
+    "Medicamentos",
+    "SUS",
+    "Súmula Vinculante"
+   ],
+   "numero": "Súmula Vinculante 60",
+   "fonte": "STF",
+   "titulo": "Observância dos acordos interfederativos do Tema 1.234 na judicialização de fármacos",
+   "resumo": "O pedido e a análise administrativos de fármacos, a judicialização e seus desdobramentos devem observar os acordos interfederativos homologados pelo STF no Tema 1.234 da repercussão geral.",
+   "completo": "O pedido e a análise administrativos de fármacos na rede pública de saúde, a judicialização do caso, bem ainda seus desdobramentos (administrativos e jurisdicionais), devem observar os termos dos três acordos interfederativos (e seus fluxos) homologados pelo Supremo Tribunal Federal, em governança judicial colaborativa, no tema 1.234 da sistemática da repercussão geral (RE 1.366.243).",
+   "explicacao": "Como súmula vinculante, obriga administração e Judiciário a seguirem os fluxos e acordos interfederativos definidos no Tema 1.234 quando o assunto for pedido e judicialização de fármacos.",
+   "emSuma": "Fármacos: pedido, judicialização e desdobramentos seguem os acordos interfederativos do Tema 1.234.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Vinculada ao Tema 1.234 (RE 1.366.243)",
+   "vinculos": [
+    "stf-t1234"
+   ]
+  },
+  {
+   "id": "stj-jt160-1",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Ministério Público",
+    "Ônus da prova",
+    "Processo civil"
+   ],
+   "numero": "Jurisp. em Teses, ed. 160, tese 1",
+   "fonte": "STJ — Direito do Consumidor IV (julgados até 13/11/2020)",
+   "titulo": "Inversão do ônus da prova em favor do Ministério Público na ação consumerista",
+   "resumo": "Na ação consumerista, o Ministério Público faz jus à inversão do ônus da prova, independentemente daqueles que figurem como autores ou réus da demanda.",
+   "completo": "Na ação consumerista, o Ministério Público faz jus à inversão do ônus da prova, independentemente daqueles que figurem como autores ou réus da demanda.",
+   "explicacao": "O Ministério Público, quando atua na defesa do consumidor, também pode se beneficiar da inversão do ônus da prova — não importa se figura como autor ou réu —, por incidência da facilitação da defesa prevista no CDC.",
+   "emSuma": "O MP, na ação consumerista, também tem direito à inversão do ônus da prova.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [
+    {
+     "ref": "Código de Defesa do Consumidor, art. 6º, caput e inciso VIII",
+     "texto": "Art. 6º São direitos básicos do consumidor:\n[...]\nVIII - a facilitação da defesa de seus direitos, inclusive com a inversão do ônus da prova, a seu favor, no processo civil, quando, a critério do juiz, for verossímil a alegação ou quando for ele hipossuficiente, segundo as regras ordinárias de experiências;"
+    }
+   ],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-jt160-2",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Proteção de dados",
+    "Dano moral"
+   ],
+   "numero": "Jurisp. em Teses, ed. 160, tese 2",
+   "fonte": "STJ — Direito do Consumidor IV",
+   "titulo": "Dano moral in re ipsa pela ausência de comunicação sobre uso de dados pessoais",
+   "resumo": "A ausência de comunicação acerca da disponibilização ou comercialização de informações pessoais do consumidor em bancos de dados configura dano moral presumido (in re ipsa).",
+   "completo": "A ausência de comunicação acerca da disponibilização/comercialização de informações pessoais do consumidor em bancos de dados configura dano moral presumido (in re ipsa).",
+   "explicacao": "Se dados pessoais do consumidor são disponibilizados ou vendidos sem que ele seja avisado, o dano moral é presumido: não é preciso provar o prejuízo concreto, basta a falta de comunicação.",
+   "emSuma": "Usar ou compartilhar dados do consumidor sem avisá-lo gera dano moral presumido.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [
+    {
+     "ref": "Código de Defesa do Consumidor, art. 43, caput",
+     "texto": "O consumidor, sem prejuízo do disposto no art. 86, terá acesso às informações existentes em cadastros, fichas, registros e dados pessoais e de consumo arquivados sobre ele, bem como sobre as suas respectivas fontes."
+    }
+   ],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-jt160-4",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Cadastro de crédito",
+    "Dano moral"
+   ],
+   "numero": "Jurisp. em Teses, ed. 160, tese 4",
+   "fonte": "STJ — Direito do Consumidor IV",
+   "titulo": "Flexibilização da Súmula 385/STJ diante de inscrição preexistente ilegítima",
+   "resumo": "É possível flexibilizar a Súmula 385/STJ para reconhecer dano moral por inscrição indevida em cadastro restritivo, quando houver nos autos elementos aptos a demonstrar a ilegitimidade da anotação preexistente.",
+   "completo": "É possível a flexibilização da orientação contida na Súmula n. 385/STJ, para reconhecer dano moral decorrente de inscrição indevida do nome do consumidor em cadastro restritivo de crédito, quando existentes nos autos elementos aptos a demonstrar a ilegitimidade da preexistente anotação.",
+   "explicacao": "A Súmula 385 diz que, havendo inscrição legítima anterior, não há dano moral por nova anotação irregular. Aqui o STJ admite exceção: se os autos mostram que a própria inscrição anterior era ilegítima, o dano moral pode ser reconhecido.",
+   "emSuma": "A Súmula 385 pode ser afastada quando a inscrição anterior também for ilegítima.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Relaciona-se à Súmula 385/STJ",
+   "vinculos": [
+    "stj-s385"
+   ]
+  },
+  {
+   "id": "stj-jt160-5",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Prescrição",
+    "Imóvel",
+    "Vício do produto"
+   ],
+   "numero": "Jurisp. em Teses, ed. 160, tese 5",
+   "fonte": "STJ — Direito do Consumidor IV",
+   "titulo": "Prazo prescricional da pretensão indenizatória por vício no imóvel",
+   "resumo": "A pretensão indenizatória do consumidor por prejuízos decorrentes de vício no imóvel submete-se ao prazo prescricional do art. 205 do Código Civil.",
+   "completo": "A pretensão indenizatória do consumidor de receber ressarcimento por prejuízos decorrentes de vício no imóvel se submete ao prazo prescricional previsto no art. 205 do Código Civil.",
+   "explicacao": "Quando o consumidor busca indenização por prejuízos de um vício no imóvel, o prazo não é o do CDC, mas o prazo geral de dez anos do Código Civil, por ausência de regra específica.",
+   "emSuma": "Indenização por vício no imóvel prescreve em 10 anos (art. 205 CC), não no prazo do CDC.",
+   "mnemonico": "Imóvel com vício → 10 anos (art. 205 CC).",
+   "fluxograma": null,
+   "dispositivos": [
+    {
+     "ref": "Código Civil, art. 205",
+     "texto": "A prescrição ocorre em dez anos, quando a lei não lhe haja fixado prazo menor."
+    }
+   ],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-jt161-8",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Contratos bancários",
+    "Instituições financeiras",
+    "Responsabilidade civil"
+   ],
+   "numero": "Jurisp. em Teses, ed. 161, tese 8",
+   "fonte": "STJ — Direito do Consumidor V (julgados até 27/11/2020)",
+   "titulo": "Responsabilidade do banco por uso indevido de cartão furtado ou extraviado",
+   "resumo": "As instituições financeiras respondem pelos danos ao consumidor por cartão roubado, furtado ou extraviado e utilizado indevidamente, ressalvada a culpa exclusiva do consumidor ou de terceiros.",
+   "completo": "As instituições financeiras são responsáveis por reparar os danos sofridos pelo consumidor que tenha o cartão de crédito roubado, furtado ou extraviado e que venha a ser utilizado indevidamente, ressalvadas as hipóteses de culpa exclusiva do consumidor ou de terceiros.",
+   "explicacao": "Cartão roubado, furtado ou extraviado e usado por terceiro gera responsabilidade do banco pelos danos, salvo se o próprio consumidor ou um terceiro tiver culpa exclusiva.",
+   "emSuma": "Banco responde por cartão furtado/extraviado usado por terceiro, salvo culpa exclusiva do consumidor ou de terceiro.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-jt161-10",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "FIES",
+    "Contratos"
+   ],
+   "numero": "Jurisp. em Teses, ed. 161, tese 10",
+   "fonte": "STJ — Direito do Consumidor V",
+   "titulo": "Inaplicabilidade do CDC aos contratos do FIES",
+   "resumo": "As regras do CDC não se aplicam aos contratos do Programa de Financiamento Estudantil (FIES), por não se tratar de serviço bancário, mas de programa governamental custeado pela União.",
+   "completo": "As regras do CDC não se aplicam aos contratos firmados no âmbito do Programa de Financiamento Estudantil – FIES, pois não se trata de serviço bancário, mas de programa governamental custeado pela União.",
+   "explicacao": "Contratos do FIES não seguem o CDC, porque não são serviço bancário, e sim programa do governo custeado pela União.",
+   "emSuma": "FIES não é serviço bancário: não se aplica o CDC.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-jt162-6",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Proteção de dados",
+    "Contratos bancários",
+    "Cláusula abusiva"
+   ],
+   "numero": "Jurisp. em Teses, ed. 162, tese 6",
+   "fonte": "STJ — Direito do Consumidor VI (julgados até 04/12/2020)",
+   "titulo": "Abusividade de cláusula que autoriza compartilhamento de dados sem opção de recusa",
+   "resumo": "É abusiva e ilegal a cláusula, em contrato de cartão de crédito, que autoriza o banco a compartilhar dados dos consumidores com outras entidades sem opção de discordar, por violar a transparência e a confiança.",
+   "completo": "É abusiva e ilegal cláusula prevista em contrato de prestação de serviços de cartão de crédito que autoriza o banco contratante a compartilhar dados dos consumidores com outras entidades financeiras ou mantenedoras de cadastros positivos e negativos de consumidores, sem que haja opção de discordar daquele compartilhamento, por desrespeitar os princípios da transparência e da confiança.",
+   "explicacao": "É nula a cláusula que autoriza o banco a repassar dados do cliente a terceiros sem lhe dar a opção de recusar, pois viola a transparência e a confiança que regem a relação de consumo.",
+   "emSuma": "Cláusula que compartilha dados do cliente sem opção de recusa é abusiva.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [
+    {
+     "ref": "Código de Defesa do Consumidor, art. 6º, caput e inciso III",
+     "texto": "Art. 6º São direitos básicos do consumidor:\n[...]\nIII - a informação adequada e clara sobre os diferentes produtos e serviços, com especificação correta de quantidade, características, composição, qualidade e preço, bem como sobre os riscos que apresentem;"
+    }
+   ],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-jt163-4",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Imóvel",
+    "Contratos",
+    "Cláusula abusiva"
+   ],
+   "numero": "Jurisp. em Teses, ed. 163, tese 4",
+   "fonte": "STJ — Direito do Consumidor VII (julgados até 18/12/2020)",
+   "titulo": "Cláusula de tolerância de 180 dias na entrega de imóvel em construção",
+   "resumo": "Não é abusiva a cláusula de tolerância que prorroga por até 180 dias o prazo de entrega de imóvel em construção, desde que observado o direito de informação ao consumidor.",
+   "completo": "Não é abusiva a cláusula de tolerância nos contratos de promessa de compra e venda de imóvel em construção que prevê prorrogação do prazo inicial para a entrega da obra pelo lapso máximo de 180 (cento e oitenta) dias, desde que observado o direito de informação ao consumidor.",
+   "explicacao": "O prazo extra de até 180 dias para entregar o imóvel em construção é válido, desde que essa tolerância seja informada claramente ao consumidor.",
+   "emSuma": "Tolerância de até 180 dias para entregar imóvel é válida, se informada ao consumidor.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-jt165-13",
+   "tribunal": "STJ",
+   "especie": "JT",
+   "area": "Direito do Consumidor",
+   "obrigatorio": false,
+   "validade": "Vigente",
+   "situacao": "Jurisprudência em Teses (compilação — não vinculante por si)",
+   "assuntos": [
+    "Consumidor",
+    "Telecomunicações",
+    "Cláusula abusiva",
+    "Contratos"
+   ],
+   "numero": "Jurisp. em Teses, ed. 165, tese 13",
+   "fonte": "STJ — Direito do Consumidor XI (julgados até 12/02/2021)",
+   "titulo": "Multa de fidelização proporcional em contratos de telecomunicação",
+   "resumo": "Nos contratos de telecomunicação com permanência mínima, é abusiva a cobrança integral da multa de fidelização, que deve ser proporcional ao período de carência remanescente.",
+   "completo": "Nos contratos de telecomunicação com previsão de permanência mínima, é abusiva a cobrança integral da multa rescisória de fidelização, que deve ser calculada de forma proporcional ao período de carência remanescente.",
+   "explicacao": "Se o cliente rompe antes o contrato com fidelização, a operadora não pode cobrar a multa cheia: ela deve ser reduzida proporcionalmente ao tempo que faltava para cumprir a carência.",
+   "emSuma": "Multa de fidelização é proporcional ao tempo que faltava, não integral.",
+   "mnemonico": "Fidelidade quebrada, multa rateada.",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Jurisprudência em Teses, STJ",
+   "vinculos": []
+  },
+  {
+   "id": "stj-s385",
+   "tribunal": "STJ",
+   "especie": "SUM",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Súmula em vigor",
+   "assuntos": [
+    "Consumidor",
+    "Cadastro de crédito",
+    "Dano moral"
+   ],
+   "numero": "Súmula 385",
+   "fonte": "STJ",
+   "titulo": "Anotação irregular e dano moral diante de inscrição preexistente legítima",
+   "resumo": "Havendo inscrição legítima preexistente, a anotação irregular em cadastro de proteção ao crédito não gera indenização por dano moral, ressalvado o direito ao cancelamento.",
+   "completo": "Da anotação irregular em cadastro de proteção ao crédito, não cabe indenização por dano moral, quando preexistente legítima inscrição, ressalvado o direito ao cancelamento.",
+   "explicacao": "Se já existe uma inscrição legítima no cadastro de inadimplentes, uma anotação irregular adicional não rende dano moral — mas o consumidor pode exigir o cancelamento dessa anotação indevida.",
+   "emSuma": "Com inscrição legítima anterior, anotação irregular não gera dano moral — só cancelamento.",
+   "mnemonico": "Legítima antes → sem dano (só cancela).",
+   "fluxograma": [
+    {
+     "t": "inicio",
+     "txt": "Anotação irregular em cadastro de proteção ao crédito"
+    },
+    {
+     "t": "decisao",
+     "txt": "Existe inscrição legítima preexistente?",
+     "sim": "Não cabe dano moral — apenas cancelamento",
+     "nao": "Cabe dano moral"
+    }
+   ],
+   "dispositivos": [
+    {
+     "ref": "Código de Defesa do Consumidor, art. 43, caput",
+     "texto": "O consumidor, sem prejuízo do disposto no art. 86, terá acesso às informações existentes em cadastros, fichas, registros e dados pessoais e de consumo arquivados sobre ele, bem como sobre as suas respectivas fontes."
+    }
+   ],
+   "precedentes": "Enunciado de súmula",
+   "vinculos": [
+    "stj-jt160-4"
+   ]
+  },
+  {
+   "id": "stj-s543",
+   "tribunal": "STJ",
+   "especie": "SUM",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Súmula em vigor",
+   "assuntos": [
+    "Consumidor",
+    "Imóvel",
+    "Contratos",
+    "Restituição"
+   ],
+   "numero": "Súmula 543",
+   "fonte": "STJ",
+   "titulo": "Restituição de parcelas na resolução da promessa de compra e venda de imóvel",
+   "resumo": "Na resolução de promessa de compra e venda de imóvel sob o CDC, as parcelas pagas são restituídas de imediato: integralmente se a culpa for do vendedor/construtor, parcialmente se o comprador deu causa.",
+   "completo": "Na hipótese de resolução de contrato de promessa de compra e venda de imóvel submetido ao Código de Defesa do Consumidor, deve ocorrer a imediata restituição das parcelas pagas pelo promitente comprador – integralmente, em caso de culpa exclusiva do promitente vendedor/construtor, ou parcialmente, caso tenha sido o comprador quem deu causa ao desfazimento.",
+   "explicacao": "Desfeito o contrato de compra de imóvel, o dinheiro pago volta imediatamente: por inteiro se a culpa foi do vendedor/construtor, ou em parte se foi o comprador que deu causa.",
+   "emSuma": "Desfeita a compra do imóvel, devolve-se já: tudo (culpa do vendedor) ou parte (culpa do comprador).",
+   "mnemonico": "Vendedor → tudo; comprador → parte.",
+   "fluxograma": [
+    {
+     "t": "inicio",
+     "txt": "Resolução da promessa de compra e venda de imóvel (CDC)"
+    },
+    {
+     "t": "decisao",
+     "txt": "A culpa foi exclusiva do vendedor/construtor?",
+     "sim": "Restituição integral e imediata",
+     "nao": "Restituição parcial e imediata (comprador deu causa)"
+    }
+   ],
+   "dispositivos": [],
+   "precedentes": "Enunciado de súmula",
+   "vinculos": []
+  },
+  {
+   "id": "stj-s566",
+   "tribunal": "STJ",
+   "especie": "SUM",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Súmula em vigor",
+   "assuntos": [
+    "Consumidor",
+    "Contratos bancários",
+    "Instituições financeiras"
+   ],
+   "numero": "Súmula 566",
+   "fonte": "STJ",
+   "titulo": "Cobrança da tarifa de cadastro no início do relacionamento bancário",
+   "resumo": "Nos contratos bancários posteriores a 30/4/2008, é possível cobrar a tarifa de cadastro no início do relacionamento entre consumidor e instituição financeira.",
+   "completo": "Nos contratos bancários posteriores ao início da vigência da Resolução-CMN n. 3.518/2007, em 30/4/2008, pode ser cobrada a tarifa de cadastro no início do relacionamento entre o consumidor e a instituição financeira.",
+   "explicacao": "Depois de 30/4/2008, o banco pode cobrar a tarifa de cadastro uma única vez, no começo do relacionamento com o cliente.",
+   "emSuma": "Tarifa de cadastro só nos contratos após 30/04/2008, no início da relação.",
+   "mnemonico": "Cadastro: só a partir de 30/04/2008.",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Enunciado de súmula",
+   "vinculos": []
+  },
+  {
+   "id": "stj-s597",
+   "tribunal": "STJ",
+   "especie": "SUM",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Súmula em vigor",
+   "assuntos": [
+    "Consumidor",
+    "Plano de saúde",
+    "Saúde suplementar",
+    "Cláusula abusiva"
+   ],
+   "numero": "Súmula 597",
+   "fonte": "STJ",
+   "titulo": "Carência abusiva em urgência e emergência no plano de saúde",
+   "resumo": "A cláusula de plano de saúde que prevê carência para urgência ou emergência é abusiva se ultrapassado o prazo máximo de 24 horas da contratação.",
+   "completo": "A cláusula contratual de plano de saúde que prevê carência para utilização dos serviços de assistência médica nas situações de emergência ou de urgência é considerada abusiva se ultrapassado o prazo máximo de 24 horas contado da data da contratação.",
+   "explicacao": "Em urgência ou emergência, a carência do plano de saúde não pode passar de 24 horas da contratação; cláusula que exija mais é abusiva.",
+   "emSuma": "Carência em urgência/emergência: no máximo 24h da contratação.",
+   "mnemonico": "24h — urgência e emergência não esperam.",
+   "fluxograma": [
+    {
+     "t": "inicio",
+     "txt": "Cláusula de carência em urgência ou emergência"
+    },
+    {
+     "t": "decisao",
+     "txt": "A carência ultrapassa 24h da contratação?",
+     "sim": "Cláusula abusiva",
+     "nao": "Cláusula válida"
+    }
+   ],
+   "dispositivos": [],
+   "precedentes": "Enunciado de súmula",
+   "vinculos": []
+  },
+  {
+   "id": "stj-s602",
+   "tribunal": "STJ",
+   "especie": "SUM",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Súmula em vigor",
+   "assuntos": [
+    "Consumidor",
+    "Cooperativa habitacional",
+    "Imóvel"
+   ],
+   "numero": "Súmula 602",
+   "fonte": "STJ",
+   "titulo": "Aplicação do CDC aos empreendimentos habitacionais de cooperativas",
+   "resumo": "O Código de Defesa do Consumidor é aplicável aos empreendimentos habitacionais promovidos pelas sociedades cooperativas.",
+   "completo": "O Código de Defesa do Consumidor é aplicável aos empreendimentos habitacionais promovidos pelas sociedades cooperativas.",
+   "explicacao": "Mesmo quando a moradia é oferecida por cooperativa habitacional, aplica-se o CDC à relação com o consumidor.",
+   "emSuma": "Cooperativa habitacional também se sujeita ao CDC.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Enunciado de súmula",
+   "vinculos": []
+  },
+  {
+   "id": "stj-s609",
+   "tribunal": "STJ",
+   "especie": "SUM",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Súmula em vigor",
+   "assuntos": [
+    "Consumidor",
+    "Seguro",
+    "Saúde suplementar",
+    "Boa-fé"
+   ],
+   "numero": "Súmula 609",
+   "fonte": "STJ",
+   "titulo": "Recusa de cobertura por doença preexistente sem exame prévio",
+   "resumo": "É ilícita a recusa de cobertura sob alegação de doença preexistente se não houve exame médico prévio à contratação nem demonstração de má-fé do segurado.",
+   "completo": "A recusa de cobertura securitária, sob a alegação de doença preexistente, é ilícita se não houve a exigência de exames médicos prévios à contratação ou a demonstração de má-fé do segurado.",
+   "explicacao": "A seguradora não pode negar cobertura alegando doença anterior se não exigiu exame médico na contratação nem provou má-fé do segurado.",
+   "emSuma": "Sem exame prévio nem má-fé, não vale negar cobertura por doença preexistente.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Enunciado de súmula",
+   "vinculos": []
+  },
+  {
+   "id": "stj-s638",
+   "tribunal": "STJ",
+   "especie": "SUM",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Súmula em vigor",
+   "assuntos": [
+    "Consumidor",
+    "Penhor civil",
+    "Instituições financeiras",
+    "Cláusula abusiva"
+   ],
+   "numero": "Súmula 638",
+   "fonte": "STJ",
+   "titulo": "Cláusula que restringe responsabilidade do banco no penhor civil",
+   "resumo": "É abusiva a cláusula que restringe a responsabilidade da instituição financeira por roubo, furto ou extravio de bem entregue em garantia no contrato de penhor civil.",
+   "completo": "É abusiva a cláusula contratual que restringe a responsabilidade de instituição financeira pelos danos decorrentes de roubo, furto ou extravio de bem entregue em garantia no âmbito de contrato de penhor civil.",
+   "explicacao": "O banco não pode, no penhor civil, limitar por cláusula sua responsabilidade por roubo, furto ou extravio do bem dado em garantia.",
+   "emSuma": "No penhor civil, banco não pode limitar responsabilidade por roubo/furto/extravio do bem.",
+   "mnemonico": "",
+   "fluxograma": null,
+   "dispositivos": [],
+   "precedentes": "Enunciado de súmula",
+   "vinculos": []
+  },
+  {
+   "id": "tjma-irdr4",
+   "tribunal": "TJMA",
+   "especie": "IRDR",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente",
+   "situacao": "Tema 4/TJMA — transitado em julgado em 18/12/2018 (Acórdão 229.940/2018, Tribunal Pleno)",
+   "assuntos": [
+    "Consumidor",
+    "Contratos bancários",
+    "Instituições financeiras",
+    "INSS",
+    "Tarifas",
+    "TJMA"
+   ],
+   "numero": "IRDR — Tema 4/TJMA",
+   "fonte": "IRDR 0000340-95.2017.8.10.0000 (3.043/2017) — Rel. Des. Paulo Sérgio Velten Pereira, Tribunal Pleno do TJMA",
+   "titulo": "Tarifas bancárias em conta de beneficiários do INSS",
+   "resumo": "É ilícita a cobrança de tarifas bancárias para o recebimento de proventos e benefícios previdenciários por cartão magnético do INSS e conta com pacote essencial; a cobrança só é possível em pacote remunerado contratado ou quando excedidos os limites de gratuidade da Res. 3.919/2010 do BACEN, com prévia e efetiva informação ao aposentado.",
+   "completo": "É ilícita a cobrança de tarifas bancárias para o recebimento de proventos e/ou benefícios previdenciários, por meio de cartão magnético do INSS e através da conta de depósito com pacote essencial, sendo possível a cobrança de tarifas bancárias na contratação de pacote remunerado de serviços ou quando excedidos os limites de gratuidade previstos na Res. 3.919/2010 do BACEN, desde que o aposentado seja prévia e efetivamente informado pela instituição financeira.",
+   "explicacao": "Vincula toda a Justiça estadual maranhense (art. 927, III, e art. 985 do CPC). O banco não pode cobrar tarifa da conta usada apenas para receber o benefício do INSS. A cobrança só se legitima se o aposentado contratou pacote remunerado ou ultrapassou a gratuidade regulamentar — e, ainda assim, mediante informação prévia e efetiva.",
+   "emSuma": "Conta só para receber INSS não paga tarifa; cobrança exige pacote contratado ou gratuidade excedida, com informação prévia.",
+   "mnemonico": "Benefício do INSS não paga tarifa — salvo pacote informado.",
+   "fluxograma": [
+    {
+     "t": "inicio",
+     "txt": "Tarifa bancária em conta de beneficiário do INSS"
+    },
+    {
+     "t": "decisao",
+     "txt": "A conta serve apenas ao recebimento do benefício (cartão INSS / pacote essencial)?",
+     "sim": "Cobrança ilícita",
+     "nao": null
+    },
+    {
+     "t": "decisao",
+     "txt": "Há pacote remunerado contratado, ou gratuidade da Res. 3.919/2010 excedida, com informação prévia e efetiva?",
+     "sim": "Cobrança possível",
+     "nao": "Cobrança ilícita"
+    }
+   ],
+   "dispositivos": [],
+   "precedentes": "Ficha oficial do NUGEPNAC/TJMA (NUT CNJ 8.10.1.000006); paradigma: ApCiv 39.668/2016",
+   "vinculos": [
+    "tjma-irdr5"
+   ]
+  },
+  {
+   "id": "tjma-irdr5",
+   "tribunal": "TJMA",
+   "especie": "IRDR",
+   "area": "Direito do Consumidor",
+   "obrigatorio": true,
+   "validade": "Vigente — em revisão",
+   "situacao": "Tema 5/TJMA — trânsito em julgado em 25/05/2022; teses submetidas a revisão no Tema 12/TJMA (IRDR 0827453-44.2024.8.10.0000); a 1ª tese relaciona-se ao Tema 1.061/STJ",
+   "assuntos": [
+    "Consumidor",
+    "Empréstimo consignado",
+    "Contratos bancários",
+    "Ônus da prova",
+    "Analfabeto",
+    "Repetição de indébito",
+    "TJMA"
+   ],
+   "numero": "IRDR — Tema 5/TJMA",
+   "fonte": "IRDR 0008932-65.2016.8.10.0000 (53.983/2016) — Rel. Des. Jaime Ferreira de Araújo, Tribunal Pleno do TJMA",
+   "titulo": "Empréstimos consignados: ônus da prova, contratação por analfabeto, repetição em dobro e modalidades de mútuo",
+   "resumo": "Quatro teses: (1) impugnada a assinatura, o ônus de provar a autenticidade é da instituição financeira; (2) o analfabeto pode contratar consignado sem procuração ou escritura pública; (3) inexistente ou inválido o contrato e demonstrada a má-fé do banco, cabe repetição do indébito em dobro, ressalvado engano justificável; (4) é lícita a contratação de qualquer modalidade de mútuo, discutindo-se eventuais vícios pelas regras dos defeitos do negócio jurídico.",
+   "completo": "1ª TESE: Na hipótese em que o consumidor/autor impugnar a autenticidade da assinatura constante em contrato bancário juntado ao processo pela instituição financeira, caberá a esta o ônus de provar a sua autenticidade (CPC, arts. 6º, 368 e 429, II). 2ª TESE: A pessoa analfabeta é plenamente capaz para os atos da vida civil (CC, art. 2º) e pode exarar sua manifestação de vontade por quaisquer meios admitidos em direito, não sendo necessária a utilização de procuração pública ou de escritura pública para a contratação de empréstimo consignado, de sorte que eventual vício existente na contratação do empréstimo deve ser discutido à luz das hipóteses legais que autorizam a anulação por defeito do negócio jurídico (CC, arts. 138, 145, 151, 156, 157 e 158). 3ª TESE (aclarada em embargos de declaração): Nos casos de empréstimos consignados, quando restar configurada a inexistência ou invalidade do contrato celebrado entre a instituição financeira e a parte autora, bem como demonstrada a má-fé da instituição bancária, será cabível a repetição de indébito em dobro, resguardadas as hipóteses de enganos justificáveis. 4ª TESE: Não estando vedada pelo ordenamento jurídico, é lícita a contratação de quaisquer modalidades de mútuo financeiro, de modo que, havendo vício na contratação, sua anulação deve ser discutida à luz das hipóteses legais que versam sobre os defeitos do negócio jurídico (CC, arts. 138, 145, 151, 156, 157 e 158) e dos deveres legais de probidade, boa-fé (CC, art. 422) e de informação adequada e clara sobre os diferentes produtos, especificando corretamente as características do contrato (art. 4º, IV e art. 6º, III, do CDC), observando-se, todavia, a possibilidade de convalidação do negócio anulável, segundo os princípios da conservação dos negócios jurídicos (CC, art. 170).",
+   "explicacao": "É o precedente central do contencioso bancário na Justiça maranhense, de aplicação diária na vara. Atenção à vigência: as teses estão sob revisão no Tema 12/TJMA (2024), e a 1ª tese dialoga com o Tema 1.061/STJ sobre o custeio da perícia grafotécnica — convém verificar o estado da revisão antes de aplicar.",
+   "emSuma": "Assinatura impugnada: banco prova. Analfabeto contrata sem escritura. Má-fé + contrato inválido: devolução em dobro. Qualquer mútuo é lícito; vício segue as regras do negócio jurídico.",
+   "mnemonico": "BADM — Banco prova · Analfabeto contrata · Dobro na má-fé · Mútuo livre.",
+   "fluxograma": [
+    {
+     "t": "inicio",
+     "txt": "Ação sobre empréstimo consignado (Tema 5/TJMA)"
+    },
+    {
+     "t": "decisao",
+     "txt": "O autor impugnou a autenticidade da assinatura?",
+     "sim": "Ônus da prova da autenticidade é do banco (1ª tese)",
+     "nao": null
+    },
+    {
+     "t": "decisao",
+     "txt": "Contrato inexistente/ inválido E má-fé do banco demonstrada?",
+     "sim": "Repetição do indébito em dobro (3ª tese)",
+     "nao": "Sem dobra: seguir regras gerais (2ª e 4ª teses)"
+    }
+   ],
+   "dispositivos": [
+    {
+     "ref": "Código de Defesa do Consumidor, art. 6º, caput e inciso III",
+     "texto": "Art. 6º São direitos básicos do consumidor:\n[...]\nIII - a informação adequada e clara sobre os diferentes produtos e serviços, com especificação correta de quantidade, características, composição, qualidade e preço, bem como sobre os riscos que apresentem;"
+    }
+   ],
+   "precedentes": "Ficha oficial do NUGEPNAC/TJMA (NUT CNJ 8.10.1.000007); 3ª tese aclarada no Acórdão 244.485/2019",
+   "vinculos": [
+    "tjma-irdr4"
+   ]
+  }
+ ]
+}
