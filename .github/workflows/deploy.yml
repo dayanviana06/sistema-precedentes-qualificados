@@ -1,0 +1,76 @@
+# Coleta os precedentes e PUBLICA o site, automaticamente, todo dia.
+#   • STJ  — Dados Abertos (automático e completo).
+#   • STF  — estoque do Corte Aberta ('stf-temas.csv', quando presente) +
+#            novidades por busca verificada (se ANTHROPIC_API_KEY existir).
+#   • Base curada (STF/TJMA/Súmulas) sempre presente e nunca apagada.
+# Não exige subir nada nem configurar mais nada para o STJ funcionar.
+name: Atualizar e publicar
+
+on:
+  schedule:
+    - cron: "0 9 * * *"      # 06h de Brasília, diariamente
+  workflow_dispatch: {}       # botão "Run workflow"
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  atualizar-e-publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install requests anthropic
+
+      - name: Coletar (STJ automático + STF em camadas) e consolidar
+        working-directory: coletor
+        env:
+          # Chave opcional: se você a cadastrar em Settings > Secrets > Actions,
+          # a camada de novidades do STF por busca verificada é ativada.
+          # Sem ela, o STF usa apenas o estoque do Corte Aberta e a base curada.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cp ../dados.json . 2>/dev/null || true
+          cp ../dados-manual.json . 2>/dev/null || true
+          cp ../stf-temas.csv . 2>/dev/null || true
+          python build_auto.py
+          cp dados.json ../dados.json
+          cp changelog.json ../changelog.json 2>/dev/null || true
+
+      - name: Preparar o site
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp dados.json _site/dados.json
+          cp changelog.json _site/changelog.json 2>/dev/null || true
+
+      - name: Salvar dados.json atualizado no repositório
+        run: |
+          git config user.name "coletor-precedentes"
+          git config user.email "actions@github.com"
+          git add dados.json changelog.json || true
+          git diff --cached --quiet || git commit -m "Atualização automática (STJ + STF + curada)"
+          git push || true
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
