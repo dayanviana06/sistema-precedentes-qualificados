@@ -1,6 +1,6 @@
 {
  "versao": 1,
- "gerado_em": "2026-09-22",
+ "gerado_em": "2026-09-23",
  "fontes": [
   "STF (Repercussão Geral)",
   "STJ (Dados Abertos — Precedentes Qualificados)",
@@ -29878,7 +29878,7 @@
    "area": "Precedentes do STJ",
    "obrigatorio": true,
    "validade": "Pendente — mérito não julgado",
-   "situacao": "Admitido · órgão: S1",
+   "situacao": "Em Julgamento · órgão: S1",
    "assuntos": [
     "Fornecimento de Gás",
     "Suspensão",
