@@ -1,5 +1,11 @@
 {
- "data": "2026-10-04",
+ "data": "2026-10-05",
  "novos": [],
- "alterados": []
+ "alterados": [
+  {
+   "id": "stj-iac-7",
+   "numero": "IAC 7/STJ",
+   "situacao": "Trânsito em Julgado · julgado em 2024-08-28 · órgão: S1"
+  }
+ ]
 }
